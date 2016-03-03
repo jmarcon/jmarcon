@@ -1,0 +1,43 @@
+BaseURL = "https://jmarcon.github.io/"
+RelativeURLs = true
+languageCode = "pt-br"
+title = "Juliano Marcon"
+disqusShortname = "jmarcon"
+paginate = 4
+
+[taxonomies]
+    tag = "tags"
+    tutorial = "tutorials"
+
+[params]
+    # Render the rotating globe in the sidebar
+    showglobe = true
+
+    # Google Analytics
+    analytics = "UA-63413033-3"
+
+    # Social buttons for sidebar
+    github = "https://github.com/jmarcon"
+    twitter = "https://twitter.com/julianomarcon"
+    linkedin = "https://br.linkedin.com/in/julianomarcon"
+    email = "juliano.marcon@gmail.com"
+
+    # Sidebar profile picture
+    profilepic = "http://www.julianomarcon.com.br/images/jmarcon.jpg"
+
+    # Title/subtitle for the sidebar
+    title = "JULIANO MARCON"
+    subtitle = "SOLUÇOES EM PRIMEIRO LUGAR"
+
+    # Nav links below the profile picture
+    [[params.navlinks]]
+    name = "Sobre"
+    url = "about/julianomarcon"
+
+    [[params.navlinks]]
+    name = "Blog"
+    url = "post/"
+
+    [[params.navlinks]]
+    name = "Contato"
+    url = "about/contato"
