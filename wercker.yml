@@ -29,9 +29,18 @@ deploy:
   steps:
     - install-packages:
         packages: git ssh-client
-    - leipert/git-push:
-        gh_oauth: $GIT_TOKEN
-        repo: jmarcon/jmarcon.github.io
-        domain: jmarcon.github.io
-        branch: master
+    - script:
+        name: configure git
         basedir: public
+        code: |-
+          git config --global user.email $GIT_EMAIL
+          git config --global user.name $GIT_USER
+          rm -rf .git
+
+    - script:
+        name: Deploy to github
+        code: |-
+          git init
+          git add .
+          git commit -m 'Deploy commit from $WERCKER_STARTED_BY'
+          git push -f $GIT_REMOTE master:gh-pages
