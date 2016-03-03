@@ -6,7 +6,6 @@
 
 <p>Profissional com grande experiência na area de projetos e desenvolvimento de software. Habilidade em liderar e motivar equipes. Conhecimento em diversas metodologias de gerenciamento de projetos. Pessoa dinâmica e comunicativa.</p>
 
-
 <div class="experiences section">
             <h3 class="title">// Profissional</h3>
             <div class="content">
