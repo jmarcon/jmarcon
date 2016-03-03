@@ -39,8 +39,9 @@ deploy:
 
     - script:
         name: Deploy to github
+        basedir: public
         code: |-
           git init
           git add .
           git commit -m 'Deploy commit from $WERCKER_STARTED_BY'
-          git push -f $GIT_REMOTE master:gh-pages
+          git push -f $GIT_REMOTE master
