@@ -5,6 +5,10 @@ title = "Juliano Marcon"
 disqusShortname = "jmarcon"
 paginate = 4
 
+[Author]
+    name = "Juliano Marcon"
+    email = "contato@julianomarcon.com.br"
+
 [taxonomies]
     tag = "tags"
     tutorial = "tutorials"
