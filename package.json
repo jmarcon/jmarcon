@@ -1,0 +1,25 @@
+{
+  "name": "jmarcon.github.io",
+  "version": "1.0.0",
+  "description": "Blog pessoal",
+  "main": "publish.sh",
+  "dependencies": {
+    "gulp-less": "3.0.5"
+  },
+  "devDependencies": {
+    "gulp": "3.9.1"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jmarcon/jmarcon.git"
+  },
+  "author": "Juliano Marcon",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jmarcon/jmarcon/issues"
+  },
+  "homepage": "https://github.com/jmarcon/jmarcon#readme"
+}
