@@ -10,6 +10,7 @@ git push -f origin master
 
 echo "$NOW -> Hugo Compiling"
 hugo -D -t hugo-geo
+gulp
 
 echo "$NOW -> Commiting compiled"
 cd public
