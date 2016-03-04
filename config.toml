@@ -41,7 +41,3 @@ paginate = 4
     [[params.navlinks]]
     name = "Blog"
     url = "post/"
-
-    [[params.navlinks]]
-    name = "Contato"
-    url = "about/contato"
