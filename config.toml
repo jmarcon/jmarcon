@@ -27,7 +27,7 @@ paginate = 4
     email = "juliano.marcon@gmail.com"
 
     # Sidebar profile picture
-    profilepic = "http://www.julianomarcon.com.br/images/jmarcon.jpg"
+    profilepic = "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAANFAAAAJDVkYWU4ZjhkLTQzNmItNDNhMS1hMjEzLTA5YmUzNzgyMzAyOQ.jpg"
 
     # Title/subtitle for the sidebar
     title = "JULIANO MARCON"
