@@ -27,7 +27,7 @@ paginate = 4
 
     # Title/subtitle for the sidebar
     title = "JULIANO MARCON"
-    subtitle = "SOLUÇOES EM PRIMEIRO LUGAR"
+    subtitle = "SOLUÇÕES EM PRIMEIRO LUGAR"
 
     # Nav links below the profile picture
     [[params.navlinks]]
