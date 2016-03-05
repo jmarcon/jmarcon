@@ -3,7 +3,7 @@ var less = require('gulp-less');
 var cleanCSS = require('gulp-clean-css');
 var shell = require('gulp-shell');
 
-var commitCommand = 'git commit -a -m "'+ (new Date().getFullYear()) +'"';
+var commitCommand = 'git commit -a -m "'+ (new Date()) +'"';
 gulp.task('commit_src', shell.task([
   'git add .',
   commitCommand,
