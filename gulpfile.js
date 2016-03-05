@@ -3,6 +3,10 @@ var less = require('gulp-less');
 var cleanCSS = require('gulp-clean-css');
 var shell = require('gulp-shell');
 
+gulp.task('publish', shell.task([
+  'sh _publish.sh'
+]));
+
 var commitCommand = 'git commit -a -m "'+ (new Date()) +'"';
 gulp.task('commit_src', shell.task([
   'git add .',
@@ -13,8 +17,8 @@ gulp.task('commit_src', shell.task([
 gulp.task('commit_compile', shell.task([
   'cd public',
   'git add .',
-  commitCommand //,
-  //'git push -f origin master'
+  commitCommand,
+  'git push -f origin master'
 ]));
 
 gulp.task('css', function() {
