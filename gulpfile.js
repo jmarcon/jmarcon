@@ -20,9 +20,7 @@ gulp.task('push', function() {
   gulp.src('.')
       .pipe(git.add())
       .pipe(git.commit('Publish ' + (new Date())))
-      .pipe(git.push('origin', 'master', {args: " -f"}, function (err) {
-              if (err) throw err;
-            }));
+      .pipe(git.push('origin', 'master'));
 });
 
 gulp.task('less', function() {
