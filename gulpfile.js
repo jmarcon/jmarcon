@@ -16,7 +16,7 @@ gulp.task('publish_git', shell.task([
   'git push -f origin master'
 ]));
 
-gulp.task('push', function() {
+gulp.task('push_src', function() {
   gulp.src('.')
       .pipe(git.add())
       .pipe(git.commit('Publish ' + (new Date())));
@@ -38,7 +38,7 @@ gulp.task('minify-css', function() {
     .pipe(gulp.dest('public/css'));
 });
 
-gulp.task('default', ['less', 'minify-css']);
+gulp.task('default', ['push_src', 'less', 'minify-css']);
 
 gulp.task('github', ['default', 'publish_git']);
 gulp.task('jm', ['default', 'publish_jm']);
