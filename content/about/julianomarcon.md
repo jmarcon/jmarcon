@@ -24,14 +24,3 @@ Liderança de equipes de projetos de desenvolvimento de novos canais digitais.
 Gerenciamento e desenvolvimento de projetos de médio e grande porte na area de canais de atendimento e e-commerce.
 
 ---
-
-
-~~~javascript
-{
-  "date" : "2016-03-03T00:19:25-03:00",
-  "draft" : true,
-  "title" : "Sobre",
-  "layout" : "sobre",
-  "highlight" : true
-}
-~~~
