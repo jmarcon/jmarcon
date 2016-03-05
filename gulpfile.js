@@ -16,10 +16,11 @@ gulp.task('publish_git', shell.task([
   'git push -f origin master'
 ]));
 
-gulp.task('commit', function() {
+gulp.task('push', function() {
   gulp.src('.')
       .pipe(git.add())
-      .pipe(git.commit('Publish ' + (new Date())));
+      .pipe(git.commit('Publish ' + (new Date())))
+      .pipe(git.push('origin','master', {args: " -f"}));
 });
 
 gulp.task('less', function() {
