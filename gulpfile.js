@@ -19,10 +19,11 @@ gulp.task('publish_git', shell.task([
 gulp.task('push', function() {
   gulp.src('.')
       .pipe(git.add())
-      .pipe(git.commit('Publish ' + (new Date())))
-      .pipe(git.push('origin', 'master', {args: " -f"}, function (err) {
-        if (err) throw err;
-      }));
+      .pipe(git.commit('Publish ' + (new Date())));
+
+  git.push('origin', 'master', {args: " -f"}, function (err) {
+    if (err) throw err;
+  });
 });
 
 gulp.task('less', function() {
