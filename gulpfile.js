@@ -3,25 +3,19 @@ var less = require('gulp-less');
 var cleanCSS = require('gulp-clean-css');
 var shell = require('gulp-shell');
 
-gulp.task('publish', shell.task([
+gulp.task('publish_jm', shell.task([
+  'sh _publish_jm.sh'
+]));
+
+gulp.task('publish_git', shell.task([
   'sh _publish.sh'
 ]));
 
-var commitCommand = 'git commit -a -m "'+ (new Date()) +'"';
-gulp.task('commit_src', shell.task([
-  'git add .',
-  commitCommand,
-  'git push -f origin master'
+gulp.task('commit', shell.task([
+  'sh _commit.sh'
 ]));
 
-gulp.task('commit_compile', shell.task([
-  'cd public',
-  'git add .',
-  commitCommand,
-  'git push -f origin master'
-]));
-
-gulp.task('css', function() {
+gulp.task('less', function() {
   gulp.src('public/less/*.less')
       .pipe(less())
       .pipe(gulp.dest('public/css'));
@@ -33,7 +27,7 @@ gulp.task('minify-css', function() {
     .pipe(gulp.dest('public/css'));
 });
 
-gulp.task('default', ['css', 'minify-css']);
+gulp.task('default', ['less', 'minify-css']);
 
-gulp.task('github', ['default']);
-gulp.task('jm', ['default']);
+gulp.task('github', ['default', 'publish_git']);
+gulp.task('jm', ['default', 'publish_jm']);
