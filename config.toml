@@ -4,6 +4,7 @@ languageCode = "pt-br"
 title = "Juliano Marcon"
 disqusShortname = "jmarcon"
 paginate = 4
+theme = "hugo-geo"
 
 [Author]
     name = "Juliano Marcon"
@@ -16,6 +17,7 @@ paginate = 4
 [params]
     # Render the rotating globe in the sidebar
     showglobe = true
+    highlight = true
 
     # Google Analytics
     analytics = "UA-63413033-3"

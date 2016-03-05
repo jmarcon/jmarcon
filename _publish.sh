@@ -9,7 +9,8 @@ echo "$NOW -> Pushing source"
 git push -f origin master
 
 echo "$NOW -> Hugo Compiling"
-hugo -D -t hugo-geo
+hugo -D
+#-t hugo-geo
 gulp
 
 echo "$NOW -> Commiting compiled"

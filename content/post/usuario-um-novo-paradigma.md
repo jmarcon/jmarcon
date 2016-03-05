@@ -2,7 +2,8 @@
   "date" : "2016-03-03T00:19:25-03:00",
   "draft" : true,
   "title" : "Usuario: um novo paradigma",
-  "comment" : true
+  "comment" : true,
+  "Author" : "Juliano Marcon"
 }
 
 Quando as primeiras aplicações eram desenvolvidas, identificava-se os usuários através de duas informações, nome de usuário e senha. Com a disseminação da internet, a grande variedade de meios de acesso (celular, tablet, pc, cafeteira  .) e o aumento dos riscos sobre as informações do usuário, os requisitos para validar e garantir que um indivíduo é realmente ele aumentaram.

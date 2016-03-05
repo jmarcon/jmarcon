@@ -1,8 +1,10 @@
 {
   "date" : "2016-03-03T00:19:25-03:00",
+  "lastMod" : "2016-03-03T00:19:25-03:00",
   "draft" : false,
   "title" : "Qual o seu lado da força",
-  "comment" : true
+  "comment" : true,
+  "Author" : "Juliano Marcon"
 }
 
 A força existe em todos nós. Mas são nossos sentimentos e atitudes que mostram qual é o caminho que escolhemos.
@@ -62,4 +64,4 @@ A maioria das pessoas não está no lado luminoso  e nem no lado negro. Quase to
 
 Em alguns momentos vai parecer que o lado negro é mais  fácil, mais cômodo e tentador.  Mas não  se engane, ele só leva a solidão e a discórdia.
 
-*Que a força esteja com você!*
+**Que a força esteja com você!**
