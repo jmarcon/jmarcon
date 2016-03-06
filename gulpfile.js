@@ -5,13 +5,19 @@ var cleanCSS = require('gulp-clean-css');
 //var exec = require('gulp-exec');
 var exec = require('child_process').exec;
 var git = require('gulp-git');
+var watch = require('gulp-watch');
+var batch = require('gulp-batch');
 
-gulp.task('README', function(callback) {
-  fs.writeFile('README.md', (new Date()), callback);
+/// watch
+gulp.task('watch', function(callback) {
+  watch('**/*.less', batch(function(events, done) {
+    gulp.start('build', done);
+  }));
 });
 
 /// Commit do Fonte
-gulp.task('commit-source', ['README'], function(callback) {
+gulp.task('commit-source', function(callback) {
+  fs.writeFile('README.md', (new Date()));
   gulp.src('.')
     .pipe(git.add())
     .pipe(git.commit('Publish ' + (new Date())))
@@ -46,14 +52,16 @@ gulp.task('compile-hugo-jm', function() {
 });
 
 /// Compilar o LESS
-gulp.task('less', ['less-local','less-github', 'less-jm']);
-gulp.task('less-theme', function(callback){
+gulp.task('less', ['less-local', 'less-github', 'less-jm']);
+gulp.task('less-theme', function(callback) {
   gulp.src('themes/hugo-geo/static/less/*.less')
-  .pipe(less())
-  .pipe(gulp.dest('themes/hugo-geo/static/css'))
-  .on('end', function(){ callback(); });
+    .pipe(less())
+    .pipe(gulp.dest('themes/hugo-geo/static/css'))
+    .on('end', function() {
+      callback();
+    });
 });
-gulp.task('less-github', ['less-theme','compile-hugo-github'], function(callback) {
+gulp.task('less-github', ['less-theme', 'compile-hugo-github'], function(callback) {
   // jmarcon.github.io
   gulp.src('public/less/*.less')
     .pipe(less())
@@ -62,7 +70,7 @@ gulp.task('less-github', ['less-theme','compile-hugo-github'], function(callback
       callback();
     });
 });
-gulp.task('less-jm', ['less-theme','compile-hugo-jm'], function(callback) {
+gulp.task('less-jm', ['less-theme', 'compile-hugo-jm'], function(callback) {
   // www.julianomarcon.com.br
   gulp.src('www/less/*.less')
     .pipe(less())

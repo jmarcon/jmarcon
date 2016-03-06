@@ -10,9 +10,11 @@
   "devDependencies": {
     "browser-sync": "2.11.1",
     "gulp": "3.9.1",
+    "gulp-batch": "1.0.5",
     "gulp-clean-css": "2.0.3",
     "gulp-exec": "2.1.2",
     "gulp-shell": "0.5.2",
+    "gulp-watch": "4.3.5",
     "lodash": "4.6.1"
   },
   "scripts": {
