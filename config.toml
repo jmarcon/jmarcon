@@ -43,3 +43,7 @@ theme = "hugo-geo"
     [[params.navlinks]]
     name = "Blog"
     url = "post/"
+
+    [[params.navlinks]]
+    name = "Contato"
+    url = "about/contato"

@@ -6,7 +6,7 @@
     <h1>{{ .Title }}</h1>
   </header>
 
-  <article>
+  <div>
     <form class="form-horizontal" method="post" action="//formspree.io/juliano.marcon@outlook.com">
       <!-- action="https://formkeep.com/f/da94034c18c6" -->
       <fieldset>
@@ -62,7 +62,12 @@
       <input type="hidden" name="_next" value="sucesso"/>
     </form>
     {{ .Content }}
-  </article>
+    <span><i class="fa fa-phone"></i> {{ .Params.phone }} </span><br/>
+    <span><i class="fa fa-envelope"></i> {{ .Params.email_name }} <i class="fa fa-at"></i> {{ .Params.email_server }}</span><br/>
+    <span><i class="fa fa-calendar-o"></i> {{ .Params.birth }} </span><br/>
+
+    <br/>
+  </div>
 
 </main>
 {{ partial "footer.html" . }}
