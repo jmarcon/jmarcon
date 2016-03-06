@@ -5,42 +5,44 @@ var shell = require('gulp-shell');
 var git = require('gulp-git');
 
 /// Commit do Fonte
-gulp.task('commit-source', function(){
+gulp.task('commit-source', function() {
   gulp.src('.')
-      .pipe(git.add())
-      .pipe(git.commit('Publish ' + (new Date())));
+    .pipe(git.add())
+    .pipe(git.commit('Publish ' + (new Date())));
 
-  git.push('origin', 'master', {args: " -f"}, function (err) {
+  git.push('origin', 'master', {
+    args: " -f"
+  }, function(err) {
     if (err) throw err;
   });
 });
 
 /// Comilar o Hugo
 gulp.task('compile-hugo', ['compile-hugo-github', 'compile-hugo-jm']);
-gulp.task('compile-hugo-github', function(){
+gulp.task('compile-hugo-github', function() {
   shell.task([
     'hugo -D --config="config.toml"' //jmarcon.github.io
   ]);
 });
-gulp.task('compile-hugo-jm', function(){
+gulp.task('compile-hugo-jm', function() {
   shell.task([
-    'hugo --config="config_jm.toml"'  //www.julianomarcon.com.br
+    'hugo --config="config_jm.toml"' //www.julianomarcon.com.br
   ]);
 });
 
 /// Compilar o LESS
 gulp.task('less', ['less-github', 'less-jm']);
-gulp.task('less-github', function(){
+gulp.task('less-github', function() {
   // jmarcon.github.io
   gulp.src('public/less/*.less')
-      .pipe(less())
-      .pipe(gulp.dest('public/css'));
+    .pipe(less())
+    .pipe(gulp.dest('public/css'));
 });
-gulp.task('less-jm', function(){
+gulp.task('less-jm', function() {
   // www.julianomarcon.com.br
   gulp.src('www/less/*.less')
-      .pipe(less())
-      .pipe(gulp.dest('public/css'));
+    .pipe(less())
+    .pipe(gulp.dest('public/css'));
 });
 
 /// Minificar o CSS
@@ -48,13 +50,17 @@ gulp.task('minify-css', ['minify-css-github', 'minify-css-jm']);
 gulp.task('minify-css-github', function() {
   // jmarcon.github.io
   gulp.src('public/css/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(cleanCSS({
+      compatibility: 'ie8'
+    }))
     .pipe(gulp.dest('public/css'));
 });
 gulp.task('minify-css-jm', function() {
   // www.julianomarcon.com.br
   gulp.src('www/css/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(cleanCSS({
+      compatibility: 'ie8'
+    }))
     .pipe(gulp.dest('www/css'));
 });
 
@@ -64,13 +70,13 @@ gulp.task('minify-css-jm', function() {
 
 /// Publicar
 gulp.task('publish', ['publish-github', 'publish-jm']);
-gulp.task('publish-github', function(){
+gulp.task('publish-github', ['compile-hugo-github', 'less-github', 'minify-css-github'], function() {
   shell.task([
     'echo ' + (new Date()),
     'sh _publish.sh"' //jmarcon.github.io
   ]);
 });
-gulp.task('publish-jm', function(){
+gulp.task('publish-jm', function() {
   shell.task([
     'echo FTP'
   ]);
@@ -79,29 +85,26 @@ gulp.task('publish-jm', function(){
 
 
 /// Pontos de Entrada
-gulp.task('default',
-  [
-    'commit-source',
-    'compile-hugo',
-    'less',
-    'minify-css',
-    'publish'
-  ]);
+gulp.task('default', [
+  'commit-source',
+  'compile-hugo',
+  'less',
+  'minify-css',
+  'publish'
+]);
 
-gulp.task('github',
-  [
-    'commit-source',
-    'compile-hugo-github',
-    'less-github',
-    'minify-css-github',
-    'publish-github'
-  ]);
+gulp.task('github', [
+  'commit-source',
+  'compile-hugo-github',
+  'less-github',
+  'minify-css-github',
+  'publish-github'
+]);
 
-gulp.task('jm',
-  [
-    'commit-source',
-    'compile-hugo-jm',
-    'less-jm',
-    'minify-css-jm',
-    'publish-jm'
-  ]);
+gulp.task('jm', [
+  'commit-source',
+  'compile-hugo-jm',
+  'less-jm',
+  'minify-css-jm',
+  'publish-jm'
+]);
