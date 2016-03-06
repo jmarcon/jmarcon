@@ -29,7 +29,7 @@ gulp.task('compile-hugo-github', function(callback) {
   exec('hugo -D --config="config.toml"', function (err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
-    cb(err);
+    callback(err);
   });
 });
 gulp.task('compile-hugo-jm', function() {
