@@ -7,26 +7,9 @@
   </header>
 
   <article class="about" id="about">
-
-    <h2>Profissional</h2>
     {{ range .Data.Pages }}
         {{ .Render "summary" }}
     {{ end }}
-
-    {{ range .Data.Pages.ByDate.Reverse "Section" "professional" }}
-      {{ .Render "summary"}}
-    {{ end }}
-
-    <h2>Educação</h2>
-    {{ range .Data.Pages.ByDate.Reverse "Section" "education" }}
-      {{ .Render "summary"}}
-    {{ end }}
-
-    <h2>Certificações</h2>
-    {{ range .Data.Pages.ByDate.Reverse "Section" "certification" }}
-      {{ .Render "summary"}}
-    {{ end }}
-
   </article>
 
 </main>
