@@ -2,7 +2,8 @@ var fs = require('fs');
 var gulp = require('gulp');
 var less = require('gulp-less');
 var cleanCSS = require('gulp-clean-css');
-var exec = require('gulp-exec');
+//var exec = require('gulp-exec');
+var exec = require('child_process').exec;
 var git = require('gulp-git');
 
 gulp.task('README', function(callback) {
