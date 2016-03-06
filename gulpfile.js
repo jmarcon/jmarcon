@@ -24,11 +24,12 @@ gulp.task('commit-source', ['README'], function(callback) {
 /// Comilar o Hugo
 gulp.task('compile-hugo', ['compile-hugo-github', 'compile-hugo-jm']);
 gulp.task('compile-hugo-github', function(callback) {
-
-  gulp.src('.')
-    .pipe(exec('hugo -D --config="config.toml"'))
-    .pipe(exec.reporter()) //jmarcon.github.io
-    .on('end', function() { callback(); });
+  //jmarcon.github.io
+  exec('hugo -D --config="config.toml"', function (err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    cb(err);
+  });
 });
 gulp.task('compile-hugo-jm', function() {
   gulp.src('.')
