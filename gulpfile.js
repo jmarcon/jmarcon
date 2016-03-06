@@ -4,19 +4,7 @@ var cleanCSS = require('gulp-clean-css');
 var shell = require('gulp-shell');
 var git = require('gulp-git');
 
-gulp.task('publish_jm', shell.task([
-  'sh _publish_jm.sh'
-]));
-
-gulp.task('publish_git', shell.task([
-  'hugo -D --config="config.toml"',
-  'cd public',
-  'git add .',
-  'git commit -a -m "Publish $NOW"',
-  'git push -f origin master'
-]));
-
-gulp.task('push_src', function() {
+gulp.task('commit-source', function(){
   gulp.src('.')
       .pipe(git.add())
       .pipe(git.commit('Publish ' + (new Date())));
@@ -26,19 +14,72 @@ gulp.task('push_src', function() {
   });
 });
 
-gulp.task('less', function() {
+gulp.task('compile-hugo', ['compile-hugo-github', 'compile-hugo-jm']);
+
+gulp.task('compile-hugo-github', function(){
+  shell.task([
+    'hugo -D --config="config.toml"' //jmarcon.github.io
+  ]);
+});
+
+gulp.task('compile-hugo-jm', function(){
+  shell.task([
+    'hugo --config="config_jm.toml"'  //www.julianomarcon.com.br
+  ]);
+});
+
+gulp.task('less', ['less-github', 'less-jm']);
+
+gulp.task('less-github', function(){
+  // jmarcon.github.io
   gulp.src('public/less/*.less')
       .pipe(less())
       .pipe(gulp.dest('public/css'));
 });
 
-gulp.task('minify-css', function() {
-  return gulp.src('public/css/*.css')
+gulp.task('less-jm', function(){
+  // www.julianomarcon.com.br
+  gulp.src('www/less/*.less')
+      .pipe(less())
+      .pipe(gulp.dest('public/css'));
+});
+
+gulp.task('minify-css', ['minify-css-github', 'minify-css-jm']);
+
+gulp.task('minify-css-github', function() {
+  // jmarcon.github.io
+  gulp.src('public/css/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('public/css'));
 });
 
-gulp.task('default', ['push_src', 'less', 'minify-css']);
+gulp.task('minify-css-jm', function() {
+  // www.julianomarcon.com.br
+  gulp.src('www/css/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('www/css'));
+});
 
-gulp.task('github', ['default', 'publish_git']);
-gulp.task('jm', ['default', 'publish_jm']);
+gulp.task('default',
+  [
+    'commit-source',
+    'compile-hugo',
+    'less',
+    'minify-css'
+  ]);
+
+gulp.task('github',
+  [
+    'commit-source',
+    'compile-hugo-github',
+    'less-github',
+    'minify-css-github'
+  ]);
+
+gulp.task('jm',
+  [
+    'commit-source',
+    'compile-hugo-jm',
+    'less-jm',
+    'minify-css-jm'
+  ]);
