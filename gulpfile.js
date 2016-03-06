@@ -1,7 +1,7 @@
 var gulp = require('gulp');
 var less = require('gulp-less');
 var cleanCSS = require('gulp-clean-css');
-var shell = require('gulp-shell');
+var exec = require('gulp-exec');
 var git = require('gulp-git');
 
 
@@ -20,13 +20,16 @@ gulp.task('commit-source', function(callback) {
 /// Comilar o Hugo
 gulp.task('compile-hugo', ['compile-hugo-github', 'compile-hugo-jm']);
 gulp.task('compile-hugo-github', function(callback) {
+
   gulp.src('.')
-  .pipe(shell.task(['hugo -D --config="config.toml"'])) //jmarcon.github.io
-  .on('end', function() { callback(); });
+    .pipe(exec('hugo -D --config="config.toml"'))
+    .pipe(exec.reporter()) //jmarcon.github.io
+    .on('end', function() { callback(); });
 });
 gulp.task('compile-hugo-jm', function() {
   gulp.src('.')
-  .pipe(shell.task(['hugo --config="config_jm.toml"'])) //www.julianomarcon.com.br
+  .pipe(exec('hugo --config="config_jm.toml"'))
+  .pipe(exec.reporter()) //www.julianomarcon.com.br
   .on('end', function() { callback(); });
 });
 
