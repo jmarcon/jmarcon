@@ -66,6 +66,7 @@ gulp.task('minify-css-jm', function() {
 gulp.task('publish', ['publish-github', 'publish-jm']);
 gulp.task('publish-github', function(){
   shell.task([
+    'echo ' + (new Date()),
     'sh _publish.sh"' //jmarcon.github.io
   ]);
 });
