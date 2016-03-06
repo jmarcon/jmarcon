@@ -4,6 +4,7 @@ var cleanCSS = require('gulp-clean-css');
 var shell = require('gulp-shell');
 var git = require('gulp-git');
 
+
 /// Commit do Fonte
 gulp.task('commit-source', function(callback) {
   gulp.src('.')
