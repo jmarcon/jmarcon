@@ -1,12 +1,16 @@
+var fs = require('fs');
 var gulp = require('gulp');
 var less = require('gulp-less');
 var cleanCSS = require('gulp-clean-css');
 var exec = require('gulp-exec');
 var git = require('gulp-git');
 
+gulp.task('README', function(callback) {
+  fs.writeFile('README.md', (new Date()), callback);
+});
 
 /// Commit do Fonte
-gulp.task('commit-source', function(callback) {
+gulp.task('commit-source', ['README'], function(callback) {
   gulp.src('.')
     .pipe(git.add())
     .pipe(git.commit('Publish ' + (new Date())))
