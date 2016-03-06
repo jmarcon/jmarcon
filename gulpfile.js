@@ -5,16 +5,14 @@ var shell = require('gulp-shell');
 var git = require('gulp-git');
 
 /// Commit do Fonte
-gulp.task('commit-source', function() {
+gulp.task('commit-source', function(callback) {
   gulp.src('.')
     .pipe(git.add())
-    .pipe(git.commit('Publish ' + (new Date())));
+    .pipe(git.commit('Publish ' + (new Date())))
+    .pipe(git.push('origin','master', {args: " -f"}, function(err){ if(err) throw err; }))
+    .on('end', function() { done(); });
 
-  git.push('origin', 'master', {
-    args: " -f"
-  }, function(err) {
-    if (err) throw err;
-  });
+  callback();
 });
 
 /// Comilar o Hugo
