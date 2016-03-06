@@ -4,6 +4,7 @@ var cleanCSS = require('gulp-clean-css');
 var shell = require('gulp-shell');
 var git = require('gulp-git');
 
+/// Commit do Fonte
 gulp.task('commit-source', function(){
   gulp.src('.')
       .pipe(git.add())
@@ -14,29 +15,27 @@ gulp.task('commit-source', function(){
   });
 });
 
+/// Comilar o Hugo
 gulp.task('compile-hugo', ['compile-hugo-github', 'compile-hugo-jm']);
-
 gulp.task('compile-hugo-github', function(){
   shell.task([
     'hugo -D --config="config.toml"' //jmarcon.github.io
   ]);
 });
-
 gulp.task('compile-hugo-jm', function(){
   shell.task([
     'hugo --config="config_jm.toml"'  //www.julianomarcon.com.br
   ]);
 });
 
+/// Compilar o LESS
 gulp.task('less', ['less-github', 'less-jm']);
-
 gulp.task('less-github', function(){
   // jmarcon.github.io
   gulp.src('public/less/*.less')
       .pipe(less())
       .pipe(gulp.dest('public/css'));
 });
-
 gulp.task('less-jm', function(){
   // www.julianomarcon.com.br
   gulp.src('www/less/*.less')
@@ -44,15 +43,14 @@ gulp.task('less-jm', function(){
       .pipe(gulp.dest('public/css'));
 });
 
+/// Minificar o CSS
 gulp.task('minify-css', ['minify-css-github', 'minify-css-jm']);
-
 gulp.task('minify-css-github', function() {
   // jmarcon.github.io
   gulp.src('public/css/*.css')
     .pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('public/css'));
 });
-
 gulp.task('minify-css-jm', function() {
   // www.julianomarcon.com.br
   gulp.src('www/css/*.css')
@@ -60,12 +58,33 @@ gulp.task('minify-css-jm', function() {
     .pipe(gulp.dest('www/css'));
 });
 
+//
+
+
+
+/// Publicar
+gulp.task('publish', ['publish-github', 'publish-jm']);
+gulp.task('publish-github', function(){
+  shell.task([
+    'sh _publish.sh"' //jmarcon.github.io
+  ]);
+});
+gulp.task('publish-jm', function(){
+  shell.task([
+    'echo FTP'
+  ]);
+});
+
+
+
+/// Pontos de Entrada
 gulp.task('default',
   [
     'commit-source',
     'compile-hugo',
     'less',
-    'minify-css'
+    'minify-css',
+    'publish'
   ]);
 
 gulp.task('github',
@@ -73,7 +92,8 @@ gulp.task('github',
     'commit-source',
     'compile-hugo-github',
     'less-github',
-    'minify-css-github'
+    'minify-css-github',
+    'publish-github'
   ]);
 
 gulp.task('jm',
@@ -81,5 +101,6 @@ gulp.task('jm',
     'commit-source',
     'compile-hugo-jm',
     'less-jm',
-    'minify-css-jm'
+    'minify-css-jm',
+    'publish-jm'
   ]);
