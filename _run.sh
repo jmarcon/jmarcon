@@ -1,3 +1,2 @@
 #!/bin/bash
-hugo server -D
-#t hugo-geo
+hugo server -Dt hugo-geo

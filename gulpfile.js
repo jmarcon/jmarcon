@@ -46,8 +46,14 @@ gulp.task('compile-hugo-jm', function() {
 });
 
 /// Compilar o LESS
-gulp.task('less', ['less-github', 'less-jm']);
-gulp.task('less-github', ['compile-hugo-github'], function(callback) {
+gulp.task('less', ['less-local','less-github', 'less-jm']);
+gulp.task('less-theme', function(callback){
+  gulp.src('themes/hugo-geo/static/less/*.less')
+  .pipe(less())
+  .pipe(gulp.dest('themes/hugo-geo/static/css'))
+  .on('end', function(){ callback(); });
+});
+gulp.task('less-github', ['less-theme','compile-hugo-github'], function(callback) {
   // jmarcon.github.io
   gulp.src('public/less/*.less')
     .pipe(less())
@@ -56,7 +62,7 @@ gulp.task('less-github', ['compile-hugo-github'], function(callback) {
       callback();
     });
 });
-gulp.task('less-jm', ['compile-hugo-jm'], function(callback) {
+gulp.task('less-jm', ['less-theme','compile-hugo-jm'], function(callback) {
   // www.julianomarcon.com.br
   gulp.src('www/less/*.less')
     .pipe(less())
