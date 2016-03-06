@@ -85,6 +85,9 @@ gulp.task('minify-css-jm', ['less-jm'], function(callback) {
 gulp.task('publish', ['publish-github', 'publish-jm']);
 gulp.task('publish-github', ['compile-hugo-github', 'less-github', 'minify-css-github'], function(callback) {
   process.chdir('./public');
+  
+  fs.writeFile('README.md', (new Date()), callback);
+
   gulp.src('.')
     .pipe(git.add())
     .pipe(git.commit('Publish ' + (new Date())))
