@@ -9,7 +9,7 @@ gulp.task('commit-source', function(callback) {
   gulp.src('.')
     .pipe(git.add())
     .pipe(git.commit('Publish ' + (new Date())))
-    .on('end', function() { done(); });
+    .on('end', function() { callback(); });
 
   git.push('origin', 'master', {args: ' -f'}, function(err){
       if (err) throw err;
