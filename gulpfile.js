@@ -111,9 +111,6 @@ gulp.task('default', [
 
 gulp.task('github', [
   'commit-source',
-  'compile-hugo-github',
-  'less-github',
-  'minify-css-github',
   'publish-github'
 ]);
 
