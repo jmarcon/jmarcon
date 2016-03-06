@@ -32,13 +32,13 @@ gulp.task('compile-hugo-jm', function() {
 
 /// Compilar o LESS
 gulp.task('less', ['less-github', 'less-jm']);
-gulp.task('less-github', function() {
+gulp.task('less-github', ['compile-hugo-github'], function() {
   // jmarcon.github.io
   gulp.src('public/less/*.less')
     .pipe(less())
     .pipe(gulp.dest('public/css'));
 });
-gulp.task('less-jm', function() {
+gulp.task('less-jm', ['compile-hugo-jm'], function() {
   // www.julianomarcon.com.br
   gulp.src('www/less/*.less')
     .pipe(less())
@@ -47,7 +47,7 @@ gulp.task('less-jm', function() {
 
 /// Minificar o CSS
 gulp.task('minify-css', ['minify-css-github', 'minify-css-jm']);
-gulp.task('minify-css-github', function() {
+gulp.task('minify-css-github', ['less-github'], function() {
   // jmarcon.github.io
   gulp.src('public/css/*.css')
     .pipe(cleanCSS({
@@ -55,7 +55,7 @@ gulp.task('minify-css-github', function() {
     }))
     .pipe(gulp.dest('public/css'));
 });
-gulp.task('minify-css-jm', function() {
+gulp.task('minify-css-jm', ['less-jm'], function() {
   // www.julianomarcon.com.br
   gulp.src('www/css/*.css')
     .pipe(cleanCSS({
