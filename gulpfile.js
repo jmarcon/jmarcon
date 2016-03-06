@@ -11,7 +11,7 @@ var batch = require('gulp-batch');
 /// watch
 gulp.task('watch', function(callback) {
   watch('**/*.less', batch(function(events, done) {
-    gulp.start('build', done);
+    gulp.start('less-theme', done);
   }));
 });
 
@@ -52,7 +52,7 @@ gulp.task('compile-hugo-jm', function() {
 });
 
 /// Compilar o LESS
-gulp.task('less', ['less-local', 'less-github', 'less-jm']);
+gulp.task('less', ['less-theme', 'less-github', 'less-jm']);
 gulp.task('less-theme', function(callback) {
   gulp.src('themes/hugo-geo/static/less/*.less')
     .pipe(less())
