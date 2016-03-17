@@ -1,9 +1,9 @@
 <div class="certification panel panel-default">
   <div class="panel-body">
-    <div class="col-xs-12 col-sm-3 text-center">
+    <div class="col-xs-6 col-sm-4 col-md-3 text-center">
       <img class="img-responsive" src="/images/{{ .Params.image }}.png" alt="{{ .Params.image }}" />
     </div>
-    <div class="col-xs-12 col-sm-9">
+    <div class="col-xs-6 col-sm-8 col-md-9">
       <h4>{{ .Title }}</h4>
         {{ index $.Site.Data.meses (printf "%d" .Date.Month) }} {{ .Date.Year }}
     </div>
