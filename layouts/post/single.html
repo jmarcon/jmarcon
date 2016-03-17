@@ -12,7 +12,7 @@
   <br/>
   <footer>
     <small>
-          Publicado em: {{ .Date.Day }} {{ index $.Site.Data.meses (printf "%d" .Date.Month) }} {{ .Date.Year }}
+          Publicado em: {{ .Date.Day }} de {{ index $.Site.Data.meses (printf "%d" .Date.Month) }} de {{ .Date.Year }}
           por <b>{{ .Site.Author.name }}</b>
     </small>
   </footer>
@@ -23,5 +23,20 @@
       <hr/>
       {{ template "_internal/disqus.html" . }}
 {{ end }}
+
+
+
+<hr/>
+<div class="text-center">
+  mais
+</div>
+<div class="row">
+  <div class="col-md-6 text-right ">
+    <a class="btn cc-btn-default{{if not .PrevInSection}} disabled{{end}}" href="{{if .PrevInSection}}{{.PrevInSection.Permalink}}{{end}}">{{if not .PrevInSection}} {{else}} {{.PrevInSection.Title}} <i class="fa fa-backward"></i> {{end}}</a>
+  </div>
+  <div class="col-md-6">
+    <a class="btn cc-btn-default{{if not .NextInSection}} disabled{{end}}" href="{{if .NextInSection}}{{.NextInSection.Permalink}}{{end}}">{{if not .NextInSection}} {{else}} <i class="fa fa-forward"></i> {{.NextInSection.Title}} {{end}}</a>
+  </div>
+</div>
 
 {{ partial "footer.html" . }}

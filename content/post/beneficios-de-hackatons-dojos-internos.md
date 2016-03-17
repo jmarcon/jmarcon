@@ -1,11 +1,19 @@
-{
-  "date" : "2016-03-12T15:42:00-03:00",
-  "lastMod" : "2016-03-12T15:42:00-03:00",
-  "draft" : false,
-  "title" : "Benefícios de Hackatons e DoJos internos",
-  "comment" : true,
-  "Author" : "Juliano Marcon"
-}
+---
+date : 2016-03-12T15:42:00-03:00
+lastMod : 2016-03-12T15:42:00-03:00
+draft : false
+title : Benefícios de Hackatons e DoJos internos
+tags :
+  - "DoJo"
+  - "Hackatons"
+  - "Liderança Corporativa"
+  - "Visão Corporativa"
+categories :
+  - "Agilidade"
+  - "Pessoas"
+comment : true
+Author : Juliano Marcon
+---
 
 Grandes empresas executam DoJos ou Hackatons sobre desenvolvimento para
 identificar equipes e profissionais de alto nível para oferecer uma nova
@@ -37,10 +45,10 @@ de software como algo importante para o futuro e não apenas um commodity.
 O cotidiano das pessoas dentro das empresas é algo cheio de responsabilidades e
 dificilmente sobra tempo para inovar.
 
-Eventos como hackatons separam tempo para que os funcionários possam pensar *fora
-da caixa*, exercitar soluções diferentes para os mesmos problemas, criar algo
-novo com conhecimento do todo e discutir sobre o que é mais produtivo para a
-empresa.
+Eventos como hackatons separam tempo para que os funcionários possam pensar
+*fora da caixa*, exercitar soluções diferentes para os mesmos problemas, criar
+algo novo com conhecimento do todo e discutir sobre o que é mais produtivo para
+a empresa.
 
 O evento se torna um investimento em soluções mais rápidas no futuro.
 
@@ -58,7 +66,8 @@ uma integração maior entre times e melhorar o clima organizacional. Não será
 difícil perceber que as principais mudanças de comportamento das pessoas vão
 ocorrer após estes eventos.
 
-Eventos devem, inclusive, promover a integração entre pessoas de times diferentes.
+Eventos devem, inclusive, promover a integração entre pessoas de times
+ferentes.
 
 ### A prática leva a perfeição
 

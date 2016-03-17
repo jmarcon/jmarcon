@@ -12,7 +12,8 @@ theme = "hugo-geo"
 
 [taxonomies]
     tag = "tags"
-    tutorial = "tutorials"
+    tutorial = "tutoriais"
+    category = "categories"
 
 [params]
     # Render the rotating globe in the sidebar
