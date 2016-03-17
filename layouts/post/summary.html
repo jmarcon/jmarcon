@@ -20,7 +20,7 @@
 		<small class="text-muted">
 			{{ $base := .Site.BaseURL }}
 			{{ range $tag := .Params.categories }}
-				<a href="{{ $base }}categories/{{ $tag | urlize }}"><span class="label label-success">{{ . }}</span></a>
+				<a href="{{ $base }}categories/{{ $tag | urlize }}"><span class="label label-primary">{{ . }}</span></a>
 			{{ end }}
 		</small>
 		{{ end }}
