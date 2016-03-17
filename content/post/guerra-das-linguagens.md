@@ -30,7 +30,8 @@ comparativo detalhado baseado em dados e benchmarks.
 
 Isso permite ao time como um todo adquirir conhecimento extra sobre os temas.
 
->Falar é uma necessidade, escutar é uma arte
+> Falar é uma necessidade, escutar é uma arte
+<p class="reference">reference</p>
 
 <br/>
 
