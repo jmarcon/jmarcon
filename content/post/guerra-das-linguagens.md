@@ -31,7 +31,7 @@ comparativo detalhado baseado em dados e benchmarks.
 Isso permite ao time como um todo adquirir conhecimento extra sobre os temas.
 
 > Falar é uma necessidade, escutar é uma arte
-<div class="reference">reference</div>
+<div class="reference">Johann Goethe</div>
 
 <br/>
 
@@ -78,8 +78,9 @@ Não é dificil entender que fixar a visão sobre a perspectiva técnica não va
 fomentar que as pessoas procurem por novas soluções para resolver os requisitos
 do cliente e da solução.
 
->O progresso é impossível sem mudança; e aqueles que não conseguem mudar as
+> O progresso é impossível sem mudança; e aqueles que não conseguem mudar as
 suas mentes não conseguem mudar nada.
+<div class="reference">George Bernard Shaw</div>
 
 <br/>
 
