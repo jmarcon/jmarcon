@@ -114,7 +114,10 @@ em novas tecnologias). Mas isso é assunto para outro post.
 ### Quem ganha a guerra?
 
 Como sempre…  **NINGUÉM**. Mas tenho certeza que existe um maior perdedor:
-**O cliente!**
 
+# <span>&nbsp;&nbsp;&nbsp;&nbsp;</span> **O cliente!**
+
+<br/>
+<br/>
 
 *Lembre-se que:*  **Não existe panacéia tecnológica.**

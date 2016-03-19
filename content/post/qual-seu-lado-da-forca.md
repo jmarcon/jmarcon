@@ -1,7 +1,7 @@
 ---
 date : 2016-03-03T00:19:25-03:00
 lastMod : 2016-03-03T00:19:25-03:00
-draft : true
+draft : false
 title : Qual o seu lado da força?
 tags:
   - "Jedi"
