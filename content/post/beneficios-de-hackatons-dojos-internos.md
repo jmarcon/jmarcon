@@ -13,6 +13,7 @@ categories :
   - "Pessoas"
 comment : true
 Author : Juliano Marcon
+postImage : hackathon.png
 ---
 
 Grandes empresas executam DoJos ou Hackatons sobre desenvolvimento para

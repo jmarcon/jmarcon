@@ -13,4 +13,5 @@ categories :
   - "Pessoas"
 comment : true
 Author : Juliano Marcon
+postImage : padrao.jpg
 ---

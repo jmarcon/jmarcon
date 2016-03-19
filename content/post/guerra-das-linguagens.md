@@ -12,6 +12,7 @@ categories:
   - "Agilidade"
 comment : true
 Author : Juliano Marcon
+postImage : languages.png
 ---
 
 Praticamente todos os dias vejo pessoas se degladiando sobre qual linguagem

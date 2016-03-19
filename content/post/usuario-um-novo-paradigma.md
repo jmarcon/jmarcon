@@ -15,6 +15,7 @@ keywords:
   - ""
 comment: true
 Author: Juliano Marcon
+postImage : iot.png
 ---
 
 Quando as primeiras aplicações eram desenvolvidas, identificava-se os usuários

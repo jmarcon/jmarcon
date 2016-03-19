@@ -13,6 +13,7 @@ categories:
   - "Pessoas"
 comment : true
 Author : Juliano Marcon
+postImage : sides.jpg
 ---
 
 A força existe em todos nós. Mas são nossos sentimentos e atitudes que mostram

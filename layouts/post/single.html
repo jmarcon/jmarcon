@@ -7,7 +7,9 @@
 	</header>
 
 	<article>
-		{{ .Content }}
+      <img class="img-responsive" style="width:100%" src="/images/post/{{ .Params.postimage }}" alt="{{ .Params.postimage }}" />
+      <br/>
+      {{ .Content }}
 	</article>
   <br/>
   <footer>
