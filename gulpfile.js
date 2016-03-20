@@ -36,7 +36,7 @@ gulp.task('commit-source', function(callback) {
 gulp.task('compile-hugo', ['compile-hugo-github', 'compile-hugo-jm']);
 gulp.task('compile-hugo-github', function(callback) {
   //jmarcon.github.io
-  exec('hugo --config="config.toml"', function(err, stdout, stderr) {
+  exec('hugo --config="config_github.toml"', function(err, stdout, stderr) {
     console.log(stdout);
     console.log(stderr);
     callback(err);

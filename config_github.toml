@@ -1,5 +1,5 @@
-BaseURL = "https://www.julianomarcon.com.br/"
-Domain = "www.julianomarcon.com.br"
+BaseURL = "https://jmarcon.github.io/"
+Domain = "jmarcon.github.io"
 RelativeURLs = true
 languageCode = "pt-br"
 title = "Juliano Marcon"
@@ -13,7 +13,8 @@ theme = "hugo-geo"
 
 [taxonomies]
     tag = "tags"
-    tutorial = "tutorials"
+    tutorial = "tutoriais"
+    category = "categories"
 
 [params]
     # Render the rotating globe in the sidebar
@@ -44,3 +45,7 @@ theme = "hugo-geo"
     [[params.navlinks]]
     name = "Blog"
     url = "post/"
+
+    [[params.navlinks]]
+    name = "Contato"
+    url = "about/contato"
