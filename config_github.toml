@@ -1,5 +1,4 @@
 BaseURL = "https://jmarcon.github.io/"
-Domain = "jmarcon.github.io"
 RelativeURLs = true
 languageCode = "pt-br"
 title = "Juliano Marcon"
