@@ -20,6 +20,7 @@ preferem, que a sua escolha é a melhor e que as outras são mais fracas. Todos
 tem ótimos argumentos do motivo pelo qual a sua escolha seria a escolha mais
 evidente para todos. Esse posicionamento forte tem vantagens e desvantagens
 quando se trata de um time de desenvolvimento.
+<!--more-->
 
 ### Vantagens
 

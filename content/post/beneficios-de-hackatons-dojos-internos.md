@@ -20,6 +20,7 @@ Grandes empresas executam DoJos ou Hackatons sobre desenvolvimento para
 identificar equipes e profissionais de alto nível para oferecer uma nova
 oportunidade de participar de algo maior. Muitas vezes, a mesma empresa ignora
 os benefícios de manter eventos como esse dentro da corporação.
+<!--more-->
 
 ### Pagar as promessas de eleição
 

@@ -7,12 +7,13 @@ draft = false
 lastMod = "2016-03-12T19:42:00-03:00"
 postImage = "sync.jpg"
 tags = ["DoJo", "Hackatons", "Liderança Corporativa", "Visão Corporativa"]
-title = "TI Bimodal : Uma questao de respeito"
+title = "TI Bimodal : Uma questão de respeito"
 +++
 
 Agilidade é, com certeza, o termo mais citado quando o futuro é discutido em grandes empresas financeiras ou necessitando se reinventar no mundo da tecnologia.
 
 A existência de um legado exige que as empresas foquem seus esforços em perfis distintos na gestão e investimento de seus recursos de tecnologia de informação.
+<!--more-->
 
 O Gartner define como:
 

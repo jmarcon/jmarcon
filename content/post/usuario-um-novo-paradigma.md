@@ -23,6 +23,7 @@ através de duas informações, nome de usuário e senha. Com a disseminação d
 internet, a grande variedade de meios de acesso (celular, tablet, pc,
 cafeteira.) e o aumento dos riscos sobre as informações do usuário, os
 requisitos para validar e garantir que um indivíduo é realmente ele aumentaram.
+<!--more-->
 
 A pessoa deixou de ser o único tipo de usuário consumidor de produtos e
 serviços. As aplicações passam a ter como requisito autenticar os dispositivos,

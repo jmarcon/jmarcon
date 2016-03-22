@@ -7,11 +7,11 @@
 	</header>
 
 	<article>
-    <div class="jumbotron bkg-responsive" style="
-      background: #000 url('../../../images/post/{{ .Params.postimage }}') no-repeat center center;
-      background-size: cover;
-    "><h2><br/>&nbsp;<br/>&nbsp;</h2></div><br/>
-      {{ .Content }}
+        <img src="{{ .Site.BaseURL }}/images/post/{{ .Params.postimage }}" alt=""
+        class="img-responsive"
+        style="width: 100%; padding-bottom:20px; "/>
+
+    {{ .Content }}
 	</article>
   <br/>
   <footer>
