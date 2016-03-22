@@ -18,6 +18,7 @@ Vejo uma grande parte dos textos falando sobre a dupla de NodeJS com o
 [MongoDB](https://www.mongodb.org). Mas o Cassandra pode ser uma alternativa para
 alguns tipos de aplicações que demandam outros níveis de acessos de escrita e
 leitura.
+<!--more-->
 
 ### Instalando o ambiente.
 
@@ -26,7 +27,6 @@ para adaptar o que vamos ter aqui para outros sistemas.
 
 Para abstrair um pouco vamos utilizar o [Docker](http://www.docker.com) e deixar
 um pouco mais automático com o recurso "docker-compose".
-<!--more-->
 
 No OSX e no Windows, o pessoal do Docker adquiriu o
 [Kitematic](https://www.kitematic.com) que após instalado vai lhe fornecer
