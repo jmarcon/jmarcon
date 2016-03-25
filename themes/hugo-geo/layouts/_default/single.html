@@ -1,0 +1,20 @@
+{{ partial "head.html" . }}
+{{ partial "nav.html" . }}
+
+<main>
+	<header>
+		<h1>{{ .Title }}</h1>
+	</header>
+
+	<article>
+		{{ .Content }}
+	</article>
+</main>
+
+
+{{ if .Site.DisqusShortname }}
+      <hr/>
+      {{ template "_internal/disqus.html" . }}
+{{ end }}
+
+{{ partial "footer.html" . }}

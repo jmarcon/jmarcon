@@ -1,0 +1,13 @@
+name = "hugo-geo"
+license = "MIT"
+licenselink = "https://raw.githubusercontent.com/alexurquhart/hugo-geo/master/LICENSE"
+description = "Blog do Juliano"
+homepage = "https://jmarcon.github.io"
+tags = ["blog"]
+features = ["blog", "responsive", "about"]
+min_version= 0.14
+
+[author]
+    name = "Juliano Marcon"
+    email = "juliano.marcon@gmail.com"
+    url = "https://jmarcon.github.io"
