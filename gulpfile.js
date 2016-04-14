@@ -19,12 +19,12 @@ gulp.task('watch', function(callback) {
 /// Commit do Fonte
 gulp.task('commit-source', function(callback) {
   fs.writeFile('README.md', (new Date()));
-  gulp.src('.')
+  return gulp.src('.')
     .pipe(git.add())
     .pipe(git.commit('Publish ' + (new Date())))
     .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) { if (err) callback(err); }, callback));
 
-  callback();
+  //callback();
 });
 
 /// Comilar o Hugo
