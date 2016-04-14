@@ -8,6 +8,7 @@ var git = require('gulp-git');
 var watch = require('gulp-watch');
 var batch = require('gulp-batch');
 var sequence = require('run-sequence');
+var util = require('gulp-util');
 
 /// watch
 gulp.task('watch', function(callback) {
@@ -21,6 +22,7 @@ gulp.task('commit-source', function(callback) {
   fs.writeFile('README.md', (new Date()));
   return gulp.src('.')
     .pipe(git.add())
+    .on('end', function() { util.log ('git added.'); })
     .pipe(git.commit('Publish ' + (new Date())))
     .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) { if (err) callback(err); }, callback))
     .on('end', function() { callback(); });
