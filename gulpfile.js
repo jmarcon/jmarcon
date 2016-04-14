@@ -21,8 +21,9 @@ gulp.task('commit-source', function(callback) {
   gulp.src('.')
     .pipe(git.add())
     .pipe(git.commit('Publish ' + (new Date())))
-    .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) { if (err) callback(err); }, callback))
-    .on('end', function() { callback(); });
+    .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) { if (err) callback(err); }, callback));
+
+    callback();
 });
 
 /// Comilar o Hugo
@@ -102,8 +103,9 @@ gulp.task('publish-github', ['compile-hugo-github', 'less-github', 'minify-css-g
   gulp.src('.')
     .pipe(git.add())
     .pipe(git.commit('Publish ' + data))
-    .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) {if (err) callback(err);}, callback))
-    .on('end', callback);
+    .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) {if (err) callback(err);}, callback));
+
+    callback();
 });
 
 gulp.task('publish-jm', function() {
