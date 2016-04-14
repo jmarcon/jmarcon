@@ -111,6 +111,7 @@ gulp.task('minify-css-jm', ['less-jm'], function(callback) {
 
 /// Publicar
 gulp.task('publish', ['publish-github', 'publish-jm']);
+
 gulp.task('publish-github', ['compile-hugo-github', 'less-github', 'minify-css-github'], function(callback) {
   process.chdir('./public');
   var data = (new Date());
@@ -129,6 +130,7 @@ gulp.task('publish-github', ['compile-hugo-github', 'less-github', 'minify-css-g
     if (err) throw err;
   }, callback);
 });
+
 gulp.task('publish-jm', function() {
   shell.task([
     'echo FTP'
