@@ -25,6 +25,7 @@ gulp.task('commit-source', function(callback) {
     .on('end', function() { util.log ('git added.'); })
     .pipe(git.commit('Publish ' + (new Date())))
     .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) { if (err) callback(err); }, callback))
+    .pipe(gulp.dest('./tmp'))
     .on('end', function() { callback(); });
 });
 
