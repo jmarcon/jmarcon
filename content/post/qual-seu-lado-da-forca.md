@@ -107,4 +107,4 @@ atenção e evolução.
 Em alguns momentos vai parecer que o lado negro é mais  fácil, mais cômodo e
 tentador.  Mas não  se engane, ele só leva a solidão e a discórdia.
 
-**Que a força esteja com você!**
+**Que a força esteja com você!** 
