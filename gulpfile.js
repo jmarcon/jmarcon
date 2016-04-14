@@ -22,30 +22,29 @@ gulp.task('commit-source', function(callback) {
     .pipe(git.add())
     .pipe(git.commit('Publish ' + (new Date())))
     .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) { if (err) callback(err); }, callback))
-    .on('end', function() {
-      callback();
-    });
+    .on('end', function() { callback(); });
 });
 
 /// Comilar o Hugo
 gulp.task('compile-hugo', ['compile-hugo-github', 'compile-hugo-jm']);
 gulp.task('compile-hugo-github', function(callback) {
   //jmarcon.github.io
-  gulp.pipe(
-    exec('hugo --config="config_github.toml"', function(err, stdout, stderr) {
-      console.log(stdout);
-      console.log(stderr);
-      callback(err);
-    })).on('end', callback);
+  exec('hugo --config="config_github.toml"', function(err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    callback(err);
+  });
+
+  callback();
 });
 gulp.task('compile-hugo-jm', function() {
   //www.julianomarcon.com.br
-  gulp.pipe(
-    exec('hugo --config="config_jm.toml"', function(err, stdout, stderr) {
-      console.log(stdout);
-      console.log(stderr);
-      callback(err);
-    })).on('end',callback);
+  exec('hugo --config="config_jm.toml"', function(err, stdout, stderr) {
+    console.log(stdout);
+    console.log(stderr);
+    callback(err);
+  });
+  callback();
 });
 
 /// Compilar o LESS
@@ -54,9 +53,7 @@ gulp.task('less-theme', function(callback) {
   gulp.src('themes/hugo-geo/static/less/*.less')
     .pipe(less())
     .pipe(gulp.dest('themes/hugo-geo/static/css'))
-    .on('end', function() {
-      callback();
-    });
+    .on('end', function() { callback(); });
 });
 gulp.task('less-github', ['less-theme', 'compile-hugo-github'], function(callback) {
   // jmarcon.github.io
