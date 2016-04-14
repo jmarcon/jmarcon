@@ -23,7 +23,8 @@ gulp.task('commit-source', function(callback) {
     .pipe(git.add())
     .pipe(git.commit('Publish ' + (new Date())));
 
-  return git.push('origin', 'master', {args: ' -f'}, function(err) { if (err) callback(err); }, callback);
+  git.push('origin', 'master', {args: ' -f'}, function(err) { if (err) callback(err); }, callback);
+  callback();
 });
 
 /// Comilar o Hugo
