@@ -17,7 +17,7 @@ gulp.task('watch', function(callback) {
 });
 
 /// Commit do Fonte
-gulp.task('commit-source', function(callback) {
+gulp.task('commit-source', function() {
   fs.writeFile('README.md', (new Date()));
   return gulp.src('.')
     .pipe(git.add())
