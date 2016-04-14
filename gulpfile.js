@@ -53,15 +53,17 @@ gulp.task('less', ['less-theme', 'less-github', 'less-jm']);
 gulp.task('less-theme', function(callback) {
   gulp.src('themes/hugo-geo/static/less/*.less')
     .pipe(less())
-    .pipe(gulp.dest('themes/hugo-geo/static/css'))
-    .on('end', function() { callback(); });
+    .pipe(gulp.dest('themes/hugo-geo/static/css'));
+
+  callback();
 });
 gulp.task('less-github', ['less-theme', 'compile-hugo-github'], function(callback) {
   // jmarcon.github.io
   gulp.src('public/less/*.less')
     .pipe(less())
-    .pipe(gulp.dest('public/css'))
-    .on('end', callback);
+    .pipe(gulp.dest('public/css'));
+
+  callback();
 });
 gulp.task('less-jm', ['less-theme', 'compile-hugo-jm'], function(callback) {
   // www.julianomarcon.com.br
@@ -79,8 +81,9 @@ gulp.task('minify-css-github', ['less-github'], function(callback) {
     .pipe(cleanCSS({
       compatibility: 'ie8'
     }))
-    .pipe(gulp.dest('public/css'))
-    .on('end', callback);
+    .pipe(gulp.dest('public/css'));
+
+    callback();
 });
 gulp.task('minify-css-jm', ['less-jm'], function(callback) {
   // www.julianomarcon.com.br
