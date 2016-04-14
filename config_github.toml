@@ -2,7 +2,10 @@ BaseURL = "https://jmarcon.github.io/"
 RelativeURLs = true
 languageCode = "pt-br"
 title = "Juliano Marcon"
-disqusShortname = "jmarcon"
+disqusShortname = "jmarcon.github.io"
+disqus_identifier = "jmarcon"
+disqus_title = "jmarcon"
+disqus_url = "jmarcon.github.io"
 paginate = 4
 theme = "hugo-geo"
 

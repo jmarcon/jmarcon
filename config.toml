@@ -7,7 +7,6 @@ disqus_identifier = "jmarcon"
 disqus_title = "jmarcon"
 disqus_url = "jmarcon.github.io"
 
-
 paginate = 4
 theme = "hugo-geo"
 
