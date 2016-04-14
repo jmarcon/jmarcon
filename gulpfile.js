@@ -21,9 +21,9 @@ gulp.task('commit-source', function(callback) {
   fs.writeFile('README.md', (new Date()));
   gulp.src('.')
     .pipe(git.add())
-    .pipe(git.commit('Publish ' + (new Date())));
+    .pipe(git.commit('Publish ' + (new Date())))
+    .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) { if (err) callback(err); }, callback));
 
-  git.push('origin', 'master', {args: ' -f'}, function(err) { if (err) callback(err); }, callback);
   callback();
 });
 
