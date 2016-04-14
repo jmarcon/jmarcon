@@ -23,8 +23,6 @@ gulp.task('commit-source', function(callback) {
     .pipe(git.commit('Publish ' + (new Date())))
     .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) { if (err) callback(err); }, callback))
     .on('end', function() { callback(); });
-
-    callback();
 });
 
 /// Comilar o Hugo
@@ -46,6 +44,7 @@ gulp.task('compile-hugo-jm', function() {
     console.log(stderr);
     callback(err);
   });
+
   callback();
 });
 
@@ -54,24 +53,22 @@ gulp.task('less', ['less-theme', 'less-github', 'less-jm']);
 gulp.task('less-theme', function(callback) {
   gulp.src('themes/hugo-geo/static/less/*.less')
     .pipe(less())
-    .pipe(gulp.dest('themes/hugo-geo/static/css'));
-
-  callback();
+    .pipe(gulp.dest('themes/hugo-geo/static/css'))
+    .on('end', function() { callback(); });
 });
 gulp.task('less-github', ['less-theme', 'compile-hugo-github'], function(callback) {
   // jmarcon.github.io
   gulp.src('public/less/*.less')
     .pipe(less())
-    .pipe(gulp.dest('public/css'));
-
-  callback();
+    .pipe(gulp.dest('public/css'))
+    .on('end', function() { callback(); });
 });
 gulp.task('less-jm', ['less-theme', 'compile-hugo-jm'], function(callback) {
   // www.julianomarcon.com.br
   gulp.src('www/less/*.less')
     .pipe(less())
     .pipe(gulp.dest('public/css'))
-    .on('end', callback);
+    .on('end', function() { callback(); });
 });
 
 /// Minificar o CSS
@@ -82,9 +79,8 @@ gulp.task('minify-css-github', ['less-github'], function(callback) {
     .pipe(cleanCSS({
       compatibility: 'ie8'
     }))
-    .pipe(gulp.dest('public/css'));
-
-    callback();
+    .pipe(gulp.dest('public/css'))
+    .on('end', function() { callback(); });
 });
 gulp.task('minify-css-jm', ['less-jm'], function(callback) {
   // www.julianomarcon.com.br
@@ -93,7 +89,7 @@ gulp.task('minify-css-jm', ['less-jm'], function(callback) {
       compatibility: 'ie8'
     }))
     .pipe(gulp.dest('www/css'))
-    .on('end', callback);
+    .on('end', function() { callback(); });
 });
 
 /// Publicar
@@ -107,9 +103,8 @@ gulp.task('publish-github', ['compile-hugo-github', 'less-github', 'minify-css-g
   gulp.src('.')
     .pipe(git.add())
     .pipe(git.commit('Publish ' + data))
-    .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) {if (err) callback(err);}, callback));
-
-    callback();
+    .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) {if (err) callback(err);}, callback))
+    .on('end', function() { callback(); });
 });
 
 gulp.task('publish-jm', function() {
@@ -117,8 +112,6 @@ gulp.task('publish-jm', function() {
     'echo FTP'
   ]);
 });
-
-
 
 /// Pontos de Entrada
 gulp.task('default', [
