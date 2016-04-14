@@ -53,8 +53,9 @@ gulp.task('less', ['less-theme', 'less-github', 'less-jm']);
 gulp.task('less-theme', function(callback) {
   gulp.src('themes/hugo-geo/static/less/*.less')
     .pipe(less())
-    .pipe(gulp.dest('themes/hugo-geo/static/css'))
-    .on('end', function() { callback(); });
+    .pipe(gulp.dest('themes/hugo-geo/static/css'));
+    callback();
+    //.on('end', function() { callback(); });
 });
 gulp.task('less-github', ['less-theme', 'compile-hugo-github'], function(callback) {
   // jmarcon.github.io
