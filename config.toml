@@ -2,9 +2,9 @@ BaseURL = "http://localhost:1313/"
 RelativeURLs = true
 languageCode = "pt-br"
 title = "Juliano Marcon"
-disqusShortname = "jmarcon"
-disqus_identifier = "jmarcon"
-disqus_title = "jmarcon"
+disqusShortname = "julianomarcon"
+disqus_identifier = "julianomarcon"
+disqus_title = "julianomarcon"
 disqus_url = "jmarcon.github.io"
 
 paginate = 4

@@ -20,15 +20,23 @@ gulp.task('watch', function(callback) {
 /// Commit do Fonte
 gulp.task('commit-source', function(callback) {
   fs.writeFile('README.md', (new Date()));
-  return gulp.src('.')
+
+  var pkg = require('./package.json');
+  var v = 'v' + pkg.version;
+  var message = 'Release ' + v;
+
+  return gulp.src('')
     .pipe(git.add())
-    .on('end', function() { util.log ('git added.'); })
-    .pipe(git.commit('Publish ' + (new Date())))
-    .on('end', function() { util.log ('git published.'); })
-    .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) { if (err) callback(err); }, callback))
-    .on('end', function() { util.log ('git pusshed.'); })
-    .pipe(gulp.dest('./tmp'))
-    .on('end', function() { callback(); });
+    .pipe(git.commit(message))
+    .pipe(git.tag(v, message))
+    .pipe(git.push(
+      'origin',
+      'master',
+      {args: ' -f --tags'},
+      function(err) {if (err) callback(err);},
+      callback
+    ))
+    .pipe(gulp.dest('./'));
 });
 
 /// Comilar o Hugo
@@ -96,10 +104,22 @@ gulp.task('push-github', function(callback) {
   var data = (new Date());
   fs.writeFile('README.md', data);
 
-  return gulp.src('.')
+  var pkg = require('./package.json');
+  var v = 'v' + pkg.version;
+  var message = 'Release ' + v;
+
+  return gulp.src('')
     .pipe(git.add())
-    .pipe(git.commit('Publish ' + data))
-    .pipe(git.push('origin', 'master', {args: ' -f'}, function(err) {if (err) callback(err);}, callback));
+    .pipe(git.commit(message))
+    .pipe(git.tag(v, message))
+    .pipe(git.push(
+      'origin',
+      'master',
+      {args: ' -f --tags'},
+      function(err) {if (err) callback(err);},
+      callback
+    ))
+    .pipe(gulp.dest('./'));
 });
 
 gulp.task('push-jm', function() {
