@@ -107,12 +107,9 @@ gulp.task('push-github', function(callback) {
     .pipe(git.add())
     .pipe(git.commit(message))
     .pipe(git.tag(v, message))
-    .pipe(git.push(
-      'origin',
-      'master',
-      {args: ' -f --tags'}
-    ))
-    .pipe(gulp.dest('./'));
+    .on('end',
+      function() { git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); }, callback); }
+    );
 });
 
 gulp.task('push-jm', function() {
