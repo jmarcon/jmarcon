@@ -96,7 +96,7 @@ gulp.task('publish', function(callback) {
 });
 
 gulp.task('push-github', ['commit-github'], function(callback) {
-  process.chdir('./public');
+  //process.chdir('./public');
   return git.push('origin','master',{args: ' -f --tags'}, callback);
 });
 
