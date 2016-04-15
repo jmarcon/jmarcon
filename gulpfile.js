@@ -97,18 +97,17 @@ gulp.task('publish', function(callback) {
 
 gulp.task('push-github', ['commit-github'], function(callback) {
   process.chdir('./public');
-  var data = (new Date());
-  fs.writeFile('README.md', data);
-
-  var pkg = require('./package.json');
-  var v = 'v' + pkg.version;
-  var message = 'Release ' + v;
-
   return git.push('origin','master',{args: ' -f --tags', cwd: './public'}, callback);
 });
 
 gulp.task('commit-github', ['push-source'], function(callback){
   process.chdir('./public');
+  var data = (new Date());
+  fs.writeFile('README.md', data);
+  var pkg = require('./package.json');
+  var v = 'v' + pkg.version;
+  var message = 'Release ' + v;
+
   return gulp.src('./public')
     .pipe(git.add())
     .pipe(git.commit(message, { cwd: './public' }));
