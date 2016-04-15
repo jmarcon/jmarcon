@@ -31,8 +31,8 @@ gulp.task('commit-source', function(callback) {
     .pipe(git.tag(v, message))
     .on('end',
       function() { git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); }); }
-    )
-    .pipe(gulp.dest('./'));
+    );
+    //.pipe(gulp.dest('./'));
 });
 
 /// Comilar o Hugo
