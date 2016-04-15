@@ -94,7 +94,7 @@ gulp.task('publish', function(callback) {
    sequence(['github', 'jm'], callback);
 });
 
-gulp.task('push-github', function(callback) {
+gulp.task('push-github', ['commit-source'], function(callback) {
   process.chdir('./public');
   var data = (new Date());
   fs.writeFile('README.md', data);
@@ -112,7 +112,7 @@ gulp.task('push-github', function(callback) {
     );
 });
 
-gulp.task('push-jm', function() {
+gulp.task('push-jm', ['commit-source'], function() {
   return shell.task([
     'echo FTP'
   ]);
@@ -132,7 +132,6 @@ gulp.task('default', function(callback) {
 
 gulp.task('github',  function(callback) {
   return sequence(
-  'commit-source',
   'less-github',
   'minify-css-github',
   'push-github',
@@ -141,7 +140,6 @@ gulp.task('github',  function(callback) {
 
 gulp.task('jm', function(callback) {
   sequence(
-  'commit-source',
   'less-jm',
   'minify-css-jm',
   'push-jm',
