@@ -32,7 +32,7 @@ gulp.task('commit-source', function(callback) {
 });
 
 gulp.task('push-source', ['commit-source'], function(callback){
-  git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); });
+  git.push('origin','master',{args: ' -f --tags'}, callback);
 });
 
 /// Comilar o Hugo
