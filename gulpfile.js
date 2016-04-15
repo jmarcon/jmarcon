@@ -113,9 +113,7 @@ gulp.task('push-github', function(callback) {
     .pipe(git.push(
       'origin',
       'master',
-      {args: ' -f --tags'},
-      function(err) {if (err) callback(err);},
-      callback
+      {args: ' -f --tags'}
     ))
     .pipe(gulp.dest('./'));
 });
