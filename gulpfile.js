@@ -29,7 +29,7 @@ gulp.task('commit-source', function(callback) {
     .pipe(git.add())
     .pipe(git.commit(message));
 
-  git.tag(v, message, function(error){
+  git.tag(v, message, { args: ' -f'}, function(error){
     if(error) return callback(error);
     git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); });
   });
