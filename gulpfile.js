@@ -95,7 +95,7 @@ gulp.task('publish', function(callback) {
    sequence(['github', 'jm'], callback);
 });
 
-gulp.task('push-github', ['push-source'], function(callback) {
+gulp.task('push-github', ['commit-github'], function(callback) {
   process.chdir('./public');
   var data = (new Date());
   fs.writeFile('README.md', data);
@@ -104,14 +104,14 @@ gulp.task('push-github', ['push-source'], function(callback) {
   var v = 'v' + pkg.version;
   var message = 'Release ' + v;
 
-  gulp.src('./public')
-    .pipe(git.add());
+  return git.push('origin','master',{args: ' -f --tags', cwd: './public'}, callback);
+});
 
-  git.commit(message, { cwd: './public', quiet: true});
-  git.tag(v, message, { cwd: './public', quiet: true});
-
-  return git.push('origin','master',{args: ' -f --tags', cwd: './public'}, function(err) { if(err) callback(err); }, callback);
-
+gulp.task('commit-github', ['push-source'], function(callback){
+  process.chdir('./public');
+  return gulp.src('./public')
+    .pipe(git.add())
+    .pipe(git.commit(message, { cwd: './public' }));
 });
 
 gulp.task('push-jm', ['push-source'], function() {
