@@ -97,7 +97,7 @@ gulp.task('publish', function(callback) {
 
 gulp.task('push-github', ['commit-github'], function(callback) {
   process.chdir('./public');
-  return git.push('origin','master',{args: ' -f --tags', cwd: './public'}, callback);
+  return git.push('origin','master',{args: ' -f --tags'}, callback);
 });
 
 gulp.task('commit-github', ['push-source'], function(callback){
