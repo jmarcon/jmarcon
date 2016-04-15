@@ -104,11 +104,12 @@ gulp.task('push-github', ['commit-source'], function(callback) {
   var message = 'Release ' + v;
 
   gulp.src('./public')
-    .pipe(git.add())
-    .pipe(git.commit(message))
-    .pipe(git.tag(v, message));
+    .pipe(git.add());
 
-  return git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); }, callback);
+  git.commit(message, { cwd: './public', quiet: true});
+  git.tag(v, message, { cwd: './public', quiet: true});
+
+  return git.push('origin','master',{args: ' -f --tags', cwd: './public'}, function(err) { if(err) callback(err); }, callback);
 
 });
 
