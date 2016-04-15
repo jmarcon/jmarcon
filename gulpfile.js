@@ -108,9 +108,9 @@ gulp.task('commit-github', ['push-source'], function(callback){
   var v = 'v' + pkg.version;
   var message = 'Release ' + v;
 
-  return gulp.src('./public')
+  return gulp.src('./')
     .pipe(git.add())
-    .pipe(git.commit(message, { cwd: './public' }));
+    .pipe(git.commit(message));
 });
 
 gulp.task('push-jm', ['push-source'], function() {
