@@ -103,7 +103,7 @@ gulp.task('push-github', ['commit-source'], function(callback) {
   var v = 'v' + pkg.version;
   var message = 'Release ' + v;
 
-  return gulp.src('')
+  return gulp.src('./public')
     .pipe(git.add())
     .pipe(git.commit(message))
     .pipe(git.tag(v, message))
