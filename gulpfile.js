@@ -27,11 +27,12 @@ gulp.task('commit-source', function(callback) {
 
   gulp.src('./')
     .pipe(git.add())
-    .pipe(git.tag(v, message))
-    .on('end', function() {git.commit(message);});
+    .pipe(git.commit(message));
 
-  git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); });
-
+  git.tag(v, message, function(error){
+    if(error) return callback(error);
+    git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); });
+  });
 });
 
 /// Comilar o Hugo
