@@ -28,10 +28,10 @@ gulp.task('commit-source', function(callback) {
   gulp.src('./')
     .pipe(git.add())
     .pipe(git.commit(message))
-    .pipe(git.tag(v, message))
-    .on('end',
-      function() { git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); }, callback); }
-    );
+    .pipe(git.tag(v, message));
+
+  git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); }, callback);
+    
 });
 
 /// Comilar o Hugo
