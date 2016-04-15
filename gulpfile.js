@@ -131,7 +131,7 @@ gulp.task('default', function(callback) {
   );
 });
 
-gulp.task('github', ['push-source'], function(callback) {
+gulp.task('github', function(callback) {
   return sequence(
   'less-github',
   'minify-css-github',
