@@ -24,16 +24,15 @@ gulp.task('commit-source', function(callback) {
 
   var pkg = require('./package.json');
   var v = 'v' + pkg.version + ' : ' + date;
-  var message = 'Release ' + v + ' : ' + date;
+  var message = 'Release ' + v;
 
-  gulp.src('./')
+  return gulp.src('./')
     .pipe(git.add())
     .pipe(git.commit(message));
+});
 
-  return git.tag(v, message, { args: ' -f'}, function(error){
-    if(error) return callback(error);
-    git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); });
-  });
+gulp.task('push-source', ['commit-source'], function(callback){
+  git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); });
 });
 
 /// Comilar o Hugo
@@ -96,7 +95,7 @@ gulp.task('publish', function(callback) {
    sequence(['github', 'jm'], callback);
 });
 
-gulp.task('push-github', ['commit-source'], function(callback) {
+gulp.task('push-github', ['push-source'], function(callback) {
   process.chdir('./public');
   var data = (new Date());
   fs.writeFile('README.md', data);
@@ -115,7 +114,7 @@ gulp.task('push-github', ['commit-source'], function(callback) {
 
 });
 
-gulp.task('push-jm', ['commit-source'], function() {
+gulp.task('push-jm', ['push-source'], function() {
   return shell.task([
     'echo FTP'
   ]);
