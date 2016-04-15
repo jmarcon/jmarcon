@@ -19,11 +19,12 @@ gulp.task('watch', function(callback) {
 
 /// Commit do Fonte
 gulp.task('commit-source', function(callback) {
-  fs.writeFile('README.md', (new Date()));
+  var date = new Date();
+  fs.writeFile('README.md', (date));
 
   var pkg = require('./package.json');
-  var v = 'v' + pkg.version;
-  var message = 'Release ' + v;
+  var v = 'v' + pkg.version + ' : ' + date;
+  var message = 'Release ' + v + ' : ' + date;
 
   gulp.src('./')
     .pipe(git.add())
