@@ -121,7 +121,6 @@ gulp.task('push-jm', ['commit-source'], function() {
 /// Pontos de Entrada
 gulp.task('default', function(callback) {
   sequence(
-  'commit-source',
   ['compile-hugo-github', 'compile-hugo-jm'],
   ['less-github', 'less-jm'],
   ['minify-css-github', 'minify-css-jm'],
