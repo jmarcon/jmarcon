@@ -1,12 +1,12 @@
 +++
 Author = "Juliano Marcon"
-categories = []
+categories = ["Sistemas", "Mercado", "Gestão"]
 comment = true
 date = "2016-03-25T14:26:38-03:00"
 draft = false
 lastMod = "2016-03-12T15:42:00-03:00"
 postImage = "gears.jpg"
-tags = []
+tags = ['Gestão','Opnião']
 title = "Outsourcing: Riscos e Oportunidades"
 +++
 O Outsourcing é uma pratica de terceirização através da aquisição de bens e serviços de fornecedores externos. Assim, em tecnologia, é possível ver empresas subcontrantando um ou mais fornecedores para execução de serviços ou até mesmo um processo completo de negócio.
