@@ -25,14 +25,13 @@ gulp.task('commit-source', function(callback) {
   var v = 'v' + pkg.version;
   var message = 'Release ' + v;
 
-  return gulp.src('')
+  gulp.src('')
     .pipe(git.add())
     .pipe(git.commit(message))
     .pipe(git.tag(v, message))
     .on('end',
       function() { git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); }); }
-    );
-    //.pipe(gulp.dest('./'));
+  );
 });
 
 /// Comilar o Hugo
