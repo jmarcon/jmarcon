@@ -33,8 +33,7 @@ gulp.task('commit-source', function(callback) {
       'origin',
       'master',
       {args: ' -f --tags'},
-      function(err) {if (err) callback(err);},
-      callback
+      function(err) {if (err) callback(err);}
     ))
     .pipe(gulp.dest('./'));
 });
