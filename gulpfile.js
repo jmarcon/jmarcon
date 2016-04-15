@@ -30,8 +30,8 @@ gulp.task('commit-source', function(callback) {
     .pipe(git.commit(message))
     .pipe(git.tag(v, message));
 
-  git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); }, callback);
-    
+  return git.push('origin','master',{args: ' -f --tags'}, function(err) { if(err) callback(err); }, callback);
+
 });
 
 /// Comilar o Hugo
