@@ -16,7 +16,7 @@ de recursos humanos. Mas, será que isso está tornando as pessoas realmente
 mais produtivas?
 <!--more-->
 
-[Nossos cerebros não foram feitos para serem multitarefas](https://www.theguardian.com/science/2015/jan/18/modern-world-bad-for-brain-daniel-j-levitin-organized-mind-information-overload). 
+[Nossos cerebros não foram feitos para serem multitarefa](https://www.theguardian.com/science/2015/jan/18/modern-world-bad-for-brain-daniel-j-levitin-organized-mind-information-overload). 
 Seu design foi construído para
 focar em uma coisa de cada vez e bombardea-lo com varios tipos de informação apenas
 deixa ele mais lento.
