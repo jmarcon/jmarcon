@@ -16,7 +16,7 @@ postImage : meanjs.png
 Vejo que atualmente muito se fala sobre MEAN Stack. Em resumo é uma pilha de
 tecnologias para desenvolvimento web baseada em JavaScript. Não pretendo discutir
 se a linguagem é a melhor. Vou apresentar as vantagens e desvantagens de basear
-todo o ambiente em uma única linguagem. 
+todo o ambiente em uma única linguagem.
 <!--more-->
 
 Se seu foco é aprender sobre o MEAN, pode encontrar informações agrupadas em
