@@ -75,7 +75,7 @@ módulos nas aplicações.
 <div class="row">
   <div class="col-xs-2"></div>
   <div class="col-xs-8 text-center">
-    <img src="../../images/post/js_back_front_joke.jpg" alt="Tudo javascript"
+    <img src="https://https://jmarcon.github.io/images/post/js_back_front_joke.jpg" alt="Tudo javascript"
     class="img-responsive"
     style="width:100%; max-width:400px">
   </div>
@@ -133,7 +133,7 @@ débito técnico que nunca poderão pagar sem reescrever todo o código.
 <div class="row">
   <div class="col-xs-2"></div>
   <div class="col-xs-8 text-center">
-    <img src="../../images/post/MEAN-Stack-Expertise.jpg" alt="Não é pouca coisa"
+    <img src="https://https://jmarcon.github.io/images/post/MEAN-Stack-Expertise.jpg" alt="Não é pouca coisa"
     class="img-responsive"
     style="width:100%; max-width:400px">
   </div>
