@@ -20,7 +20,7 @@
       <description>
         {{ "<![CDATA[" | safeHTML }}
           <img src="{{ .Site.BaseURL }}images/post/{{ .Params.postimage }}" alt="{{ .Params.postimage }}" />
-          {{ .Content | html }}
+          {{ .Content }}
         ]]>
       </description>
     </item>
