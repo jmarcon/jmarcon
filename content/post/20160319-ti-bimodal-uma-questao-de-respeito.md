@@ -44,7 +44,7 @@ Equipes do Modo1 devem ter autonomia para fazer as experimentações necessária
 
 Ambas as partes devem respeitar seus pares em relação a evolução tecnológica da empresa e trabalharem juntos para construir um modelo de trabalho onde a negociação entre os times resulte em uma sincronização dos ciclos de entrega garantindo evolução contínua com grandes lançamentos em ciclos mais longos.
 
-<img src="https://https://jmarcon.github.io/images/post/bimodal.png" class="img-responsive" alt="Bimodal IT cycles" />
+<img src="https://jmarcon.github.io/images/post/bimodal.png" class="img-responsive" alt="Bimodal IT cycles" />
 
 É essencial que os times do Modo2 se preparem para um mundo de [objetos conectados na internet](https://pt.wikipedia.org/wiki/Internet_das_Coisas
 ) a todo momento, a [monitoração da interação social](https://en.wikipedia.org/wiki/Social_media_measurement) de seu cliente diante da marca, disponibilização de produtos e serviços em canais que nem mesmo existem atualmente, identificação e segurança do usuário no mundo digital, computação em nuvem e os possíveis concorrentes que esses modelos podem trazer ([SaaS](https://pt.wikipedia.org/wiki/Software_como_serviço
