@@ -2,9 +2,9 @@
 Author = "Juliano Marcon"
 categories = ["Agilidade", "Pessoas", "Programação"]
 comment = true
-date = "2016-04-17T17:53:07-03:00"
+date = "2016-04-18T17:53:07-03:00"
 draft = false
-lastMod = "2016-03-12T15:42:00-03:00"
+lastMod = "2016-03-18T22:19:00-03:00"
 postImage = "soft-skills.jpg"
 tags = ["Liderança Corporativa", "Visão Corporativa"]
 title = "Como ser um desenvolvedor melhor"
