@@ -18,8 +18,10 @@
       {{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
       <guid>{{ .Permalink }}</guid>
       <description>
+        <![CDATA[
         <img src="{{ .Site.BaseURL }}images/post/{{ .Params.postimage }}" alt="{{ .Params.postimage }}" />
         {{ .Content | html }}
+        ]]>
       </description>
     </item>
     {{ end }}
