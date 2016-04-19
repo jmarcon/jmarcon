@@ -10,9 +10,10 @@ tags:
 categories:
   - "Software"
 keywords:
-  - ""
-  - ""
-  - ""
+  - "Autenticação"
+  - "Autorização"
+  - "Desenvolvimento"
+  - "Arquitetura"
 comment: true
 Author: Juliano Marcon
 postImage : iot.png
