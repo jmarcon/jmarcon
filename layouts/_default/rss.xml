@@ -19,10 +19,10 @@
       <guid>{{ .Permalink }}</guid>
       <description>
         {{ .Content | html }}
-        <![CDATA[
-        <img src="{{ .Site.BaseURL }}images/post/{{ .Params.postimage }}" alt="{{ .Params.postimage }}" />
-        ]]>
       </description>
+      <media:content
+        url="{{ .Site.BaseURL }}images/post/{{ .Params.postimage }}" 
+        type="image/jpeg" />
     </item>
     {{ end }}
   </channel>
