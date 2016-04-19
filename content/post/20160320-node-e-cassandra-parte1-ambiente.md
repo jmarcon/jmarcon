@@ -37,7 +37,7 @@ todos os requisitos necessários para criar nosso ambiente.
 Vamos começar simplesmente criando uma arvore de diretórios que vai nos apoiar
 nesse projeto.
 
-Crie a seguinte extrutura na sua maquina:
+Crie a seguinte estrutura na sua maquina:
 
 ~~~javascript
 [cassandra_docker]
@@ -120,7 +120,7 @@ docker-compose up -d cassandra
 ~~~
 
 É possível iniciar o Kitematic e ver as maquinas criadas. Apenas a maquina do
-cassandra estará rodando e estará acessivel pelo endereço 192.168.99.100:27017 se
+cassandra estará rodando e estará acessível pelo endereço 192.168.99.100:27017 se
 quiser utilizar uma GUI para acessar o banco.
 
 > O IP ***192.168.99.100*** é atribuído para a maquina virtual (virtualbox) criada como

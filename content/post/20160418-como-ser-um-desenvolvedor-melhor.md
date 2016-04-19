@@ -41,7 +41,7 @@ Confie que as pessoas farão seu trabalho!
 
 Pratique isso com todos que você conhece e que interagem com seu trabalho. Entenda
 que negócios e seu time serão os maiores afetados pelas decisões que você tomar. Não
-é possível ter colaboracão com o cliente sem se colocar no lugar dele, muito menos
+é possível ter colaboração com o cliente sem se colocar no lugar dele, muito menos
 responder a mudanças de forma satisfatória.
 
 Nunca assuma que sabe o motivo de uma descisão a não ser que esteja na sala
@@ -52,16 +52,16 @@ quando ela foi tomada.
 Indivíduos e interação entre eles é essencial para entregar valor da melhor forma.
 É importante saber que suas atividades vão impactar as pessoas ao seu redor e as
 suas entregas vão melhorar a vida de varias pessoas. Pessoas relacionadas à
-negócios e desenvolvedores devem trabalhar em conjunto e diáriamente,
+negócios e desenvolvedores devem trabalhar em conjunto e diariamente,
 durante todo o curso do projeto.
 
 Compartilhe o que sabe e o que aprendeu com as pessoas ao seu redor e sempre
 peça para que elas façam o mesmo com você. Lembre-se: O método mais
-eficiente de transimitir informações é através de uma conversa cara a cara.
+eficiente de transmitir informações é através de uma conversa cara a cara.
 
 Cuidado ao entrar em discussões do tipo A contra B. Raramente isso vale o tempo e,
 com certeza, não vai entregar valor. Ja comentei sobre isso em
-[Guerra das Linguages](/post/guerra-das-linguagens).
+[Guerra das Linguagens](/post/guerra-das-linguagens).
 
 ### Criatividade
 
@@ -83,7 +83,7 @@ qualquer tecnologia pode ser a melhor escolha dependendo da necessidade do proje
 e a capacidade do time.
 
 Afinal, as melhores arquiteturas, requisitos e designs emergem de times
-auto-organizaveis.
+auto-organizáveis.
 
 ### Lealdade e respeito com as pessoas
 
@@ -96,10 +96,10 @@ ajustar e otimizar o comportamento de acordo.
 
 # Valores
 
-Se para você os valores acima são obvios, então é bem provável que você já os tenha
+Se para você os valores acima são óbvios, então é bem provável que você já os tenha
 impregnado em seu dia a dia. Neste caso, tenha empatia para com aqueles que não
 mantém esses comportamentos e os apoie a evoluir.
 
 Caso não seja seu caso, é um bom momento para revisar seus valores e pensar sobre
-como serão suas atividades no futuro. O mundo está mudando, talvez seja hora de 
+como serão suas atividades no futuro. O mundo está mudando, talvez seja hora de
 mudar com ele.

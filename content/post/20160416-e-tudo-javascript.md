@@ -36,12 +36,12 @@ para apoiar sua escolha.
 
 #### A linguagem é sempre a mesma
 
-Ter um ambiente onde todos os sistemas falam a mesma lingua ajuda que as pessoas
+Ter um ambiente onde todos os sistemas falam a mesma língua ajuda que as pessoas
 consigam discutir livremente sobre o que pode estar ocorrendo ou como criar uma
 rotina da melhor forma.
 
 A análise da qualidade do código pode ser simplificada, programadores podem fazer
-o code-review de outros mais facilmente, mais e mais pessoas terão a capacidade de
+o **code review** de outros mais facilmente, mais e mais pessoas terão a capacidade de
 avaliar se o que está sendo produzido é feito da melhor forma.
 
 #### Curva de aprendizagem
@@ -50,12 +50,12 @@ A curva de aprendizagem entre os sistemas e tecnologias envolvidos é reduzida e
 evoluir mais rapidamente no conhecimento do código gerado e aumentar a produtividade.
 
 A comunidade pode apoiar facilmente os novos profissionais e uma maior quantidade
-de cursos e treinamentos estão disponíveis para apoiar a evolução de um time em 
+de cursos e treinamentos estão disponíveis para apoiar a evolução de um time em
 formação.
 
 #### A linguagem é bem difundida
 
-Se existe tecnologia em diversos meios com a mesma linguagem, é bem provavel que
+Se existe tecnologia em diversos meios com a mesma linguagem, é bem provável que
 exista um maior numero de pessoas que a conheçam bem. Isso é um aliado forte no
 momento de montar um time de desenvolvedores.
 
@@ -75,7 +75,7 @@ módulos nas aplicações.
 <div class="row">
   <div class="col-xs-2"></div>
   <div class="col-xs-8 text-center">
-    <img src="../../images/post/js_back_front_joke.jpg" alt="Tudo javascript" 
+    <img src="../../images/post/js_back_front_joke.jpg" alt="Tudo javascript"
     class="img-responsive"
     style="width:100%; max-width:400px">
   </div>
@@ -91,7 +91,7 @@ Você deve estar se perguntando: "Mas isso não é uma vantagem?". Nesse caso, e
 lados da moeda. A falsa visão de que, por ser a mesma linguagem, a tecnologia é a mesma
 pode causar um risco para os projetos.
 
-Afinal, um programador de aplicação "front-end" tem um foco de pensamento e racioncínio
+Afinal, um programador de aplicação "front-end" tem um foco de pensamento e raciocínio
 diferente do programador de "back-end" que tem um foco diferente de como armazenar
 informações e deveria ter apoio de conhecedores do banco de dados escolhido.
 
@@ -100,7 +100,7 @@ informações e deveria ter apoio de conhecedores do banco de dados escolhido.
 Agrupei essas duas vantagens para apresentar o risco que ambas podem gerar em um
 projeto novo.
 
-A facilidade de encontrar conhecimento e modulos prontos gera o risco de contratar
+A facilidade de encontrar conhecimento e módulos prontos gera o risco de contratar
 pessoas que apenas sabem utilizar os recursos prontos e não tem conhecimento para
 desenvolver a solução da melhor forma.
 
@@ -121,7 +121,7 @@ de frameworks. Isso é natural, o MEAN é um caso desses, pois utiliza o Express
 
 Os envolvidos no desenvolvimento do projeto acabam por ficar dependentes do uso
 de determinados recursos e acabam restringindo o uso da tecnologia como um todo.
-Muitas vezes estas restrições são agravadas quando novas versões do framwork são
+Muitas vezes estas restrições são agravadas quando novas versões do framework são
 lançadas e a aplicação precisa de refactorings para utilizar o que é novo.
 
 A dependência pode ficar ainda mais evidente quando um framework para de ser
@@ -133,7 +133,7 @@ débito técnico que nunca poderão pagar sem reescrever todo o código.
 <div class="row">
   <div class="col-xs-2"></div>
   <div class="col-xs-8 text-center">
-    <img src="../../images/post/MEAN-Stack-Expertise.jpg" alt="Não é pouca coisa" 
+    <img src="../../images/post/MEAN-Stack-Expertise.jpg" alt="Não é pouca coisa"
     class="img-responsive"
     style="width:100%; max-width:400px">
   </div>

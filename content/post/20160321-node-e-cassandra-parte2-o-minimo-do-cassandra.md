@@ -22,7 +22,7 @@ benchmarks encontrados na internet para que você possa tomar a decisão.
 * [MongoDB](https://www.mongodb.com/blog/post/high-performance-benchmarking-mongodb-and-nosql-systems)
 * [JaxEnter](https://jaxenter.com/evaluating-nosql-performance-which-database-is-right-for-your-data-107481.html)
 
-Neste momento, vamos preparar nossa base para receber os dados de nossa api. Para
+Neste momento, vamos preparar nossa base para receber os dados de nossa API. Para
 nosso exemplo apenas armazenaremos dados simples de email e senha. Apenas focado
 em uma autenticação simples.
 
@@ -31,7 +31,7 @@ Com o Docker do Cassandra rodando como descrito no
 na base de dados.
 
 Se você criou as pastas como indicado, vamos iniciar o prompt do cassandra em uma
-maquina docker temporaria, execute o comando abaixo:
+maquina docker temporária, execute o comando abaixo:
 
 ~~~bash
 docker run -it --link cassandranode_cassandra_1:cassandra --rm cassandra sh -c 'exec cqlsh "$CASSANDRA_PORT_9042_TCP_ADDR"'
@@ -60,7 +60,7 @@ cqlsh> CREATE KEYSPACE demo
    ... };
 ~~~
 
-Os parametros passados para replicação não serão tratados aqui.
+Os parâmetros passados para replicação não serão tratados aqui.
 
 Verifique se o Keyspace foi criado:
 

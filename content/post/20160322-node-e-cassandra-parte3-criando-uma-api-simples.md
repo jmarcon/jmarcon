@@ -85,12 +85,12 @@ router.post('/login', function(req, res) {
 
       var user = result.rows[0];
       if (user == null) {
-        res.json({ message: 'Usuario ou senha invalidos ' });
+        res.json({ message: 'Usuário ou senha inválidos ' });
       }
       else if (user.password != pass) {
         //Se tentar executar um WHERE diretamente no Cassandra ele apresentará
         //um erro. Não criamos um índice para a coluna password.
-        res.json({ message: 'Usuario ou senha invalidos ' });
+        res.json({ message: 'Usuário ou senha inválidos ' });
       }
       else {
         res.json({ message: user.email });
@@ -136,7 +136,7 @@ app.use('/api', router);
 //Iniciando o servidor
 app.listen(port);
 
-console.log('A Magica acontece na porta ' + port);
+console.log('A Mágica acontece na porta ' + port);
 
 ~~~
 
@@ -159,7 +159,7 @@ Assim, vamos iniciar também nossa maquina docker com o comando:
 docker-compose up -d nodejs
 ~~~
 
-Utilize um utilitario como o [Postman](https://www.getpostman.com/) ou o
+Utilize um utilitário como o [Postman](https://www.getpostman.com/) ou o
 [Fiddler](http://www.telerik.com/fiddler) para fazer chamadas na sua API nos
 endereços:
 

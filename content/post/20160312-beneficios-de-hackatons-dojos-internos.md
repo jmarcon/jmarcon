@@ -69,7 +69,7 @@ difícil perceber que as principais mudanças de comportamento das pessoas vão
 ocorrer após estes eventos.
 
 Eventos devem, inclusive, promover a integração entre pessoas de times
-ferentes.
+diferentes.
 
 ### A prática leva a perfeição
 

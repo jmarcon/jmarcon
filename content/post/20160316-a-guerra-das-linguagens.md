@@ -15,7 +15,7 @@ Author : Juliano Marcon
 postImage : languages.png
 ---
 
-Praticamente todos os dias vejo pessoas se degladiando sobre qual linguagem
+Praticamente todos os dias vejo pessoas se digladiando sobre qual linguagem
 preferem, que a sua escolha é a melhor e que as outras são mais fracas. Todos
 tem ótimos argumentos do motivo pelo qual a sua escolha seria a escolha mais
 evidente para todos. Esse posicionamento forte tem vantagens e desvantagens
@@ -76,7 +76,7 @@ O mundo de tecnologia possui cada vez mais novas tecnologias e frameworks
 nascendo e morrendo em todas as linguagens de programação. Cada uma tentando
 resolver um problema.
 
-Não é dificil entender que fixar a visão sobre a perspectiva técnica não vai
+Não é difícil entender que fixar a visão sobre a perspectiva técnica não vai
 fomentar que as pessoas procurem por novas soluções para resolver os requisitos
 do cliente e da solução.
 
@@ -92,13 +92,13 @@ Se o vencedor ganhar pela melhor argumentação sobre a superioridade técnica d
 sua tecnologia sem olhar o que se espera da solução é fácil perceber que o
 desenvolvimento vai iniciar já com débitos técnicos referentes à solução e é
 ainda mais crítico quando percebemos que uma escolha equivocada no início vai
-gerar grandes retrabalhos ou ainda inviabilizar a entrega de valor.
+gerar grandes re-trabalhos ou ainda inviabilizar a entrega de valor.
 
 <br/>
 
 ### Conclusão
 
-Ter uma opnião sobre uma tecnologia é algo de extrema importância para todo
+Ter uma opinião sobre uma tecnologia é algo de extrema importância para todo
 profissional envolvido com o desenvolvimento de soluções mas, tão importante
 quanto, é entender que os conceitos ágeis também se aplicam nesse momento e que
 ter a mente aberta ao diferente é essencial para entregar software com

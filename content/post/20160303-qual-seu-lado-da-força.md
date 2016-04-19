@@ -99,7 +99,7 @@ aceitar riscos para promover a evolução é parte do caminho  luminoso da forç
 ## Área cinzenta
 
 A maioria das pessoas não está no lado luminoso  e nem no lado negro. Quase
-todas ficam em uma  área cinza. Poucas pessoas estão totalmnente no lado negro e
+todas ficam em uma  área cinza. Poucas pessoas estão totalmente no lado negro e
 dificilmente as pessoas conseguem seguir todas as atitudes  necessárias para
 estar sempre no lado luminoso, o caminho é difícil e necessita  de constante
 atenção e evolução.
@@ -107,4 +107,4 @@ atenção e evolução.
 Em alguns momentos vai parecer que o lado negro é mais  fácil, mais cômodo e
 tentador.  Mas não  se engane, ele só leva a solidão e a discórdia.
 
-**Que a força esteja com você!** 
+**Que a força esteja com você!**
