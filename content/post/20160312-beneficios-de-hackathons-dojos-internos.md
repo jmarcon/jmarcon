@@ -2,10 +2,10 @@
 date : 2016-03-12T15:42:00-03:00
 lastMod : 2016-03-12T15:42:00-03:00
 draft : false
-title : Benefícios de Hackatons e DoJos internos
+title : Benefícios de Hackathons e DoJos internos
 tags :
   - "DoJo"
-  - "Hackatons"
+  - "Hackathons"
   - "Liderança Corporativa"
   - "Visão Corporativa"
 categories :
@@ -16,7 +16,7 @@ Author : Juliano Marcon
 postImage : hackathon.png
 ---
 
-Grandes empresas executam DoJos ou Hackatons sobre desenvolvimento para
+Grandes empresas executam DoJos ou Hackathons sobre desenvolvimento para
 identificar equipes e profissionais de alto nível para oferecer uma nova
 oportunidade de participar de algo maior. Muitas vezes, a mesma empresa ignora
 os benefícios de manter eventos como esse dentro da corporação.
@@ -31,13 +31,12 @@ que a diversão do evento não faz parte das atividades e que aquilo era apenas
 uma promessa de eleição.
 
 Executar eventos internamente demonstra consistência e continuidade nos valores
-e que a empresa não apenas quer apenas **parecer** cool, como isso é parte
-integrante da cultura organizacional.
+e que a empresa não quer apenas **parecer** cool, como isso é parte integrante da cultura organizacional.
 
 ### Reconhecimento do conhecimento
 
 Colocar as melhores mentes técnicas para liderar reuniões como essa é parte do
-reconhecimento por sua evolução e conhecimento. As premiações de hackatons,
+reconhecimento por sua evolução e conhecimento. As premiações de Hackathons,
 apesar de serem muitas vezes simbólicas, demonstram o quanto a empresa dá valor
 ao conhecimento técnico e que a instituição entende o setor de desenvolvimento
 de software como algo importante para o futuro e não apenas um commodity.
@@ -47,7 +46,7 @@ de software como algo importante para o futuro e não apenas um commodity.
 O cotidiano das pessoas dentro das empresas é algo cheio de responsabilidades e
 dificilmente sobra tempo para inovar.
 
-Eventos como hackatons separam tempo para que os funcionários possam pensar
+Eventos como Hackathons separam tempo para que os funcionários possam pensar
 *fora da caixa*, exercitar soluções diferentes para os mesmos problemas, criar
 algo novo com conhecimento do todo e discutir sobre o que é mais produtivo para
 a empresa.
