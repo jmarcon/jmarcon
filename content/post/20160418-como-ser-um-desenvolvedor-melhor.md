@@ -15,7 +15,7 @@ de [agilidade](http://www.manifestoagil.com.br/) acabam por determinar comportam
 esperados dos envolvidos na criação de softwares.
 <!--more-->
 
-As habilidades ou "Soft Skills" esperados de um profissional diferenciado no
+As habilidades ou "Soft Skills" do profissional diferenciado no
 mercado atual seriam:
 
 ### Consciência
