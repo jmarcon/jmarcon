@@ -14,6 +14,8 @@ $(document).ready(function() {
 
 	// Change all href links that go out of the origin to open in a new window
 	$("a").not("[href*='" + window.location.origin + "']").attr("target", "new");
+  // Remove the effect for Pagination
+  $(".pagination>li>a[target='new']").removeAttr('target');
 
 	// Highlight all on load if highlighting
 	if (typeof hljs !== "undefined") {
