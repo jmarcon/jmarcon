@@ -31,5 +31,6 @@ deploy:
         packages: git ssh-client
     - leipert/git-push:
         gh_oauth: $GIT_TOKEN
+        repo: jmarcon/jmarcon.github.io
         basedir: public
         gh_pages: true
