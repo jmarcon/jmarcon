@@ -33,13 +33,9 @@ deploy:
             apt-get update
             apt-get -y install git
     - script:
-        name: install node
+        name: install node and NPM install
         code: |
-            apt-get update
             apt-get -y install nodejs
-    - script:
-        name: npm install
-        code: |
             npm install
     # Add SSH-Key to 
     - leipert/add-ssh-key-gh-bb:
