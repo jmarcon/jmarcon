@@ -27,10 +27,17 @@ build:
 
 deploy:
   steps:
-    - install-packages:
-        packages: git ssh-client gulp gulp-cli
+    - script:
+        name: install git
+        code: |
+            apt-get update
+            apt-get -y install git
+    # Add SSH-Key to 
+    - leipert/add-ssh-key-gh-bb:
+        keyname: DEPLOY_SSH
     - leipert/git-push:
-        gh_oauth: $GIT_TOKEN
+        #gh_oauth: $GIT_TOKEN
         repo: jmarcon/jmarcon.github.io
         basedir: public
+        branch: master
         gh_pages: true
