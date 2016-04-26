@@ -41,9 +41,9 @@ deploy:
     - leipert/add-ssh-key-gh-bb:
         keyname: DEPLOY_SSH
     - leipert/git-push:
-        #gh_oauth: $GIT_TOKEN
-        #repo: jmarcon/jmarcon.github.io
-        host: github.io
+        gh_oauth: $GIT_TOKEN
+        repo: jmarcon/jmarcon.github.io
+        #host: github.io
         basedir: public
         branch: master
         gh_pages: true
