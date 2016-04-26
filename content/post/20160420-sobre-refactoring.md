@@ -2,7 +2,7 @@
 Author = "Juliano Marcon"
 categories = ["Agilidade", "Pessoas", "Software"]
 comment = true
-date = "2016-04-24T17:48:35-03:00"
+date = "2016-04-20T17:48:35-03:00"
 draft = false
 lastMod = "2016-03-12T15:42:00-03:00"
 postImage = "tdd.jpg"
