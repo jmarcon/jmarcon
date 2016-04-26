@@ -23,7 +23,7 @@ build:
     - arjen/hugo-build:
         version: "0.14"
         theme: "hugo-geo"
-        flags: --buildDrafts=true
+        flags: --buildDrafts=false
 
 deploy:
   steps:
