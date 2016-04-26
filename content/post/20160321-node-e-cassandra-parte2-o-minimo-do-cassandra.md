@@ -27,7 +27,7 @@ nosso exemplo apenas armazenaremos dados simples de email e senha. Apenas focado
 em uma autenticação simples.
 
 Com o Docker do Cassandra rodando como descrito no
-[artigo anterior](../Node-e-Cassandra-Parte1-Ambiente), vamos agora nos conectar
+[artigo anterior]({{< ref "post/20160320-node-e-cassandra-parte1-ambiente.md" >}}), vamos agora nos conectar
 na base de dados.
 
 Se você criou as pastas como indicado, vamos iniciar o prompt do cassandra em uma

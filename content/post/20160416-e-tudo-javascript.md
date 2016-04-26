@@ -13,10 +13,7 @@ comment : true
 Author : Juliano Marcon
 postImage : meanjs.png
 ---
-Vejo que atualmente muito se fala sobre MEAN Stack. Em resumo é uma pilha de
-tecnologias para desenvolvimento web baseada em JavaScript. Não pretendo discutir
-se a linguagem é a melhor. Vou apresentar as vantagens e desvantagens de basear
-todo o ambiente em uma única linguagem.
+Vejo que atualmente muito se fala sobre MEAN Stack. Em resumo é uma pilha de tecnologias para desenvolvimento web baseada em JavaScript. Não pretendo discutir se a linguagem é a melhor. Vou apresentar as vantagens e desvantagens de basear todo o ambiente em uma única linguagem.
 <!--more-->
 
 Se seu foco é aprender sobre o MEAN, pode encontrar informações agrupadas em
@@ -36,13 +33,11 @@ para apoiar sua escolha.
 
 #### A linguagem é sempre a mesma
 
-Ter um ambiente onde todos os sistemas falam a mesma língua ajuda que as pessoas
-consigam discutir livremente sobre o que pode estar ocorrendo ou como criar uma
-rotina da melhor forma.
+Ter um ambiente onde todos os sistemas falam a mesma língua ajuda as pessoas
+a conseguirem discutir livremente sobre o que pode estar ocorrendo ou como criar um programa da melhor forma possível.
 
 A análise da qualidade do código pode ser simplificada, programadores podem fazer
-o **code review** de outros mais facilmente, mais e mais pessoas terão a capacidade de
-avaliar se o que está sendo produzido é feito da melhor forma.
+o **code review** de outros mais facilmente. Dessa forma, mais e mais pessoas terão a capacidade de avaliar se o que está sendo produzido é feito da melhor forma.
 
 #### Curva de aprendizagem
 
@@ -50,7 +45,7 @@ A curva de aprendizagem entre os sistemas e tecnologias envolvidos é reduzida e
 evoluir mais rapidamente no conhecimento do código gerado e aumentar a produtividade.
 
 A comunidade pode apoiar facilmente os novos profissionais e uma maior quantidade
-de cursos e treinamentos estão disponíveis para apoiar a evolução de um time em
+de cursos e treinamentos estarão disponíveis para apoiar a evolução de um time em
 formação.
 
 #### A linguagem é bem difundida
@@ -59,7 +54,7 @@ Se existe tecnologia em diversos meios com a mesma linguagem, é bem provável q
 exista um maior numero de pessoas que a conheçam bem. Isso é um aliado forte no
 momento de montar um time de desenvolvedores.
 
-Contratar novos profissionais quando o produto evoluir e crescer pode ser um
+Contratar novos profissionais, quando o produto evoluir e crescer, pode ser um
 desafio. Saber que a tecnologia é amplamente conhecida facilita para as equipes
 de recrutamento captar pessoas para o time em crescimento.
 
@@ -89,7 +84,7 @@ módulos nas aplicações.
 
 Você deve estar se perguntando: "Mas isso não é uma vantagem?". Nesse caso, existem dois
 lados da moeda. A falsa visão de que, por ser a mesma linguagem, a tecnologia é a mesma
-pode causar um risco para os projetos.
+pode causar um risco aos projetos.
 
 Afinal, um programador de aplicação "front-end" tem um foco de pensamento e raciocínio
 diferente do programador de "back-end" que tem um foco diferente de como armazenar
@@ -104,11 +99,11 @@ A facilidade de encontrar conhecimento e módulos prontos gera o risco de contra
 pessoas que apenas sabem utilizar os recursos prontos e não tem conhecimento para
 desenvolver a solução da melhor forma.
 
-Alguns profissionais criam aplicações "do zero" que, sem que eles escrevam realmente
+Alguns profissionais criam aplicações "do zero", sem que eles escrevam realmente
 uma linha de código voltada para o produto, possuem mais de 3500 arquivos.
 
 Ao invés de discorrer sobre o tema de forma aprofundada (pois sei que esse assunto
-é polêmico). Segue duas referências interessantes para estudo que podem exemplificar
+é polêmico), segue duas referências interessantes para estudo que podem exemplificar
 bem como isso pode estar afetando a comunidade.
 
 * [NPM : Have we forgotten how to program?](http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/)
@@ -144,7 +139,6 @@ débito técnico que nunca poderão pagar sem reescrever todo o código.
 ## Conclusão
 
 Considerando os pontos acima, acredito que utilizar recursos como o MEAN é vantajoso
-principalmente para profissionais ou empresas que pretendem provar um conceito e que
-após um resultado positivo se preparem para mitigar os riscos e construir não apenas
-uma aplicação escalável mas formas de mitigar os riscos gerados por essa escolha
+principalmente para profissionais ou empresas que pretendem provar um conceito, e que, após um resultado positivo, se preparem para mitigar os riscos e construir, não apenas
+uma aplicação escalável, mas formas de mitigar os riscos gerados por essa escolha
 dentro de seus ambientes.
