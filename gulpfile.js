@@ -44,7 +44,7 @@ gulp.task('compile-hugo-github', function(callback) {
     callback(err);
   });
 });
-gulp.task('compile-hugo-jm', function() {
+gulp.task('compile-hugo-jm', function(callback) {
   //www.julianomarcon.com.br
   return exec('hugo --config="config_jm.toml"', function(err, stdout, stderr) {
     console.log(stdout);
