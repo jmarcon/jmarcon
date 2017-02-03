@@ -3,7 +3,7 @@
   <head prefix="og: http://ogp.me/ns# article: http://ogp.me/ns/article# website: http://ogp.me/ns/website#">
     <!-- test -->
     <script type="text/javascript">
-      var enforce = "jmarcon.github.io";
+      var enforce = "{{ .Site.BaseURL }}";
       if ((enforce == window.location.host) && (window.location.protocol != "https:"))
         window.location = window.location.toString().replace(/^http:/, "https:");
     </script>
