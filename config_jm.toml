@@ -1,4 +1,4 @@
-BaseURL = "https://www.julianomarcon.com.br/"
+BaseURL = "http://www.julianomarcon.com.br/"
 RelativeURLs = true
 languageCode = "pt-br"
 title = "Juliano Marcon"
