@@ -5,7 +5,7 @@
   "main": "publish.sh",
   "dependencies": {
     "gulp-git": "1.7.0",
-    "gulp-less": "3.0.5"
+    "gulp-less": "4.0.0"
   },
   "devDependencies": {
     "browser-sync": "2.11.1",
