@@ -5,7 +5,8 @@
   "main": "publish.sh",
   "dependencies": {
     "gulp-git": "1.7.0",
-    "gulp-less": "3.0.5"
+    "gulp-less": "3.0.5",
+    "snyk": "^1.88.0"
   },
   "devDependencies": {
     "browser-sync": "2.11.1",
@@ -20,7 +21,9 @@
     "run-sequence": "1.1.5"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "repository": {
     "type": "git",
@@ -31,5 +34,6 @@
   "bugs": {
     "url": "https://github.com/jmarcon/jmarcon/issues"
   },
-  "homepage": "https://github.com/jmarcon/jmarcon#readme"
+  "homepage": "https://github.com/jmarcon/jmarcon#readme",
+  "snyk": true
 }
