@@ -10,36 +10,30 @@ pool:
   vmImage: 'ubuntu-latest'
 
 steps:
-- task: Docker@1
-  displayName: 'Run an image'
+- task: UseRubyVersion@0
   inputs:
-    containerregistrytype: 'Container Registry'
+    versionSpec: '>= 2.4'
 
-    command: 'Run an image'
-
-    imageName: 'jekyll/builder:latest'
-
-    qualifyImageName: false
-
-    volumes: |
-     $(Build.SourcesDirectory):/srv/jekyll
-     $(Build.BinariesDirectory):/srv/jekyll/_site
-     
-
-    workingDirectory: '$(Build.SourcesDirectory):/srv/jekyll'
-
-    containerCommand: 'jekyll build'
-
-    runInBackground: false
-
-- task: CopyFiles@2
-  displayName: 'Copy Files to: $(Build.ArtifactStagingDirectory)'
+- task: CmdLine@2
   inputs:
-    SourceFolder: '$(Build.BinariesDirectory)'
+    script: 'echo Install Bundler Tool
+      
+      gem install bundler'
 
-    TargetFolder: '$(Build.ArtifactStagingDirectory)'
+- task: CmdLine@2
+  inputs:
+    script: 'echo Install all dependencies
+      
+      bundle install'
+
+- task: CmdLine@2
+  inputs:
+    script: 'echo Write your commands here
+      
+      bundle exec jekyll build -d $(Build.ArtifactStagingDirectory)'
 
 - task: PublishBuildArtifacts@1
-  displayName: 'Publish Artifact: _site'
   inputs:
-    ArtifactName: '_site'
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: 'site'
+    publishLocation: 'Container'
