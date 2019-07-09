@@ -36,4 +36,5 @@ steps:
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'site'
+    TargetPath: '/'
     publishLocation: 'Container'
