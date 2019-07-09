@@ -36,5 +36,3 @@ steps:
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
     ArtifactName: 'site'
-    TargetPath: '$(Build.BinariesDirectory)'
-    publishLocation: 'filePath'
