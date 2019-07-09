@@ -23,11 +23,13 @@
     padding: 0;
     margin: 0;
     max-height: 500px;
-    background-color: $lightgray;
+    background-color: lighten($primary-light,40%);
     overflow: hidden;
     figure {
       position: relative;
-      margin: 0;
+      text-align: center;
+      // margin: 0;
+      border-radius: 7px;
     }
     figcaption {
       position: absolute;
@@ -41,8 +43,12 @@
       font-size: 10px;
     }
     .page-image {
-      width: 100%;
-      height: 100%;
+      object-fit: cover;
+      height: -moz-available;          /* WebKit-based browsers will ignore this. */
+      height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+      height: fill-available;
+      border-radius: 7px;
+      border: 1px solid $primary-light;
     }
   }
   
@@ -56,6 +62,7 @@
     .page-share {
       margin-bottom: 10px;
       text-align: left;
+      margin: 0 auto;
       a {
         display: inline-block;
         text-decoration: none;
@@ -75,6 +82,8 @@
       }
     }
     .page-tag {
+      margin: 0 auto;
+      flex-grow: 0;
       a {
         color: white;
         text-decoration: none;
@@ -82,7 +91,6 @@
         padding: 5px 10px;
         margin-left: 5px;
         text-transform: uppercase;
-        border: 1px solid $dark-blue;
         &:hover {
           text-decoration: underline;
         }
