@@ -5,9 +5,10 @@ comment : true
 date : "2016-03-19T17:18:14-03:00"
 lastMod : "2016-03-12T19:42:00-03:00"
 layout: post
-img : posts/sync.jpg
 tags: ["DoJo", "Hackatons", "Liderança Corporativa", "Visão Corporativa"]
 title: "TI Bimodal : Uma questão de respeito"
+img : posts/sync.jpg
+image : posts/sync.jpg
 ---
 
 Agilidade é, com certeza, o termo mais citado quando o futuro é discutido em grandes empresas financeiras ou necessitando se reinventar no mundo da tecnologia.

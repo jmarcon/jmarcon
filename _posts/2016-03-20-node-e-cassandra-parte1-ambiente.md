@@ -9,6 +9,7 @@ title : "Node e Cassandra - Parte 1 : Ambiente"
 highlight : true
 layout: post
 img : posts/docker.png
+image : posts/docker.png
 ---
 
 Este é o primeiro de três posts sobre como criar uma API utilizando o

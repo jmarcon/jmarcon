@@ -5,9 +5,10 @@ comment : true
 date : "2016-04-18T17:53:07-03:00"
 lastMod : "2016-03-18T22:19:00-03:00"
 layout: post
-img:  posts/soft-skills.jpg
 tags : ["Liderança Corporativa", "Visão Corporativa"]
 title : "Como ser um desenvolvedor melhor"
+img:  posts/soft-skills.jpg
+image:  posts/soft-skills.jpg
 ---
 
 Conhecer com maestria uma determinada tecnologia pode não ser suficiente

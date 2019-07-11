@@ -4,10 +4,11 @@ categories: ["Agilidade", "Pessoas", "Software"]
 comment: true
 date: "2016-04-20T17:48:35-03:00"
 lastMod: "2016-04-21T15:42:00-03:00"
-img: "posts/tdd.jpg"
 layout: post
 tags : ["Tecnologia", "Projetos", "Brasil", "Débito Técnico", "Visão Corporativa"]
 title: "Sobre TDD e Refactoring"
+img: "posts/tdd.jpg"
+image: "posts/tdd.jpg"
 ---
 
 A preocupação diária com a qualidade dos código construídos nas empresas que desenvolvem software, próprios ou para terceiros, estão fomentando a prática de técnicas como o TDD.

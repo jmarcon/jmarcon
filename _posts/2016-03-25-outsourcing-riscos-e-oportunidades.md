@@ -5,9 +5,10 @@ comment : true
 date : "2016-03-25T14:26:38-03:00"
 lastMod : "2016-03-12T15:42:00-03:00"
 layout: post
-img : "posts/gears.jpg"
 tags : ['Gestão','Opnião']
 title : "Outsourcing: Riscos e Oportunidades"
+img : "posts/gears.jpg"
+image : "posts/gears.jpg"
 ---
 O Outsourcing é uma pratica de terceirização através da aquisição de bens e serviços de fornecedores externos. Assim, em tecnologia, é possível ver empresas subcontrantando um ou mais fornecedores para execução de serviços ou até mesmo um processo completo de negócio.
 <!--more-->

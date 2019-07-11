@@ -44,9 +44,13 @@
     }
     .page-image {
       object-fit: cover;
-      height: -moz-available;          /* WebKit-based browsers will ignore this. */
-      height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
-      height: fill-available;
+      // width: auto;
+      // height: 100vh;
+      // max-width: 90vw;
+      max-height: 480px;
+      // height: -moz-available;          /* WebKit-based browsers will ignore this. */
+      // height: -webkit-fill-available;  /* Mozilla-based browsers will ignore this. */
+      // height: fill-available;
       border-radius: 7px;
       border: 1px solid $primary-light;
     }

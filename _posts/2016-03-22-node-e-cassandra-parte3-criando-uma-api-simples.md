@@ -5,10 +5,11 @@ comment : true
 date : "2016-03-22T17:19:31-03:00"
 lastMod : "2016-03-22T15:42:00-03:00"
 layout: post
-img : "posts/nodejs.jpg"
 tags : ["Node", "API"]
 title : "Node e Cassandra - Parte 3 : Criando uma API Simples"
 highlight : true
+img : "posts/nodejs.jpg"
+image : "posts/nodejs.jpg"
 ---
 
 Este é o terceiro e último de três posts sobre como criar uma API utilizando o

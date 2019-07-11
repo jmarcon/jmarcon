@@ -7,6 +7,7 @@ categories: ["Software", "Agilidade"]
 comment : true
 layout: post
 img : posts/languages.png
+image : posts/languages.png
 ---
 
 Praticamente todos os dias vejo pessoas se digladiando sobre qual linguagem

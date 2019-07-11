@@ -5,10 +5,11 @@ comment : true
 date : "2016-03-21T17:19:15-03:00"
 lastMod : "2016-03-21T15:42:00-03:00"
 layout: post
-img : "posts/cassandra.png"
 tags : ["Node", "Cassandra", "NoSQL"]
 title : "Node e Cassandra - Parte 2 : O mínimo do cassandra"
 highlight : true
+img : "posts/cassandra.png"
+image : "posts/cassandra.png"
 ---
 Este é o segundo de três posts sobre como criar uma API utilizando o
 [NodeJS](https://nodejs.org) e o [Apache Cassandra](https://cassandra.apache.org).

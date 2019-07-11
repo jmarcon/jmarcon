@@ -5,9 +5,10 @@ comment : true
 date : "2016-04-17T16:06:25-03:00"
 lastMod : "2016-03-12T15:42:00-03:00"
 layout: post
-img : "posts/tasks-min.jpg"
 tags : ["Pessoas", "Liderança Corporativa", "Visão Corporativa"]
 title : "Multitarefa e a motivação"
+img : "posts/tasks-min.jpg"
+image : "posts/tasks-min.jpg"
 ---
 
 As exigências da globalização e da redução de custos das empresas estão criando um

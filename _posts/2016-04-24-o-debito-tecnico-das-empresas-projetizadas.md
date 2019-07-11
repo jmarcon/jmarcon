@@ -3,9 +3,10 @@ categories : ["Agilidade", "Pessoas", "Mercado"]
 comment : true
 date : "2016-04-24T11:36:41-03:00"
 layout: post
-img : "posts/debito_tecnico.jpg"
 tags : ["Tecnologia", "Projetos", "Brasil", "Débito Técnico", "Visão Corporativa"]
 title : "O Débito Técnico das Empresas Projetizadas"
+img : "posts/debito_tecnico.jpg"
+image : "posts/debito_tecnico.jpg"
 ---
 
 Durante o desenvolvimento de qualquer projeto, atalhos são tomados. O motivo? Vamos fazê-lo para entregar mais rápido. Só dessa vez.

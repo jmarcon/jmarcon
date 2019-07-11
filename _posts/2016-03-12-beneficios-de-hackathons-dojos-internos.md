@@ -14,6 +14,7 @@ comment : true
 Author : Juliano Marcon
 layout: post
 img : posts/hackathon2.png
+image: posts/hackathon2.png
 ---
 
 Grandes empresas executam DoJos ou Hackathons sobre desenvolvimento para
