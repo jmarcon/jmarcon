@@ -1,0 +1,563 @@
+---
+layout: presentation
+title : Docker e Docker-Compose
+date : 2017-03-03T00:19:25-03:00
+presentation: docker
+img: "presentations/docker.png"
+theme: css/theme/devmesh.css
+centered: true
+width: 1600
+height: 900
+transition: fade
+description: 
+    Apresentação sobre as boas práticas do uso do docker e do docker-compose
+---
+
+<!-- Any section element inside of this container is displayed as a slide -->
+<div class="slides">
+    <section data-background="#FFFFFF">
+        <img src="imgs/devmesh.png" alt="" style="width:50%" />
+        <h2 style="color:#FD7822">Docker e Docker-Compose</h2>
+    </section>
+
+    <section>
+        <section data-background="imgs/fundoJuliano.png" data-transition="zoom" data-background-transition="none">
+            <h1 style="text-align: left; color:#141D33">Juliano Marcon</h1>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </section>
+        <section data-background="#FFFFFF">
+            <img src="imgs/googleit.png" style="width:50%" alt="">
+        </section>
+        <section data-background="#FFFFFF">
+            <img src="imgs/foto.jpg" alt="" style="width: 15%; border-radius:500px;">
+            <h1 style="color:black">Quem sou eu?</h1>
+            <p style="color:black" class="fragment fade-up">Especialista em Arquitetura de Soluções</p>
+            <p style="color:black" class="fragment fade-up">Formado em Matemática pela UNESP</p>
+            <p style="color:black" class="fragment fade-up">Apaixonado por tecnologia</p>
+            <h2 style="color:black" class="fragment fade-up">Developer!!!</h2>
+
+            <aside class="notes">
+            </aside>
+        </section>
+    </section>
+
+    <section>
+        <section data-background="imgs/bkg.png">
+            <img src="imgs/dockerLogo.png" alt="" style="max-height: 500px">
+            <h1>Docker</h1>
+
+            <!-- Notas -->
+            <aside class="notes">
+                <strong>Plataforma de containers de aplicação</strong>
+
+                <p>Os containers docker encapsulam um software em um sistema de arquivos completo que contem tudo
+                    o que é necessário para executar: codigo, runtime, ferramentas de sistemas, bibliotecas. </p>
+
+                <p>Qualquer coisa que possa ser instalado em um servidor. Isso garante que o software sempre
+                    vai ser executado da mesma forma, independente do ambiente.</p>
+            </aside>
+        </section>
+
+        <section>
+            <h2>Na minha m&aacute;quina funciona!</h2>
+            <h1 class="fragment fade-up">Novamente :-)</h1>
+        </section>
+
+        <section data-background="imgs/bkg.png">
+            <img src="imgs/docker_linux.jpg" alt="" style="max-height: 600px">
+            <h5>https://docs.docker.com/engine/installation/linux/</h5>
+        </section>
+
+        <section data-background="imgs/macwinbkg.png" data-background-transition="fade">
+            <img src="imgs/dockerLogo.png" alt="">
+            <h3>Docker no macOS e Windows!</h3>
+
+            <!-- Notas -->
+            <aside class="notes">
+                <h1>Docker é nativo do Linux mas...</h1>
+
+                <p>Em Julho de 2016 a Docker anunciou o lancamento oficial do Docker para macOS e para Windows.</p>
+            </aside>
+        </section>
+        <section data-background="imgs/macwinbkg.png" data-transition="convex">
+            <div style="background:rgba(0, 0, 0, 0.65); float:left; width: 40%; border-radius:30px;">
+                <img src="imgs/macOS_yosemite.png" alt="" style="width:25%">
+                <h5>macOS 10.10.3 (Yosemite) ou maior</h5>
+            </div>
+            <div style="background:rgba(0, 0, 0, 0.65); float:right; width: 40%; border-radius:30px;">
+                <img src="imgs/windows10.png" alt="" style="width:25%">
+                <h5>Windows 10 <strong>Pro 64bit</strong> build 10586 ou maior</h5>
+                <h6>+ Hyper-V instalado</h6>
+            </div>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <!--section data-background="imgs/oldboy.png">
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                        <h1 style="background:rgba(0, 0, 0, 0.9);">Update?</h1>
+
+						<aside class="notes">
+						</aside>
+                    </section-->
+    </section>
+
+
+    <section data-background="imgs/bkg.png">
+        <section>
+            <h2>Dockerfile</h2>
+            <pre><code class="dockerfile" data-trim contenteditable  style="font-size: 1.6em;">
+FROM nginx:1.10-alpine
+COPY apresentacao/ /usr/share/nginx/html
+CMD nginx -g 'daemon off;'
+						</code></pre>
+
+            <!-- Notas -->
+            <aside class="notes">
+                <p>docker build -t apresentacao:latest . </p>
+                <p>docker run -p 8880:80 -d --name dmesh apresentacao:latest <p>
+
+                        <pre><code class="zsh" data-trim contenteditable  style="font-size: 1.6em;">
+Sending build context to Docker daemon 64.21 MB
+Step 1 : FROM nginx:1.10-alpine
+1.10-alpine: Pulling from library/nginx
+3690ec4760f9: Pull complete 
+2e2cf600c52c: Pull complete 
+3302770f2bf7: Pull complete 
+e97f47e49acb: Pull complete 
+Digest: sha256:56766e6df28bb0c572dca24acbe5639ddf866d931c105cb33410d52624c27682
+Status: Downloaded newer image for nginx:1.10-alpine
+ ---> 501d2ca4f2e2
+Step 2 : COPY apresentacao/ /usr/share/nginx/html
+ ---> c9c28d501532
+Removing intermediate container bc7f86ee17ce
+Step 3 : CMD nginx -g 'daemon off;'
+ ---> Running in c225e9999c57
+ ---> 14443727bab8
+Removing intermediate container c225e9999c57
+Successfully built 14443727bab8
+                            </code></pre>
+
+            </aside>
+        </section>
+        <section data-background="#606C49" data-transition="fade" data-background-transition="none">
+            <h2>Demo</h2>
+            <img src="imgs/demo1.png" alt="" />
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section>
+            <img src="imgs/dockerhost_layout.png" alt="" />
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+    </section>
+
+    <section data-background="#FFFFFF">
+        <section data-background="#0B3962">
+            <img src="imgs/keepcalm.png" alt="">
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section data-background="#EDEEE1">
+            <img src="imgs/loading.png" alt="">
+            <h3 style="color:#504A67">N&atilde;o instale pacotes desnecess&aacute;rios</h3>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section data-background="#FFFFFF">
+            <div>
+                <img src="imgs/stack.png" alt="" style="width:30%; display:inline-block; " />
+                <h3 style="color:#F28033; display:inline-block; float:left; width: 60%; padding-top: 10%">O limite
+                    de camadas subiu de 42 para 127!</h3>
+            </div>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section data-background-color="black" data-background="imgs/tree.png">
+            <h2>Utilize tags</h2>
+            <p>docker build . -t tag:version</p>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section data-background="imgs/stacking.png">
+            <h2 style="color:#58463D; text-align:right">O que mais muda<br />fica para o final!</h2>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section data-background="imgs/bkg.png">
+            <h3>apt-get</h3>
+            <div>
+                <pre><code class="dockerfile" data-trim contenteditable  style="font-size: 1.6em;">
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install wget
+                            </code></pre>
+            </div>
+            <div class="fragment fade-up">
+                <pre><code class="dockerfile" data-trim contenteditable  style="font-size: 1.6em;">
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install wget vim
+                            </code></pre>
+            </div>
+            <div class="fragment fade-up" style="clear:both">
+                <pre><code class="dockerfile" data-trim contenteditable  style="font-size: 1.6em;">
+FROM ubuntu
+RUN apt-get update && apt-get install wget vim
+                            </code></pre>
+            </div>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+    </section>
+
+
+    <section>
+        <section data-background="imgs/bkg.png">
+            <img src="imgs/dockermachine.png" alt="" style="max-height: 500px">
+            <h1>Docker Machine</h1>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section data-background="#FFFFFF" data-transition="fade">
+            <img src="imgs/dockermachine_api.png" alt="">
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section data-background="imgs/bkg.png" data-transition="concave">
+            <img src="imgs/containers_layout.png" alt="" style="max-height: 500px">
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section data-background="imgs/bkg.png" data-transition="zoom">
+            <pre><code class="zsh" data-trim contenteditable style="font-size: 1.6em;">
+$ docker-machine create -d virtualbox nomedohost
+
+Creating CA: /home/username/.docker/machine/certs/ca.pem
+Creating client certificate: /home/username/.docker/machine/certs/cert.pem
+Image cache does not exist, creating it at /home/username/.docker/machine/cache...
+No default boot2docker iso found locally, downloading the latest release...
+Downloading https://github.com/boot2docker/boot2docker/releases/download/v1.6.2/boot2docker.iso to /home/username/.docker/machine/cache/boot2docker.iso...
+Creating VirtualBox VM...
+Creating SSH key...
+Starting VirtualBox VM...
+Starting VM...
+To see how to connect Docker to this machine, run: docker-machine env nomedohost
+
+$ eval "$(docker-machine env nomedohost)"
+
+$ eval "$(docker-machine env -u)"
+						</code></pre>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+
+        <section data-background="imgs/bkg.png" data-transition="zoom">
+            <pre><code class="zsh" data-trim contenteditable style="font-size: 1.4em;">
+$ docker-machine create --driver digitalocean 
+--digitalocean-access-token $dotoken devmesh-now
+
+Running pre-create checks...
+Creating machine...
+(devmesh-now) Creating SSH key...
+(devmesh-now) Creating Digital Ocean droplet...
+(devmesh-now) Waiting for IP address to be assigned to the Droplet...
+Waiting for machine to be running, this may take a few minutes...
+Detecting operating system of created instance...
+Waiting for SSH to be available...
+Detecting the provisioner...
+Provisioning with ubuntu(systemd)...
+Installing Docker...
+Copying certs to the local machine directory...
+Copying certs to the remote machine...
+Setting Docker configuration on the remote daemon...
+Checking connection to Docker...
+Docker is up and running!
+To see how to connect your Docker Client 
+to the Docker Engine running on this virtual machine, 
+run: docker-machine env devmesh-now
+						</code></pre>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+
+        <section data-background="imgs/bkg.png" data-transition="zoom">
+            <pre><code class="zsh" data-trim contenteditable style="font-size: 1.4em;">
+$ docker-machine env devmesh-now
+
+export DOCKER_TLS_VERIFY="1"
+export DOCKER_HOST="tcp://45.55.66.73:2376"
+export DOCKER_CERT_PATH="/Users/jmarcon/.docker/machine/machines/devmesh-now"
+export DOCKER_MACHINE_NAME="devmesh-now"
+# Run this command to configure your shell:
+# eval $(docker-machine env devmesh-now)
+						</code></pre>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+
+        <section data-background="imgs/bkg.png" data-transition="zoom">
+            <pre><code class="zsh" data-trim contenteditable style="font-size: 1.4em;">
+
+$ docker build . -t apresentacao:latest
+
+Sending build context to Docker daemon  35.1 MB
+Step 1 : FROM nginx:1.10-alpine
+1.10-alpine: Pulling from library/nginx
+
+3690ec4760f9: Pull complete
+2e2cf600c52c: Pull complete
+3302770f2bf7: Pull complete
+e97f47e49acb: Pull complete
+Digest: sha256:56766e6df28bb0c572dca24acbe5639ddf866d931c105cb33410d52624c27682
+Status: Downloaded newer image for nginx:1.10-alpine
+ ---> 501d2ca4f2e2
+Step 2 : COPY . /usr/share/nginx/html
+ ---> 0cd1f68842d0
+Removing intermediate container aa7281676c85
+Step 3 : CMD nginx -g 'daemon off;'
+ ---> Running in c6502ff53f16
+ ---> 50a2bdfd7c9d
+Removing intermediate container c6502ff53f16
+Successfully built 50a2bdfd7c9d
+                        </code></pre>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+
+
+
+        <section data-background="#45556C" data-transition="fade" data-background-transition="none">
+            <h2>Demo</h2>
+            <img src="imgs/demo5.png" alt="" />
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+
+        <section data-background="#262422" data-transition="convex">
+            <img src="imgs/olddocker.png" alt="" style="border-radius:50px; border:20px solid #262422; padding:-3px;" />
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+
+        <section data-background="imgs/dinofight.png" data-transition="convex">
+            <div style="background:rgba(0, 0, 0, 0.65); float:left; width: 40%; border-radius:30px;">
+                <img src="imgs/macos_lion.png" alt="" style="width:25%">
+                <h5>macOS 10.8.3 (Montain Lion) ou maior</h5>
+            </div>
+            <div style="background:rgba(0, 0, 0, 0.65); float:right; width: 40%; border-radius:30px;">
+                <img src="imgs/windows7.png" alt="" style="width:25%">
+                <h5>Windows 7 <strong>64bit</strong> ou maior</h5>
+                <h6>+ virtualiza&ccedil;&atilde;o</h6>
+            </div>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+    </section>
+
+
+
+    <section data-background="imgs/bkg.png">
+        <section>
+            <img src="imgs/dockercompose.png" alt="" style="max-height: 500px" />
+            <h1>Docker-Compose</h1>
+
+            <aside class="notes">
+            </aside>
+        </section>
+        <section data-background="imgs/multi-container.jpg">
+            <p style="padding: 15px; font-size: 1.4em; background:rgba(0, 0, 0, 0.65);  border-radius:30px;">
+                Ferramenta para definir e executar aplica&ccedil;&otilde;es em multiplos containers Docker.
+            </p>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br />
+        </section>
+        <section data-background-color="#FFFFFF">
+            <img src="imgs/arquitetura.png" alt="" style="max-height: 600px" />
+        </section>
+        <section data-background="#696AB4" data-transition="fade" data-background-transition="none">
+            <h2>Demo</h2>
+            <img src="imgs/demo2.png" alt="" />
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+    </section>
+
+    <!--section data-background="imgs/bkg.png">
+                    <section>
+                        <img src="imgs/swarm.png" alt="" style="max-height: 500px"/>
+                        <h1>Docker-Swarm</h1>
+
+						<aside class="notes">
+						</aside>
+                    </section>
+                </section !-->
+
+    <section data-background="imgs/bkg.png">
+        <section data-background="imgs/god.gif">
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section data-background="#FFFFFF">
+            <img src="imgs/dockerall.png" alt="" />
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section>
+            <h3>12 fatores</h3>
+            <div class="fragment fade-up">
+                <div style="float:left; width: 47%; ">
+                    <ul>
+                        <li>Codebase</li>
+                        <li>Depend&ecirc;ncias</li>
+                        <li>Configura&ccedil;&otilde;es</li>
+                        <li>Servi&ccedil;os de Apoio</li>
+                        <li>Build, Release, Run</li>
+                        <li>Processos</li>
+                    </ul>
+                </div>
+                <div style="float:right; width: 47%; ">
+                    <ul>
+                        <li>Vinculo de Porta</li>
+                        <li>Concorr&ecirc;ncia</li>
+                        <li>Descartabilidade</li>
+                        <li>Dev/Prod semelhantes</li>
+                        <li>Logs</li>
+                        <li>Processos de Admin</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="fragment fade-up" style="clear:both">
+                <br />
+                <h5>E mais...</h5>
+                <ul style="display:inline-block">
+                    <li>Monitora&ccedil;&atilde;o</li>
+                </ul>
+                <ul style="display:inline-block">
+                    <li>Autentica&ccedil;&atilde;o e Autoriza&ccedil;&atilde;o</li>
+                </ul>
+                <ul style="display:inline-block">
+                    <li>API First</li>
+                </ul>
+            </div>
+            <br />
+            <div class="fragment fade-up" style="clear:both">
+                <h4>https://12factor.net/</h4>
+            </div>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section data-background="#2C4533">
+            <img src="imgs/dinopensa.png" alt="">
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section data-background="imgs/nonono.gif"></section>
+        <section>
+            <div style="background:rgba(0, 0, 0, 0.65); border-radius:30px;">
+                <ul style="padding: 20px">
+                    <li>Segurança dos repositórios das imagens</li>
+                    <li>Orquestração do processo de deploy dos containers com zero downtime</li>
+                    <li>Roll-back do deploy de containers</li>
+                    <li>Rede entre os containers entre vários hosts</li>
+                    <li>Gerenciar os logs dos containers</li>
+                    <li>Gerenciar os dados em containers (DB)</li>
+                    <li>Criar imagens que lidem corretamente com init, logs, etc.</li>
+                    <li>Muito, muito mais...</li>
+                </ul>
+            </div>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+    </section>
+    <section data-background="imgs/bkg.png">
+        <section data-background="imgs/bkgdkr.png">
+            <img src="imgs/foto.jpg" alt="" style="width: 15%; border-radius:500px;">
+            <h1 style="color:black">Obrigado!</h1>
+            <div>
+                <img src="imgs/rss.png" alt="" style="width:50px; vertical-align:middle;">
+                <a href="http://www.julianomarcon.com.br"
+                    style="margin:15px; line-height: 50px;">http://www.julianomarcon.com.br</a>
+            </div>
+            <div>
+                <img src="imgs/linkedin.png" alt="" style="width:50px; vertical-align:middle;">
+                <a href="http://www.linkedin.com/in/julianomarcon"
+                    style="margin:15px; line-height: 50px;">http://www.linkedin.com/in/julianomarcon</a>
+            </div>
+            <div>
+                <img src="imgs/twitter.png" alt="" style="width:50px; vertical-align:middle;">
+                <a href="https://twitter.com/julianomarcon" style="margin:15px; line-height: 50px;">@julianomarcon</a>
+            </div>
+
+            <!-- Notas -->
+            <aside class="notes">
+            </aside>
+        </section>
+        <section>
+            <blockquote>“Learn the rules like a pro, so you can break them like an artist."</blockquote>
+            <p style="text-align:right; font-size: 0.6em; padding-right: 150px">Pablo Picasso</p>
+        </section>
+        <section>
+            <ul>
+                <li>Reveal.js</li>
+                <li>JQuery</li>
+            </ul>
+        </section>
+    </section>
+</div>

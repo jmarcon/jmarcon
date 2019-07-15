@@ -1,0 +1,24 @@
+---
+layout: main
+title: Apresentações
+---
+<h1 style="flex-shrink: 1; flex-basis: 100%; text-align: center">{{ page.title }}</h1>
+
+{% for page in site.pages %}
+{% if page.layout == "presentation" %}
+<article class="post">
+    {% if page.img %}
+    <a class="post-thumbnail"
+        style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : page.img}})"
+        href="{{page.url | prepend: page.baseurl}}"></a>
+    {% else %}
+    {% endif %}
+
+    <div class="post-content">
+        <h2 class="post-title"><a href="{{page.url | prepend: page.baseurl}}">{{page.title}}</a></h2>
+        <p>{{ page.description }}</p>
+    </div>
+</article>
+{% else %}
+{% endif %}
+{% endfor %}

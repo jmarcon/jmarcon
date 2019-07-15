@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="{{ page.description }}">
+    <meta name="author" content="{{ site.author.name }}">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="/assets/reveal/css/reveal.css">
+    {% if page.theme %}
+    <link rel="stylesheet" href="{{ page.theme }}" id="theme">
+    {% else %}
+    <link rel="stylesheet" href="{{site.baseurl}}/assets/reveal/css/theme/black.css" id="theme">
+    {% endif %}
+
+    {% if page.custom_theme %}
+    <link rel="stylesheet" href="{{ page.custom_theme }}" id="theme">
+    {% endif %}
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="/assets/reveal/lib/css/atom-dark.css">
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement('link');
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match(/print-pdf/gi) ? '/assets/reveal/css/print/pdf.css' :
+            '/assets/reveal/css/print/paper.css';
+        document.getElementsByTagName('head')[0].appendChild(link);
+    </script>
+
+    <!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+</head>
+
+<body>
+    <div class="reveal">
+        {{ content }}
+    </div>
+    <script src="/assets/reveal/lib/js/head.min.js"></script>
+    <script src="/assets/reveal/js/reveal.js"></script>
+    <script>
+        // More info https://github.com/hakimel/reveal.js#configuration
+        Reveal.initialize({
+            width: {% if page.width %} {{ page.width }} {% else %} 960 {% endif %},
+            height: {% if page.height %} {{page.height}} {% else %} 540 {% endif %},
+            {% if page.transition %} transition: '{{page.transition}}', {% endif %} // transitions: none/fade/slide/convex/concave/zoom
+            margin: 0.1,
+            minScale: 0.2,
+            maxScale: 3,
+            controls: true,
+            progress: true,
+            history: true,
+            center: {% if page.centered %}true{% else %}false{% endif %},
+         
+            // More info https://github.com/hakimel/reveal.js#dependencies
+            dependencies: [{
+                    src: '/assets/reveal/lib/js/classList.js',
+                    condition: function () {
+                        return !document.body.classList;
+                    }
+                },
+                {
+                    src: '/assets/reveal/plugin/markdown/marked.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '/assets/reveal/plugin/markdown/markdown.js',
+                    condition: function () {
+                        return !!document.querySelector('[data-markdown]');
+                    }
+                },
+                {
+                    src: '/assets/reveal/plugin/highlight/highlight.js',
+                    async: true,
+                    callback: function () {
+                        hljs.initHighlightingOnLoad();
+                    }
+                },
+                {
+                    src: '/assets/reveal/plugin/zoom-js/zoom.js',
+                    async: true
+                },
+                {
+                    src: '/assets/reveal/plugin/notes/notes.js',
+                    async: true
+                }
+            ]
+        });
+
+        Reveal.addEventListener('ready', function (event) {
+            // event.currentSlide, event.indexh, event.indexv
+            var jsElement = document.createElement("script");
+            jsElement.type = "application/javascript";
+            jsElement.src = "js/behavior.js";
+            document.body.appendChild(jsElement);
+        });
+    </script>
+    </script>
+</body>
+
+</html>

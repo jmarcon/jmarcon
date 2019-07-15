@@ -1,0 +1,58 @@
+--- 
+---
+/* COLORS: */
+$background1: #FFFFFF;
+$text1: hsl(0, 0%, 0%);
+$background2: #00A1E0;
+$text2: #323031;
+$accent1: #646469;
+$accent2: #00A1E0;
+$accent3: #999899;
+$accent4: #00607C;
+$accent5: #00B39C;
+$accent6: #5E66F9;
+
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.reveal {
+    .slides > section.title {
+        h1 {
+            color: $background1;
+            font-size: 5em;
+            line-height: 1.2em;
+            font-weight: normal;
+        }
+
+        h2 {
+            color: $background1;
+            font-size: 3em;
+            line-height: 1.2em;
+            margin: 0 1em;
+            font-weight: normal;
+        }
+
+        h3 {
+            color: $background1;
+            font-size: 1.5em;
+            line-height: 1.2em;
+            margin: 0 1em;
+            font-weight: normal;
+        }
+    }
+
+    .slides > section {
+        color: $text2;
+        h1.title {
+            font-size: 3em;
+        }
+
+        img {
+            border: 0;
+            box-shadow: 0 0 0 transparent;
+            background: transparent;
+        }
+    }
+}
