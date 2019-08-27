@@ -19,6 +19,13 @@ title: Blog
             class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minutos" }}{% endunless %}</span>
     </div>
 </article>
+<!-- <ins class="adsbygoogle"
+     style="display:block"
+     data-ad-format="fluid"
+     data-ad-layout-key="-5k+c0-20-67+w4"
+     data-ad-client="ca-pub-2593937197676387"
+     data-ad-slot="9217674039">
+</ins> -->
 {% endfor %}
 
 {% include pagination.html %}
