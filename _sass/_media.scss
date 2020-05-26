@@ -1,109 +1,104 @@
-/* Medium Devices, Desktops */
-@media only screen and (max-width : 992px) {
-  .post {
-    width: 48%;
-    max-width: 100%;
-    margin: 0 0.9% 1.5%;
-    flex-direction: column;
+@import 'variables';
 
-    .post-thumbnail {
-      width: 100%;
-    }
+$body-back-dark: invert($background);
+$background-dark: lighten($body-back-dark, 7%);
+$primary-dark: darken($primary, 25%);
+$text-dark: invert($text);
+$blog-text-dark: darken(invert($blog-text), 25%);
 
-    .post-content {
-      width: 100%;
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: $body-back-dark !important;
+    color: $text-dark;
+  }
 
-      .post-title {
-        margin: 0 0 5px;
-
-        a {
-          font-size: 21px;
-        }
-      }
+  a {
+    color: $primary-dark;
+    &:hover,
+    &:focus,
+    &:active {
+      color: $text-dark;
     }
   }
-}
 
-/* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {
   .sidebar {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 100%;
-    padding: 10px;
-    background-color: $primary;
-    box-shadow: 0 1px 1px 0 rgba(31, 35, 46, .15);
-
-    footer {
-      margin-bottom: 10px;
+    .about {
+      box-shadow: none;
+      .author-name {
+        border-bottom: 1px dashed #333333;
+        background: $background-dark;
+      }
     }
 
-  }
+    .menu {
+      background: lighten($background-dark, 7%);
+      ul {
+        li {
+          a {
+            color: $text-dark;
+            &:hover {
+              color: $primary-dark;
+            }
+          }
+        }
+      }
+    }
 
-  .about {
-    text-align: center;
-    max-width: 480px;
-    margin: 10px auto auto;
+    .contact {
+      ul {
+        background: $background-dark;
+        li {
+          a {
+            color: $text-dark;
 
-    img {
-      width: 150px;
-      height: 150px;
-      border-radius: 100%;
-      margin-bottom: 10px;
+            &.facebook {
+              background: darken(#3b5998, 25%);
+            }
+            &.twitter {
+              background: darken(#1da1f2, 25%);
+            }
+            &.github {
+              background: lighten(#000000, 25%);
+            }
+            &.linkedin {
+              background: darken(#0077b5, 25%);
+            }
+            &.rss {
+              background: darken(#f78322, 25%);
+            }
+          }
+        }
+      }
+
+      box-shadow: none;
     }
   }
 
-  .content-box {
-    padding: 20px 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    align-items: stretch;
-  }
+  .page-body {
+    background-color: $background-dark;
+    box-shadow: none;
 
-  .contact-title,
-  .copyright {
-    display: none;
-  }
+    .content-page {
+      border-top: 1px dashed #dedede;
+      border-bottom: 1px dashed #dedede;
 
-  .page-cover-image .page-image {
-    height: auto;
-  }
-}
+      .blog-post {
+        color: $blog-text-dark;
 
-/* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {
-  .content-box {
-    padding: 10px;
-  }
-
-  .post {
-    width: 98%;
-    max-width: 100%;
-    margin: 2%;
-    flex-direction: column;
-
-    .post-thumbnail {
-      width: 100%;
-    }
-
-    .post-content {
-      width: 100%;
-
-      .post-title {
-        margin: 0 0 5px;
-
-        a {
-          font-family: 'Quicksand', sans-serif, 'PT Serif', serif;
-          font-size: 21px;
+        h2,
+        h3,
+        h4 {
+          color: $primary-dark;
         }
       }
     }
   }
 
-  .page-cover-image .page-image {
-    height: auto;
+  img {
+    opacity: 0.75;
+    transition: opacity 0.5s ease-in-out;
+  }
+  img:hover {
+    opacity: 1;
   }
 }

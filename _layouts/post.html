@@ -1,54 +1,53 @@
 ---
 layout: main
 ---
-<article class="article-page">
-  <div class="page-content">
-    {% if page.img %}
-    <div class="page-cover-image">
-      <figure>
-        <img class="page-image" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}}
-          alt="{{page.title}}">
-        {% if page.fig-caption %}
-        <figcaption>{{page.fig-caption}}</figcaption>
-        {% endif %}
-      </figure>
-    </div> <!-- End Page Cover Image -->
-    {% endif %}
-    <div class="wrap-content">
-      <header class="header-page">
-        <h1 class="page-title">{{page.title}}</h1>
-        <div class="page-date"><span>{{page.date | date: '%d/%m/%Y'}}</span></div>
-      </header>
-      {{content | markdownify}}
-      <!-- <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
+<div class="sub-title">
+  <h2 class="page-title">{{page.title}}</h2>
+  <div class="page-date"><span>{{page.date | date: '%d/%m/%Y'}}</span></div>
+</div>
+
+<article class="content-page">
+  {% if page.img %}
+  <div class="page-cover-image">
+    <figure>
+      <img class="page-image img-fluid" src={{ "/assets/img/" | prepend: site.baseurl | append : page.img}}
+        alt="{{page.title}}">
+      {% if page.fig-caption %}
+      <figcaption>{{page.fig-caption}}</figcaption>
+      {% endif %}
+    </figure>
+  </div> <!-- End Page Cover Image -->
+  {% endif %}
+  <div class="blog-post col-md-12">
+    {{content | markdownify}}
+    <!-- <ins class="adsbygoogle" style="display:block; text-align:center;" data-ad-layout="in-article"
         data-ad-format="fluid" data-ad-client="ca-pub-2593937197676387" data-ad-slot="9481683326"></ins> -->
 
-      <div class="page-footer">
-        <div class="page-share">
-          <a href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}"
-            title="Share on Twitter" rel="nofollow" target="_blank"><span class="fa fa-twitter"></span></a>
-          <a href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook"
-            rel="nofollow" target="_blank"><span class="fa fa-facebook"></span></a>
-          <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title | url_encode }}&source={{ site.url }}"
-            rel="nofollow" target="_blank"><span class="fa fa-linkedin"></span></a>
-        </div>
-        <div class="page-tag">
-          {% for tag in page.tags %}
-          <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">&#35; {{ tag }}</a>
-          {% endfor %}
-        </div>
-        <div class="page-tag">
-          {% for category in page.categories %}
-          <a href="{{site.baseurl}}/categories#{{category}}" class="category">{{category|slugize}}</a>
-          {% endfor %}
-        </div>
-
+    <div class="page-footer">
+      <div class="page-share">
+        <a class="twitter" href="https://twitter.com/intent/tweet?text={{ page.title }}&url={{ site.url }}{{ page.url }}"
+          title="Share on Twitter" rel="nofollow" target="_blank"><span class="fa fa-twitter"></span></a>
+        <a class="facebook" href="https://facebook.com/sharer.php?u={{ site.url }}{{ page.url }}" title="Share on Facebook"
+          rel="nofollow" target="_blank"><span class="fa fa-facebook"></span></a>
+        <a class="linkedin" href="https://www.linkedin.com/shareArticle?mini=true&url={{ site.url }}{{ page.url }}&title={{ page.title | url_encode }}&source={{ site.url }}"
+          rel="nofollow" target="_blank"><span class="fa fa-linkedin"></span></a>
       </div>
-      {% if page.comment %}
-      {% include disqus.html %}
-      {% else %}
-      <div>Comentários desabilitados</div>
-      {% endif %}
-    </div> <!-- End Wrap Content -->
-  </div> <!-- End Page Content -->
+      <div class="page-tag">
+        {% for tag in page.tags %}
+        <a href="{{site.baseurl}}/tags#{{tag}}" class="tag">&#35; {{ tag }}</a>
+        {% endfor %}
+      </div>
+      <div class="page-tag">
+        {% for category in page.categories %}
+        <a href="{{site.baseurl}}/categories#{{category}}" class="category">{{category|slugize}}</a>
+        {% endfor %}
+      </div>
+
+    </div>
+    {% if page.comment %}
+    {% include disqus.html %}
+    {% else %}
+    <div>Comentários desabilitados</div>
+    {% endif %}
+  </div> <!-- End Wrap Content -->
 </article> <!-- End Article Page -->

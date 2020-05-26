@@ -1,14 +1,22 @@
 ---
 layout: default
 ---
-<aside class="sidebar">
-  <header>
+
+<aside class="sidebar col-md-3">
+  <div class="sticky-top">
     <div class="about">
       <div class="cover-author-image">
-        <a href="{{site.baseurl}}/"><img
-            src="{{site.baseurl}}/assets/img/{% if site.author.img %}{{site.author.img}}{% endif %}"
-            alt="{{site.author.name}}"></a>
+        <a href="{{site.baseurl}}/">
+          <img src="{{site.baseurl}}/assets/img/{% if site.author.img %}{{site.author.img}}{% endif %}"
+            alt="{{site.author.name}}">
+        </a>
       </div>
+      <section class="menu">
+        <ul>
+          <li><a href="/">Blog</a></li>
+          <li><a href="/presentations">Apresentações</a></li>
+        </ul>
+      </section>
       <div class="author-name">{{site.author.name}}</div>
 
 
@@ -19,54 +27,38 @@ layout: default
       <span>Tags: {{site.tags | size }}</span>
       {% endcomment %}
     </div>
-  </header> <!-- End Header -->
-  <footer>
+
     <section class="contact">
-      <h3 class="contact-title">SOCIAL</h3>
       <ul>
         {% if site.social-twitter %}
-        <li><a href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><i class="fa fa-twitter"
-              aria-hidden="true"></i></a></li>
-        {% else %}
-        <li><a href="https://twitter.com/artemsheludko_" target="_blank"><i class="fa fa-twitter"
-              aria-hidden="true"></i></a></li>
+        <li><a class="twitter" href="https://twitter.com/{{ site.social-twitter }}" target="_blank"><i
+              class="fa fa-twitter" aria-hidden="true"></i></a></li>
         {% endif %}
         {% if site.social-facebook %}
-        <li><a href="https://facebook.com/{{ site.social-facebook }}" target="_blank"><i class="fa fa-facebook"
-              aria-hidden="true"></i></a></li>
-        {% else %}
-        <li><a href="https://facebook.com/" target="_blank"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+        <li><a class="facebook" href="https://facebook.com/{{ site.social-facebook }}" target="_blank"><i
+              class="fa fa-facebook" aria-hidden="true"></i></a></li>
         {% endif %}
         {% if site.social-github %}
-        <li class="github"><a href="http://github.com/{{site.social-github}}" target="_blank"><i
+        <li><a class="github" href="http://github.com/{{site.social-github}}" target="_blank"><i
               class="fa fa-github"></i></a></li>
-        {% else %}
-        <li class="github"><a href="http://github.com/" target="_blank"><i class="fa fa-github"
-              aria-hidden="true"></i></a></li>
         {% endif %}
         {% if site.social-linkedin %}
-        <li class="linkedin"><a href="https://in.linkedin.com/in/{{site.social-linkedin}}" target="_blank"><i
+        <li><a class="linkedin" href="https://in.linkedin.com/in/{{site.social-linkedin}}" target="_blank"><i
               class="fa fa-linkedin"></i></a></li>
-        {% else %}
-        <li class="linkedin"><a href="https://in.linkedin.com/" target="_blank"><i class="fa fa-linkedin"
-              aria-hidden="true"></i></a></li>
         {% endif %}
-        <li class=""><a href="/feed.xml"><span class="fa fa-rss"></span></a></li>
+        <li><a class="rss" href="/feed.xml"><span class="fa fa-rss"></span></a></li>
       </ul>
     </section> <!-- End Section Contact -->
-    <section class="contact">
-      <h3 class="contact-title">AREAS</h3>
-      <ul>
-        <li><a href="/">Blog</a></li>
-        <li><a href="/presentations">Apresentações</a></li>
-      </ul>
-    </section>
+    <!--     
     <div class="copyright">
       <p>{{site.time | date: '%Y'}} &copy; {{site.author.name}}</p>
-    </div>
-  </footer> <!-- End Footer -->
+    </div> -->
+
+  </div>
 </aside> <!-- End Sidebar -->
 
-<div class="content-box clearfix">
-  {{ content }}
+<div class="col-md-9 page-body">
+  <div class="col-md-12 ">
+    {{ content }}
+  </div>
 </div>
