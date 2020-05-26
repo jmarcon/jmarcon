@@ -22,7 +22,7 @@ title: Blog
         <p>{{ post.excerpt }}</p>
         <span class="post-date">{{post.date | date: '%d/%m/%Y' }}&nbsp;&nbsp;&nbsp;—&nbsp;</span>
         <span
-            class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minutos" }}{% endunless %}</span>
+            class="post-words">{% capture words %}{{ post.content | number_of_words }}{% endcapture %}{% unless words contains "-" %}{{ words | plus: 250 | divided_by: 250 | append: " minutos de leitura" }}{% endunless %}</span>
     </div>
 </article>
 <!-- <ins class="adsbygoogle"

@@ -1,104 +1,131 @@
-@import 'variables';
-
-$body-back-dark: invert($background);
-$background-dark: lighten($body-back-dark, 7%);
-$primary-dark: darken($primary, 25%);
-$text-dark: invert($text);
-$blog-text-dark: darken(invert($blog-text), 25%);
-
-@media (prefers-color-scheme: dark) {
-  body {
-    background-color: $body-back-dark !important;
-    color: $text-dark;
-  }
-
-  a {
-    color: $primary-dark;
-    &:hover,
-    &:focus,
-    &:active {
-      color: $text-dark;
-    }
-  }
-
-  .sidebar {
-    .about {
-      box-shadow: none;
-      .author-name {
-        border-bottom: 1px dashed #333333;
-        background: $background-dark;
+@media only screen and (max-width: 767px) {
+  .container .row {
+    .sidebar {
+      .sticky-top {
+        padding-top: 10px;
       }
-    }
-
-    .menu {
-      background: lighten($background-dark, 7%);
-      ul {
-        li {
-          a {
-            color: $text-dark;
-            &:hover {
-              color: $primary-dark;
-            }
+      .contact {
+        margin-bottom: 10px;
+      }
+      .about {
+        .cover-author-image {
+          background: white;
+          img {
+            width: 25%;
+            border-radius: 50%;
+            margin-top: 10px;
           }
         }
       }
     }
 
-    .contact {
-      ul {
-        background: $background-dark;
-        li {
-          a {
-            color: $text-dark;
-
-            &.facebook {
-              background: darken(#3b5998, 25%);
-            }
-            &.twitter {
-              background: darken(#1da1f2, 25%);
-            }
-            &.github {
-              background: lighten(#000000, 25%);
-            }
-            &.linkedin {
-              background: darken(#0077b5, 25%);
-            }
-            &.rss {
-              background: darken(#f78322, 25%);
-            }
-          }
-        }
-      }
-
-      box-shadow: none;
+    .page-body {
+      margin-top: 10px;
     }
-  }
-
-  .page-body {
-    background-color: $background-dark;
-    box-shadow: none;
-
-    .content-page {
-      border-top: 1px dashed #dedede;
-      border-bottom: 1px dashed #dedede;
-
-      .blog-post {
-        color: $blog-text-dark;
-
-        h2,
-        h3,
-        h4 {
-          color: $primary-dark;
-        }
-      }
-    }
-  }
-
-  img {
-    opacity: 0.75;
-    transition: opacity 0.5s ease-in-out;
-  }
-  img:hover {
-    opacity: 1;
   }
 }
+
+// @import 'variables';
+
+// $body-back-dark: invert($background);
+// $background-dark: lighten($body-back-dark, 7%);
+// $primary-dark: darken($primary, 25%);
+// $text-dark: invert($text);
+// $blog-text-dark: darken(invert($blog-text), 25%);
+
+// @media (prefers-color-scheme: dark) {
+//   body {
+//     background-color: $body-back-dark !important;
+//     color: $text-dark;
+//   }
+
+//   a {
+//     color: $primary-dark;
+//     &:hover,
+//     &:focus,
+//     &:active {
+//       color: $text-dark;
+//     }
+//   }
+
+//   .sidebar {
+//     .about {
+//       box-shadow: none;
+//       .author-name {
+//         border-bottom: 1px dashed #333333;
+//         background: $background-dark;
+//       }
+//     }
+
+//     .menu {
+//       background: lighten($background-dark, 7%);
+//       ul {
+//         li {
+//           a {
+//             color: $text-dark;
+//             &:hover {
+//               color: $primary-dark;
+//             }
+//           }
+//         }
+//       }
+//     }
+
+//     .contact {
+//       ul {
+//         background: $background-dark;
+//         li {
+//           a {
+//             color: $text-dark;
+
+//             &.facebook {
+//               background: darken(#3b5998, 25%);
+//             }
+//             &.twitter {
+//               background: darken(#1da1f2, 25%);
+//             }
+//             &.github {
+//               background: lighten(#000000, 25%);
+//             }
+//             &.linkedin {
+//               background: darken(#0077b5, 25%);
+//             }
+//             &.rss {
+//               background: darken(#f78322, 25%);
+//             }
+//           }
+//         }
+//       }
+
+//       box-shadow: none;
+//     }
+//   }
+
+//   .page-body {
+//     background-color: $background-dark;
+//     box-shadow: none;
+
+//     .content-page {
+//       border-top: 1px dashed #dedede;
+//       border-bottom: 1px dashed #dedede;
+
+//       .blog-post {
+//         color: $blog-text-dark;
+
+//         h2,
+//         h3,
+//         h4 {
+//           color: $primary-dark;
+//         }
+//       }
+//     }
+//   }
+
+//   img {
+//     opacity: 0.75;
+//     transition: opacity 0.5s ease-in-out;
+//   }
+//   img:hover {
+//     opacity: 1;
+//   }
+// }
