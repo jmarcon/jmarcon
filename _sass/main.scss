@@ -255,15 +255,17 @@ a {
         display: inline-block;
         padding: 7px;
         margin: 2px;
+        color: $social-text;
 
         &.facebook {
-          color: $facebook;
+          background: $facebook;
+
         }
         &.twitter {
-          color: $twitter;
+          background: $twitter;
         }
         &.linkedin {
-          color: $linkedin;
+          background: $linkedin;
         }
       }
     }
