@@ -46,7 +46,7 @@ author:
   stackoverflow: 6416366
 
 # Disqus
-discus-identifier: juliano-marcon # add your discus identifier
+discus-identifier: julianomarcon # add your discus identifier
 
 sass:
   style: compressed
