@@ -246,45 +246,59 @@ a {
 
   .page-footer {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
 
     .page-share {
       text-align: left;
       a {
         display: inline-block;
-        padding: 7px;
-        margin: 2px;
+        width: $padding;
+        margin: 3px;
         color: $social-text;
+        border-radius: 5px;
+        text-align: center;
 
         &.facebook {
           background: $facebook;
-
+          &:hover {
+            background: lighten($color: $facebook, $amount: 25%);
+          }
         }
         &.twitter {
           background: $twitter;
+          &:hover {
+            background: lighten($color: $twitter, $amount: 25%);
+          }
         }
         &.linkedin {
           background: $linkedin;
+          &:hover {
+            background: lighten($color: $linkedin, $amount: 25%);
+          }
         }
       }
     }
 
     .page-tag {
-      flex-grow: 0;
       a {
         display: inline-block;
-        padding: 5px 10px;
-        margin: 2px;
+        padding: 0px 10px;
+        border-radius: 3px;
+        margin: 3px;
         font-size: 10px;
         text-transform: uppercase;
         &.tag {
           background: $primary;
-          color: $text;
+          color: darken($primary, 50%);
+          &:hover {
+            background: lighten($primary, 25%);
+          }
         }
         &.category {
-          background: $primary;
-          color: $text;
+          background: $body-back;
+          color: $blog-text;
+          &:hover{
+            background: lighten($body-back, 25%)
+          }
         }
       }
     }
