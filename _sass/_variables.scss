@@ -1,11 +1,22 @@
 $background: #ffffff;
 $body-back: darken($background, 7%);
+$divisor: #d3d3d3;
 $primary: #1abc9c;
 $text: #333333;
 $blog-text: #696767;
+$blog-title: #333333;
+
+$social-text: #ffffff;
+$facebook: #3b5998;
+$twitter: #1da1f2;
+$github: #000000;
+$linkedin: #0077b5;
+$rss: #f78322;
 
 @mixin shadow {
     box-shadow: -2px -1px 88px 0px rgba(0, 0, 0, 0.17);
 }
 
+$inverted-background: #333333;
+$inverted-blog-text: invert($blog-text);
 $padding: 30px;

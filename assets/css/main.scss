@@ -1,4 +1,13 @@
 ---
 ---
 
-@import "main";
+@import 'variables';
+@import 'main';
+
+a.toggleTheme {
+  &:after {
+    font-size:13px;
+    left: 5px;
+    content: '\f186';
+  }
+}

@@ -1,6 +1,5 @@
 @import 'normalize';
 @import 'syntax';
-@import 'variables';
 
 @import url('https://fonts.googleapis.com/css?family=Quicksand|Roboto&display=swap');
 
@@ -11,6 +10,24 @@ body {
 
   & > .container {
     margin: 0px auto;
+  }
+}
+
+a.toggleTheme {
+  position: fixed;
+  display: block;
+  bottom: 20px;
+  left: 20px;
+  background: $inverted-background;
+  color: $inverted-blog-text;
+  font-family: 'fontawesome';
+  z-index: 999;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  &:after {
+    position: absolute;
+    top: 0;
   }
 }
 
@@ -42,13 +59,15 @@ a {
     width: 100%;
     @include shadow;
     .author-name {
+      background: $background;
       padding: 23px;
       font-size: 20px;
       font-weight: 700;
       display: block;
-      border-bottom: 1px dashed #cccccc;
+      border-bottom: 1px dashed $divisor;
     }
     .cover-author-image {
+      background: transparent !important;
       img {
         width: 100%;
       }
@@ -56,7 +75,6 @@ a {
   }
 
   .menu {
-    background: $background;
     ul {
       list-style: none;
       padding: 25px;
@@ -77,6 +95,7 @@ a {
   }
 
   .contact {
+    background: $background;
     ul {
       list-style: none;
       padding: 20px;
@@ -90,23 +109,23 @@ a {
           height: 30px;
           line-height: 32px;
           font-size: 13px;
-          color: #ffffff;
+          color: $social-text;
           border-radius: 50%;
 
           &.facebook {
-            background: #3b5998;
+            background: $facebook;
           }
           &.twitter {
-            background: #1da1f2;
+            background: $twitter;
           }
           &.github {
-            background: #000000;
+            background: $github;
           }
           &.linkedin {
-            background: #0077b5;
+            background: $linkedin;
           }
           &.rss {
-            background: #f78322;
+            background: $rss;
           }
         }
       }
@@ -139,8 +158,19 @@ a {
   .content-page {
     padding-top: 30px;
     padding-bottom: 10px;
-    border-top: 1px dashed #dedede;
-    border-bottom: 1px dashed #dedede;
+    border-top: 1px dashed $divisor;
+
+    & > .row {
+      margin-bottom: 50px;
+      border-bottom: 1px dashed $divisor;
+      padding-bottom: 50px;
+    }
+
+    .post-thumbnail {
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
 
     .post-content {
       display: block;
@@ -175,7 +205,7 @@ a {
           }
         }
         p {
-          color: $blog-text;
+          color: white;
           text-align: right;
           padding-right: 25px;
           font-size: 14px;
@@ -189,6 +219,7 @@ a {
       h5 {
         margin-top: 20px;
         margin-bottom: 10px;
+        color: $blog-title;
       }
 
       h2 {
@@ -196,21 +227,19 @@ a {
         line-height: 35px;
         font-weight: 600;
         letter-spacing: 0.5px;
-        color: #000000;
+        
       }
       h3 {
         font-size: 22px;
         line-height: 32px;
         font-weight: 600;
         letter-spacing: 0.5px;
-        color: #000000;
       }
       h4 {
         font-size: 20px;
         line-height: 30px;
         font-weight: 600;
         letter-spacing: 0.5px;
-        color: #000000;
       }
     }
   }
@@ -228,13 +257,13 @@ a {
         margin: 2px;
 
         &.facebook {
-          color: #3b5998;
+          color: $facebook;
         }
         &.twitter {
-          color: #1da1f2;
+          color: $twitter;
         }
         &.linkedin {
-          color: #0077b5;
+          color: $linkedin;
         }
       }
     }

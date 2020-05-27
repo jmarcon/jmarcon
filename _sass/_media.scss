@@ -1,5 +1,10 @@
 @media only screen and (max-width: 767px) {
   .container .row {
+    .content-page {
+      .post-thumbnail {
+        min-height: 300px;
+      }
+    }
     .sidebar {
       .sticky-top {
         padding-top: 10px;
