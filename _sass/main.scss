@@ -29,6 +29,9 @@ a.toggleTheme {
     position: absolute;
     top: 0;
   }
+  &:hover {
+    color: lighten($inverted-blog-text,15%);
+  }
 }
 
 a {
