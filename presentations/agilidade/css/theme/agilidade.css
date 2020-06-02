@@ -1,0 +1,178 @@
+div.list {
+  padding: 1em;
+}
+
+p {
+  font-weight: 100;
+  padding: 0.5em;
+}
+
+p span.more {
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+div.list span {
+  display: inline-block;
+  min-width: 32%;
+  padding: 0.2em 0.4%;
+}
+
+.books,
+.reference {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.books .book {
+  flex: 1 1 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+
+.books .book * {
+  flex: 1 1 0px;
+}
+
+.books .book h3,
+.books .book h4 {
+  padding: 0;
+  margin: 0;
+}
+.books .book .title {
+  font-size: 0.8em;
+}
+.books .book .subtitle {
+  font-size: 0.5em;
+}
+.books .book .date {
+  font-size: 0.7em;
+  font-weight: 700;
+}
+
+.reveal section .books img,
+.reveal section .reference img {
+  border: 0;
+  box-shadow: none;
+  display: block;
+  max-width: 200px;
+  width: auto;
+  height: auto;
+}
+
+div.timeline {
+  display: flex;
+  position: relative;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.events .start,
+.events .finish {
+  display: block;
+  width: 30px;
+  position: relative;
+}
+
+.events span.title,
+.events span.subtitle {
+  display: none;
+}
+
+.events .event img {
+  margin: 0 auto;
+  max-width: 100px;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.events .start:after,
+.events .finish:after {
+  content: ' ';
+  display: block;
+  border-radius: 50%;
+  border: 3px solid black;
+  background-color: white;
+  z-index: 999;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: -15px;
+  left: 0px;
+  color: transparent;
+}
+
+.timeline .events .space {
+  /* background-color: rgba(0,0,0,0.1); */
+  display: block;
+  border-bottom: 3px dotted rgba(0, 0, 0, 0.3);
+}
+
+section.timeline {
+  overflow-x: scroll;
+}
+
+.timeline .events {
+  display: flex;
+  text-align: center;
+}
+
+.events .event {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  min-width: 100px;
+  max-width: 100px;
+  padding: 20px;
+  font-size: 8pt;
+}
+
+.events .event .time {
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  width: 100%;
+  left: 0;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+.events .event:after {
+  content: ' ';
+  position: absolute;
+  bottom: -9px;
+  left: 60px;
+  display: block;
+
+  border-radius: 50%;
+  width: 15px;
+  height: 15px;
+}
+
+.events .event.before {
+  color: darkred;
+  border-bottom: 3px solid darkred;
+}
+.events .event.main {
+  color: darkblue;
+  border-bottom: 3px solid darkblue;
+}
+.events .event.after {
+  color: darkgreen;
+  border-bottom: 3px solid darkgreen;
+}
+
+.events .event.before:after {
+  background: red;
+}
+.events .event.main:after {
+  background: blue;
+}
+.events .event.after:after {
+  background: green;
+}

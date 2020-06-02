@@ -1,0 +1,906 @@
+---
+layout: presentation
+title : Arquitetura e Agilidade
+date : 2020-06-01T16:56:13-03:00
+presentation: agilidade
+img: "presentations/agilidade.png"
+theme: /assets/reveal/css/theme/simple.css
+custom_theme: css/theme/agilidade.css
+centered: true
+width: 1600
+height: 900
+description: Um pouco da origem da agilidade e a relação com a Arquitetura de Software
+---
+<div class="slides">
+    <section class="title">
+        <h1>{{page.title}}</h1>
+    </section>
+
+    <!-- Manifesto Ágil -->
+    <section data-background="#F8F9F6" class="title">
+        <h1>Manifesto ágil</h1>
+        <a href="https://agilemanifesto.org/iso/ptbr/manifesto.html" target="_new">https://agilemanifesto.org/</a>
+        <p>
+            Estamos descobrindo maneiras melhores de desenvolver <br>
+            software, fazendo-o nós mesmos e ajudando outros a <br>
+            fazerem o mesmo. Através deste trabalho, passamos a valorizar: <br>
+        </p>
+        <p>
+            <span class="more">Indivíduos e interações</span> mais que processos e ferramentas<br>
+            <span class="more">Software em funcionamento</span> mais que documentação abrangente<br>
+            <span class="more">Colaboração com o cliente</span> mais que negociação de contratos<br>
+            <span class="more">Responder a mudanças</span> mais que seguir um plano<br>
+        </p>
+        <p>
+            Ou seja, mesmo havendo valor nos itens à direita,<br>
+            valorizamos mais os itens à esquerda.
+        </p>
+    </section>
+    <section>
+        <section>
+            <h2>Signatários Originais (2001)</h2>
+            <div class="list">
+                <span>Alistair Cokburn</span>
+                <span>Andrew Hunt</span>
+                <span>Arie van Bennekum</span>
+                <span>Brian Marick</span>
+                <span>Dave Thomas</span>
+                <span>James Grenning</span>
+                <span>Jeff Sutherland</span>
+                <span>Jim Highsmith</span>
+                <span>Jon Kern</span>
+                <span>Ken Schwaber</span>
+                <span>Kent Beck</span>
+                <span>Martin Fowler</span>
+                <span>Mike Beedle</span>
+                <span>Robert C. Martin</span>
+                <span>Ron Jeffries</span>
+                <span>Steve Mellor</span>
+                <span>Ward Cumningham</span>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Alistair Cockburn</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">Surviving Object-Oriented Projects</h3>
+                    <!-- <a href="https://amzn.to/3gJ9WKP"><img src="imgs/Cockburn_199801.png" /></a> -->
+                    <a href="https://www.amazon.com.br/Surviving-Object-Oriented-Projects-Alistair-Cockburn/dp/0201498340/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Surviving+Object-Oriented+Projects&qid=1591035633&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=fe3fcb48f8ef031699bd5839272b8b74&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0201498340&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0201498340"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Janeiro/1998</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Writing Effective Use Cases </h3>
+                    <!-- <a href="https://amzn.to/3dnVaY3"><img src="imgs/Cockburn_200010.png" /></a> -->
+                    <a href="https://www.amazon.com.br/Writing-Effective-Cases-Software-Development-ebook/dp/B00I077Z1M/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Writing+Effective+Use+Cases&qid=1591035773&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=a8113e29d65ad082bc70d1f7f063fa5c&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00I077Z1M&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B00I077Z1M"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <a href="https://amzn.to/2XKuvhm">pt-br</a>
+                    <span class="date">Outubro/2000</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Crystal Clear</h3>
+                    <h4 class="subtitle">A Human-Powered Methodology for Small Teams</h4>
+                    <!-- <a href="https://amzn.to/2yYa5sY"><img src="imgs/Cockburn_200410.png" /></a> -->
+                    <a href="https://www.amazon.com.br/Crystal-Clear-Human-Powered-Methodology-Small/dp/0201699478/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Crystal+Clear+Small+Teams&qid=1591035908&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=41b245787ce8caae1cdf9bd79a8ab37b&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0201699478&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0201699478"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Outubro/2004</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Andrew Hunt & Dave Thomas</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">The Pragmatic Programmer</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Hunt_Thomas_199909.png" /> -->
+                    <a href="https://www.amazon.com.br/Pragmatic-Programmer-journey-mastery-Anniversary/dp/0135957052/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=The+Pragmatic+Programmer&qid=1591036108&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=c2245fd73e89f900e3eab0183e34d557&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0135957052&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0135957052"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Setembro/1999</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Dave Thomas</h2>
+            <div class="reference">
+                <div class="qr">
+                    <img src="imgs/AgileIsDead_QrCode.png" />
+                </div>
+                <div class="video">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/a-BOSpxYJ9M" frameborder="0"
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+                    <h3 class="title">Agile is Dead (Long Live Agility)</h3>
+                    <a href="https://www.youtube.com/watch?v=a-BOSpxYJ9M"
+                        target="_new">https://www.youtube.com/watch?v=a-BOSpxYJ9M</a>
+                </div>
+                </reference>
+        </section>
+        <section>
+            <h2 class="Author">Arie Van Bennekum</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">Lean Agile Marketing</h3>
+                    <h4 class="subtitle">How to Become Agile and Deliver Markeging Success</h4>
+                    <!-- <img src="imgs/Bennekum_201702.png" /> -->
+                    <a href="https://www.amazon.com.br/Lean-Agile-Marketing-Deliver-English-ebook/dp/B01NAP0T3V/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Lean+Agile+Marketing&qid=1591036153&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=bae2ee684a78bf3de4433b856a377a1f&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01NAP0T3V&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B01NAP0T3V"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Fevereiro/2017</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Brian Marick</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">The Craft of Software Testing</h3>
+                    <h4 class="subtitle">Subsystem Testing</h4>
+                    <!-- <img src="imgs/Marick_199412.png" /> -->
+                    <a href="https://www.amazon.com.br/Craft-Software-Testing-Object-Based-Object-Oriented/dp/0131774115/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=The+Craft+of+Software+Testing&qid=1591036181&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=de1ed6da7f7b197ba9b2b4a4deef400e&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0131774115&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0131774115"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Dezembro/1994</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">James W. Grenning</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">Test-Driven Development for Embedded C</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Grenning_201104.png" /> -->
+                    <a href="https://www.amazon.com.br/Development-Embedded-Pragmatic-Programmers-English-ebook/dp/B01D3TWF5M/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=test-driven+development+for+embedded+c&qid=1591036204&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=c8b936225374bd0bafb2c12263e12fe7&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B01D3TWF5M&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B01D3TWF5M"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Abril/2011</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Jeff Sutherland & Ken Schwaber</h2>
+            <div class="reference">
+                <img src="imgs/Sutherland_Schwaber_OOPSLA_1995.png" alt="qrcode" />
+                <img src="imgs/oopsla_95.png" alt="oopsla 95" />
+            </div>
+            <a href="http://www.jeffsutherland.org/oopsla/schwapub.pdf"
+                target="_new">http://www.jeffsutherland.org/oopsla/schwapub.pdf</a>
+            <p>
+                Criaram a primeira sugestão de processo Scrum
+                apresentada na OOPSLA em 1995 OOPSLA
+                (Object-Oriented Programming, Systems, Languages & Applications)
+            </p>
+        </section>
+        <section>
+            <h2 class="Author">Jeff Sutherland</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">Business Object Design and Implementation</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Sutherland_199705.png" /> -->
+                    <a href="https://www.amazon.com.br/Business-Object-Design-Implementation-Proceedings/dp/3540760962/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Business+Object+Design+and+Implementation&qid=1591036228&sr=8-4&linkCode=li3&tag=jmarcon-20&linkId=9fabf607e024003a6f77e04009f7c60d&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=3540760962&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=3540760962"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Maio/1997</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">The Power of SCRUM</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Sutherland_201111.png" /> -->
+                    <a href="https://www.amazon.com.br/Power-Scrum-English-Jeff-Sutherland-ebook/dp/B007474YMC/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=The+Power+of+SCRUM&qid=1591036274&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=70d5f2ae9e6c46c44572f3559d038481&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B007474YMC&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B007474YMC"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Novembro/2011</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Software in 30 days</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Sutherland_Schwaber_201205.png" /> -->
+                    <a href="https://www.amazon.com.br/Software-30-Days-Customers-Competitors-ebook/dp/B007P6UPLG/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Software+in+30+days&qid=1591036310&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=9247079d45242143edd25747fa72be90&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B007P6UPLG&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B007P6UPLG"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Maio/2012</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">SCRUM: The Art of Doing Twice the Work in Half the Time</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Sutherland_201409.png" /> -->
+                    <a href="https://www.amazon.com.br/Scrum-Doing-Twice-Work-English-ebook/dp/B00JI54HCU/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=SCRUM:+The+Art+of+Doing+Twice+the+Work+in+Half+the+Time&qid=1591036343&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=9374af3488d0959d9012c2c295c7c7b4&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00JI54HCU&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B00JI54HCU"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Setembro/2014</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">The SCRUM Fieldbook</h3>
+                    <h4 class="subtitle">A Master Class on Accelerating Performance, Getting Results, and Defining the
+                        Future</h4>
+                    <a href="https://www.amazon.com.br/Scrum-Fieldbook-Accelerating-Performance-Defining/dp/0525573216/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=SCRUM:+The+Art+of+Doing+Twice+the+Work+in+Half+the+Time&qid=1591036360&sr=8-2&linkCode=li3&tag=jmarcon-20&linkId=181e16981bd1a35819e7ee7beeef25fd&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0525573216&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0525573216"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Outubro/2019</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Ken Schwaber</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">Agile Software Development with Scrum</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Schwaber_Beedle_200110.png" /> -->
+                    <a href="https://www.amazon.com.br/Agile-Software-Development-Robert-Martin/dp/0130676349/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Agile+Software+Development+with+Scrum&qid=1591036491&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=2152f82bb22831563648976f013bc758&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0130676349&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0130676349"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Outubro/2001</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Agile Project Management with Scrum</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Schwaber_200402.png" /> -->
+                    <a href="https://www.amazon.com.br/Project-Management-Developer-Practices-English-ebook/dp/B00JDMPOZW/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Agile+Project+Management+with+Scrum&qid=1591036518&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=99f52c2752baedc341d35ae20d10e00a&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00JDMPOZW&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B00JDMPOZW"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Fevereiro/2004</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">The Enterprise and Scrum</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Schwaber_200706.png" /> -->
+                    <a href="https://www.amazon.com.br/Enterprise-Scrum-Ken-Schwaber/dp/8178531267/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=The+Enterprise+and+Scrum&qid=1591036545&sr=8-2&linkCode=li3&tag=jmarcon-20&linkId=7a86b6e21c59724bb024f01658c905e4&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=8178531267&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=8178531267"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Junho/2007</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Software in 30 Days</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Sutherland_Schwaber_201205.png" /> -->
+                    <a href="https://www.amazon.com.br/Software-30-Days-Customers-Competitors-ebook/dp/B007P6UPLG/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Software+in+30+days&qid=1591036310&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=9247079d45242143edd25747fa72be90&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B007P6UPLG&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B007P6UPLG"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Maio/2012</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Jim Highsmith</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">Agile Software Development Ecosystems</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Highsmith_200204.png" /> -->
+                    <a href="https://www.amazon.com.br/Agile-Software-Development-Ecosystems-Highsmith/dp/0201760436/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Agile+Software+Development+Ecosystems&qid=1591036571&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=2e296bcf5302fe64504e47ec41745a6a&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0201760436&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0201760436"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Abril/2002</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Agile Project Management</h3>
+                    <h4 class="subtitle">Creating Innovative Products</h4>
+                    <!-- <img src="imgs/Highsmith_200404.png" /> -->
+                    <a href="https://www.amazon.com.br/Agile-Project-Management-Innovative-Development-ebook/dp/B002HMJYAG/ref=as_li_ss_il?_encoding=UTF8&qid=1591036599&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=d8d2acd716f4f48c0e79716f481b3080&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B002HMJYAG&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B002HMJYAG"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Abril/2004</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Adaptive Leadership</h3>
+                    <h4 class="subtitle">Accelerating Enterprise Agility</h4>
+                    <!-- <img src="imgs/Highsmith_201311.png" /> -->
+                    <a href="https://www.amazon.com.br/Adaptive-Leadership-Accelerating-Enterprise-Agility-ebook/dp/B00GFSAOKC/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Adaptive+Leadership&qid=1591036635&sr=8-3&linkCode=li3&tag=jmarcon-20&linkId=735859d6204669cd979cb18a174d1697&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00GFSAOKC&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B00GFSAOKC"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Novembro/2013</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">EDGE</h3>
+                    <h4 class="subtitle">Value-Driven Digital Transformation</h4>
+                    <!-- <img src="imgs/Highsmith_201908.png" /> -->
+                    <a href="https://www.amazon.com.br/EDGE-Value-Driven-Digital-Transformation-English-ebook/dp/B07WFL74JR/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=EDGE&qid=1591036662&sr=8-4&linkCode=li3&tag=jmarcon-20&linkId=bdb7de535705838430e2c2c82ed5bc47&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B07WFL74JR&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B07WFL74JR"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Agosto/2019</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Jon Kern</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">Java Design</h3>
+                    <h4 class="subtitle">Building Better Apps & Applets</h4>
+                    <!-- <img src="imgs/Kern_199812.png" /> -->
+                    <a href="https://www.amazon.com.br/Java-Design-Building-Better-Applets/dp/0132711494/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Java+Design+Building+Better+Apps+&+Applets&qid=1591036697&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=62d452a272a1863335824be8d7980a65&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0132711494&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0132711494"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Dezembro/1998</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Kent Beck</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">Extreme Programming Explained</h3>
+                    <h4 class="subtitle">Embrace Change</h4>
+                    <!-- <img src="imgs/Beck_199910.png" /> -->
+                    <a href="https://www.amazon.com.br/Extreme-Programming-Explained-Embrace-English-ebook/dp/B00N1ZN6C0/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Extreme+Programming+Explained&qid=1591036729&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=ffea9ad780b37cf31cb12eae99bf6f1b&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00N1ZN6C0&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B00N1ZN6C0"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Outubro/1999</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Planning Extreme Programming</h3>
+                    <h4 class="subtitle">Embrace Change</h4>
+                    <!-- <img src="imgs/Beck_Fowler_200010.png" /> -->
+                    <a href="https://www.amazon.com.br/Planning-Extreme-Programming-Kent-Beck/dp/0201710919/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Planning+Extreme+Programming&qid=1591036754&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=cd40f0e0eb1721b587e3c47ce1eebd8a&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0201710919&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0201710919"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Outubro/2000</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Test-Driven Development</h3>
+                    <h4 class="subtitle">By Example</h4>
+                    <!-- <img src="imgs/Beck_200211.png" /> -->
+                    <a href="https://www.amazon.com.br/Test-Driven-Development-Kent-Beck/dp/0321146530/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Test-Driven+Development&qid=1591036774&sr=8-2&linkCode=li3&tag=jmarcon-20&linkId=f7e48fe1465f9cd2b6c27ddf39bec7bc&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0321146530&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0321146530"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Novembro/2002</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Martin Fowler</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">Analysis Patterns</h3>
+                    <h4 class="subtitle">Reusable Object Models</h4>
+                    <!-- <img src="imgs/Fowler_Cumningham_199610.png" /> -->
+                    <a href="https://www.amazon.com.br/Analysis-Patterns-Reusable-Object-English-ebook/dp/B0186FU89I/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Analysis+Patterns&qid=1591036800&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=c0c6e9713e339013d62e0edc302e5476&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0186FU89I&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B0186FU89I"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Outubro/1996</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">UML Distilled</h3>
+                    <h4 class="subtitle">Applying the Standard Object Modeling Language</h4>
+                    <!-- <img src="imgs/Fowler_199701.png" /> -->
+                    <a href="https://www.amazon.com.br/UML-Distilled-Standard-Modeling-Language-ebook/dp/B000OZ0N8A/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=UML+Distilled&qid=1591036822&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=30612eb29fd252cdcc26ed936dd3ec73&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B000OZ0N8A&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B000OZ0N8A"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Janeiro/1997</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Planning Extreme Programming</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Beck_Fowler_200010.png" /> -->
+                    <a href="https://www.amazon.com.br/Planning-Extreme-Programming-Kent-Beck/dp/0201710919/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Planning+Extreme+Programming&qid=1591036850&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=21e248df7c7ae9c14af155ad0c22a12f&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0201710919&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0201710919"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Outubro/2000</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Patterns of Enterprise Application Architecture</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Fowler_200203.png" /> -->
+                    <a href="https://www.amazon.com.br/Patterns-Enterprise-Application-Architecture-Addison-Wesley-ebook/dp/B008OHVDFM/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Patterns+of+Enterprise+Application+Architecture&qid=1591036877&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=4cbf2de6f6dd71aa59b9785fa09ea3a9&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B008OHVDFM&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B008OHVDFM"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <a href="https://amzn.to/2yTedKJ" alt="Padrões de Arquitetura de Aplicações Corporativas"
+                        target="_new">pt-br</a>
+                    <span class="date">Março/2002</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Domain-Specific Languages</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Fowler_201009.png" /> -->
+                    <a href="https://www.amazon.com.br/Domain-Specific-Languages-Addison-Wesley-Signature-English-ebook/dp/B003ZUYJ3G/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Domain-Specific+Languages&qid=1591036971&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=97297b56651b01b4ac2b36f1f7c0a961&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B003ZUYJ3G&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B003ZUYJ3G"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Setembro/2010</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Refactoring</h3>
+                    <h4 class="subtitle">Improving the Design of Existing Code</h4>
+                    <!-- <img src="imgs/Fowler_Beck_201203.png" /> -->
+                    <a href="https://www.amazon.com.br/Refactoring-Improving-Design-Existing-Code/dp/0134757599/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Refactoring&qid=1591037010&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=836a9bfc399f5a7ed39ac6d9674b1c67&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0134757599&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0134757599"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <a href="https://amzn.to/2AoZt6F" alt="refatoração" target="_new">pt-br</a>
+                    <span class="date">Março/2012</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Mike Beedle</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">Agile Software Development with SCRUM</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Schwaber_Beedle_200110.png" /> -->
+                    <a href="https://www.amazon.com.br/Agile-Software-Development-Robert-Martin/dp/0130676349/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Agile+Software+Development+with+SCRUM&qid=1591037145&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=9949f9cf7d5ec896a02ccdc1fffe94f8&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0130676349&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0130676349"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Outubro/2001</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Robert C. Martin</h2>
+            <h4>(UNCLE BOB)</h4>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">Agile Software Development</h3>
+                    <h4 class="subtitle">Principles, Patterns, and Practices</h4>
+                    <!-- <img src="imgs/Bob_200210.png" /> -->
+                    <a href="https://www.amazon.com.br/Software-Development-Principles-Patterns-Practices/dp/0135974445/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Agile+Software+Development&qid=1591037190&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=d3f4eec654bbaa21e4dc9a55bd517863&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0135974445&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0135974445"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Outubro/2002</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Clean Code</h3>
+                    <h4 class="subtitle">A Handbook of Agile Software Craftmanship</h4>
+                    <!-- <img src="imgs/Bob_200808.png" /> -->
+                    <a href="https://www.amazon.com.br/Clean-Code-Handbook-Software-Craftsmanship-ebook/dp/B001GSTOAM/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Clean+Code&qid=1591037281&sr=8-2&linkCode=li3&tag=jmarcon-20&linkId=69e981557617920c6d4e3d334e2822e6&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001GSTOAM&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B001GSTOAM"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <a href="https://amzn.to/36SMK8h" alt="Código Limpo" target="_new">pt-br</a>
+                    <span class="date">Agosto/2008</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">The Clean Coder</h3>
+                    <h4 class="subtitle">A Code of Conduct for Professional Programmers</h4>
+                    <!-- <img src="imgs/Bob_201105.png" /> -->
+                    <a href="https://www.amazon.com.br/Clean-Coder-Conduct-Professional-Programmers-ebook/dp/B0050JLC9Y/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Clean+Coder&qid=1591037352&sr=8-2&linkCode=li3&tag=jmarcon-20&linkId=57a261e56da8b3d7be6447f4428c82ee&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0050JLC9Y&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B0050JLC9Y"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <a href="https://amzn.to/36PbNt7" alt="Codificador Limpo" target="_new">pt-br</a>
+                    <span class="date">Maio/2011</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Clean Architecture</h3>
+                    <h4 class="subtitle">A Craftmanship's Guide to Software Structure and Design</h4>
+                    <!-- <img src="imgs/Bob_201709.png" /> -->
+                    <a href="https://www.amazon.com.br/Clean-Architecture-Craftsmans-Software-Structure-ebook/dp/B075LRM681/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Clean+Architecture&qid=1591037442&sr=8-2&linkCode=li3&tag=jmarcon-20&linkId=40bd9e402b727c52e308c93eb1d43d37&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B075LRM681&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B075LRM681"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <a href="https://amzn.to/2ZXyhXu" alt="Arquitetura Limpa" target="_new">pt-br</a>
+                    <span class="date">Setembro/2017</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Clean Agile</h3>
+                    <h4 class="subtitle">Back to Basics</h4>
+                    <!-- <img src="imgs/Bob_201909.png" /> -->
+                    <a href="https://www.amazon.com.br/Clean-Agile-Robert-C-Martin/dp/0135781868/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Clean+Agile&qid=1591037516&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=2b7172ddf0ad35a57f3a1580f320b69b&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0135781868&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0135781868"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Setembro/2019</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Ron Jeffries</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">Extreme Programming Installed</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Jeffries_200010.png" /> -->
+                    <a href="https://www.amazon.com.br/Extreme-Programming-Installed-Ron-Jeffries/dp/0201708426/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Extreme+Programming+Installed&qid=1591037559&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=1137b8943ebf746d27c59145417acca9&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0201708426&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0201708426"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Outubro/2000</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">Extreme Programming Adventures in C#</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Jeffries_200402.png" /> -->
+                    <a href="https://www.amazon.com.br/Extreme-Programming-Adventures-Ron-Jeffries/dp/0735619492/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Extreme+Programming+Adventures+in+C#&qid=1591037570&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=4645c0ca33d4e48b35a6a34ff4504695&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0735619492&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0735619492"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Fevereiro/2004</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">The Nature of Software Development</h3>
+                    <h4 class="subtitle"></h4>
+                    <!-- <img src="imgs/Jeffries_201502.png" /> -->
+                    <a href="https://www.amazon.com.br/Nature-Software-Development-Valuable-English-ebook/dp/B00VDHRFWU/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=The+Nature+of+Software+Development&qid=1591037579&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=0b4f47fc0ca6d14b1e3210c2ec49d86f&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B00VDHRFWU&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B00VDHRFWU"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Fevereiro/2015</span>
+                </div>
+            </div>
+        </section>
+        <section>
+            <h2 class="Author">Steve Mellor</h2>
+            <h4>(Stephen J. Mellor)<h4>
+                    <div class="books">
+                        <div class="book">
+                            <h3 class="title">Structured Development for Real-Time Systems</h3>
+                            <h4 class="subtitle"></h4>
+                            <!-- <img src="imgs/Mellor_198606.png" /> -->
+                            <a href="https://www.amazon.com.br/Structured-Development-Real-Time-Systems-Vol-ebook/dp/B001EWOG80/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Structured+Development+for+Real-Time+Systems&qid=1591037642&sr=8-3&linkCode=li3&tag=jmarcon-20&linkId=c08bf4d46dee53f094b81cf02aabc58e&language=pt_BR"
+                                target="_blank"><img border="0"
+                                    src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B001EWOG80&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                                src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B001EWOG80"
+                                width="1" height="1" border="0" alt=""
+                                style="border:none !important; margin:0px !important;" />
+                            <span class="date">Junho/1986</span>
+                        </div>
+                        <div class="book">
+                            <h3 class="title">Object-Oriented Systems Analysis</h3>
+                            <h4 class="subtitle">Modeling the World in Data</h4>
+                            <!-- <img src="imgs/Mellor_198804.png" /> -->
+                            <a href="https://www.amazon.com.br/Object-Oriented-Systems-Analysis-Modeling/dp/013629023X/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Object-Oriented+Systems+Analysis&qid=1591037698&sr=8-3&linkCode=li3&tag=jmarcon-20&linkId=a0d3c4b0ae9348cb267af553b341b8d9&language=pt_BR"
+                                target="_blank"><img border="0"
+                                    src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=013629023X&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                                src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=013629023X"
+                                width="1" height="1" border="0" alt=""
+                                style="border:none !important; margin:0px !important;" />
+                            <span class="date">Abril/1988</span>
+                        </div>
+                        <div class="book">
+                            <h3 class="title">Object Lifecycles</h3>
+                            <h4 class="subtitle">Modeling the World in States</h4>
+                            <!-- <img src="imgs/Mellor_199109.png" /> -->
+                            <a href="https://www.amazon.com.br/Object-Lifecycles-Modeling-World-States/dp/0136299407/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Object+Lifecycles&qid=1591037731&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=64e56e33d17d11776365d45f1dd1abf2&language=pt_BR"
+                                target="_blank"><img border="0"
+                                    src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0136299407&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                                src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0136299407"
+                                width="1" height="1" border="0" alt=""
+                                style="border:none !important; margin:0px !important;" />
+                            <span class="date">Setembro/1991</span>
+                        </div>
+                        <div class="book">
+                            <h3 class="title">Executable UML</h3>
+                            <h4 class="subtitle">A Foundation for Model-Driven Architecture</h4>
+                            <!-- <img src="imgs/Mellor_200205.png" /> -->
+                            <a href="https://www.amazon.com.br/Executable-UML-Foundation-Model-Driven-Architecture/dp/0201748045/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Executable+UML&qid=1591037756&sr=8-4&linkCode=li3&tag=jmarcon-20&linkId=ad21fe81ba482f48da3600ae8ea85927&language=pt_BR"
+                                target="_blank"><img border="0"
+                                    src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0201748045&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                                src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0201748045"
+                                width="1" height="1" border="0" alt=""
+                                style="border:none !important; margin:0px !important;" />
+                            <span class="date">Maio/2002</span>
+                        </div>
+                        <div class="book">
+                            <h3 class="title">MDA Distilled</h3>
+                            <h4 class="subtitle">Principles of Model-Driven Architecture</h4>
+                            <!-- <img src="imgs/Mellor_200403.png" /> -->
+                            <a href="https://www.amazon.com.br/MDA-Distilled-Stephen-J-Miller/dp/0201788918/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=MDA+Distilled&qid=1591037824&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=9c71e664d2f38f8b93328c1734df0334&language=pt_BR"
+                                target="_blank"><img border="0"
+                                    src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=0201788918&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                                src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=0201788918"
+                                width="1" height="1" border="0" alt=""
+                                style="border:none !important; margin:0px !important;" />
+                            <span class="date">Março/2004</span>
+                        </div>
+                    </div>
+        </section>
+        <section>
+            <h2 class="Author">Ward Cumningham</h2>
+            <div class="books">
+                <div class="book">
+                    <h3 class="title">Analysis Patterns</h3>
+                    <h4 class="subtitle">Reusable Object Models</h4>
+                    <!-- <img src="imgs/Fowler_Cumningham_199610.png" /> -->
+                    <a href="https://www.amazon.com.br/Analysis-Patterns-Reusable-Object-English-ebook/dp/B0186FU89I/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=Analysis+Patterns&qid=1591037847&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=52bb1c23386e850c33103271a8b704b6&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=B0186FU89I&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=B0186FU89I"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Outubro/1996</span>
+                </div>
+                <div class="book">
+                    <h3 class="title">The Wiki Way</h3>
+                    <h4 class="subtitle">Quick Collaboration on the Web</h4>
+                    <!-- <img src="imgs/Cumningham_200104.png" /> -->
+                    <a href="https://www.amazon.com.br/Wiki-Way-Collaboration-Sharing-Internet/dp/020171499X/ref=as_li_ss_il?__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&dchild=1&keywords=The+Wiki+Way&qid=1591037874&sr=8-1&linkCode=li3&tag=jmarcon-20&linkId=9ca6f99bae9ab9c7c2aca2d7a43bc872&language=pt_BR"
+                        target="_blank"><img border="0"
+                            src="//ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&ASIN=020171499X&Format=_SL250_&ID=AsinImage&MarketPlace=BR&ServiceVersion=20070822&WS=1&tag=jmarcon-20&language=pt_BR"></a><img
+                        src="https://ir-br.amazon-adsystem.com/e/ir?t=jmarcon-20&language=pt_BR&l=li3&o=33&a=020171499X"
+                        width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+                    <span class="date">Abril/2001</span>
+                </div>
+            </div>
+        </section>
+    </section>
+    <section class="timeline">
+        <h1>Timeline</h1>
+        <div class="timeline">
+            <div class="events">
+                <div class="start"></div>
+                <div class="space"></div>
+                <div class="event before"><span class="title">Structured development for real-time systems</span><img
+                        class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B001EWOG80&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">05</span>/<span class="year">1986</span></span></div>
+                <div class="space" style="min-width: 55.8333px;"></div>
+                <div class="event before"><span class="title">Object-oriented systems analysis</span><span
+                        class="subtitle">Modeling the world in data</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=013629023X&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">03</span>/<span class="year">1988</span></span></div>
+                <div class="space" style="min-width: 104px;"></div>
+                <div class="event before"><span class="title">Object lifecycles</span><span class="subtitle">Modeling
+                        the world in states</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0136299407&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">08</span>/<span class="year">1991</span></span></div>
+                <div class="space" style="min-width: 98.9167px;"></div>
+                <div class="event before"><span class="title">The craft of software testing</span><span
+                        class="subtitle">Subsystem testing</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0131774115&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">11</span>/<span class="year">1994</span></span></div>
+                <div class="space" style="min-width: 55.8333px;"></div>
+                <div class="event before"><span class="title">Analysis Patterns</span><span class="subtitle">Reusable
+                        object models</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B0186FU89I&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">09</span>/<span class="year">1996</span></span></div>
+                <div class="space" style="min-width: 7.66667px;"></div>
+                <div class="event before"><span class="title">UML Distiled</span><span class="subtitle">Applying the
+                        standard object modeling language</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B000OZ0N8A&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">12</span>/<span class="year">1996</span></span></div>
+                <div class="space" style="min-width: 10px;"></div>
+                <div class="event before"><span class="title">Business object design and implementation</span><img
+                        class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=3540760962&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">04</span>/<span class="year">1997</span></span></div>
+                <div class="space" style="min-width: 20.4167px;"></div>
+                <div class="event before"><span class="title">Surviving object-oriented projects</span><img
+                        class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0201498340&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">12</span>/<span class="year">1997</span></span></div>
+                <div class="space" style="min-width: 27.8333px;"></div>
+                <div class="event before"><span class="title">Java Design</span><span class="subtitle">Building better
+                        apps &amp; applets</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0132711494&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">11</span>/<span class="year">1998</span></span></div>
+                <div class="space" style="min-width: 22.8333px;"></div>
+                <div class="event before"><span class="title">The pragmatic programmer</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0135957052&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">08</span>/<span class="year">1999</span></span></div>
+                <div class="space" style="min-width: 2.5px;"></div>
+                <div class="event before"><span class="title">Extreme Programming Explained</span><span
+                        class="subtitle">Embrace change</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B00N1ZN6C0&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">09</span>/<span class="year">1999</span></span></div>
+                <div class="space" style="min-width: 30.5px;"></div>
+                <div class="event before"><span class="title">Writing effective use cases</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B00I077Z1M&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">09</span>/<span class="year">2000</span></span></div>
+                <div class="space" style="min-width: 0px;"></div>
+                <div class="event before"><span class="title">Planning extreme programming</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0201710919&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">09</span>/<span class="year">2000</span></span></div>
+                <div class="space" style="min-width: 0px;"></div>
+                <div class="event before"><span class="title">Extreme programming installed</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0201708426&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">09</span>/<span class="year">2000</span></span></div>
+                <div class="space" style="min-width: 7.67361px;"></div>
+                <div class="event before"><span class="title">Agile Software Development with Scrum</span><img
+                        class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0130676349&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">01</span>/<span class="year">2001</span></span></div>
+                <div class="space" style="min-width: 2.57639px;"></div>
+                <div class="event main"><span class="title">Agile Manifest</span><img
+                        src="https://uploads-ssl.webflow.com/5bd1714cb8d1c65c34990924/5d79fb98ef0e0f5a5ea5521d_agile-manifesto-hero.svg"
+                        class="image" /><span class="time"><span class="month">01</span>/<span
+                            class="year">2001</span></span></div>
+                <div class="space" style="min-width: 4.91667px;"></div>
+                <div class="event after"><span class="title">The wiki way</span><span class="subtitle">Quick
+                        collaboration on the web</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=020171499X&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">03</span>/<span class="year">2001</span></span></div>
+                <div class="space" style="min-width: 27.8333px;"></div>
+                <div class="event after"><span class="title">Pattern of enterprise application architecture</span><img
+                        class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B008OHVDFM&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">02</span>/<span class="year">2002</span></span></div>
+                <div class="space" style="min-width: 2.58333px;"></div>
+                <div class="event after"><span class="title">Agile software development ecosystems</span><img
+                        class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0201760436&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">03</span>/<span class="year">2002</span></span></div>
+                <div class="space" style="min-width: 2.5px;"></div>
+                <div class="event after"><span class="title">Executable UML</span><span class="subtitle">A foundation
+                        for model-driven architecture</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0201748045&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">04</span>/<span class="year">2002</span></span></div>
+                <div class="space" style="min-width: 12.75px;"></div>
+                <div class="event after"><span class="title">Agile software development</span><span
+                        class="subtitle">Principles, patterns, and practices</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0135974445&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">09</span>/<span class="year">2002</span></span></div>
+                <div class="space" style="min-width: 2.58333px;"></div>
+                <div class="event after"><span class="title">Test-driven development</span><span class="subtitle">by
+                        example</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0321146530&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">10</span>/<span class="year">2002</span></span></div>
+                <div class="space" style="min-width: 38.0833px;"></div>
+                <div class="event after"><span class="title">Agile Project Management</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B00JDMPOZW&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">01</span>/<span class="year">2004</span></span></div>
+                <div class="space" style="min-width: 0px;"></div>
+                <div class="event after"><span class="title">Extreme programming adventures in C#</span><img
+                        class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0735619492&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">01</span>/<span class="year">2004</span></span></div>
+                <div class="space" style="min-width: 2.41667px;"></div>
+                <div class="event after"><span class="title">MDA Distilled</span><span class="subtitle">Principles of
+                        model-driven architecture</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0201788918&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">02</span>/<span class="year">2004</span></span></div>
+                <div class="space" style="min-width: 2.58333px;"></div>
+                <div class="event after"><span class="title">Agile project management</span><span
+                        class="subtitle">creating innovative products</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B002HMJYAG&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">03</span>/<span class="year">2004</span></span></div>
+                <div class="space" style="min-width: 15.25px;"></div>
+                <div class="event after"><span class="title">Crystal clear</span><span class="subtitle">A Human-Powered
+                        Methodology for Small Teams</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0201699478&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">09</span>/<span class="year">2004</span></span></div>
+                <div class="space" style="min-width: 81.0833px;"></div>
+                <div class="event after"><span class="title">The enterprise and scrum</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=8178531267&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">05</span>/<span class="year">2007</span></span></div>
+                <div class="space" style="min-width: 35.5833px;"></div>
+                <div class="event after"><span class="title">Clean code</span><span class="subtitle">A handbook of agile
+                        software craftmanship</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B001GSTOAM&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">07</span>/<span class="year">2008</span></span></div>
+                <div class="space" style="min-width: 63.4167px;"></div>
+                <div class="event after"><span class="title">Domain-specific languages</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B003ZUYJ3G&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">08</span>/<span class="year">2010</span></span></div>
+                <div class="space" style="min-width: 17.6667px;"></div>
+                <div class="event after"><span class="title">Test-driven development for embedded C</span><img
+                        class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B01D3TWF5M&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">03</span>/<span class="year">2011</span></span></div>
+                <div class="space" style="min-width: 2.5px;"></div>
+                <div class="event after"><span class="title">The clean coder</span><span class="subtitle">A code of
+                        conduct for professional programers</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B0050JLC9Y&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">04</span>/<span class="year">2011</span></span></div>
+                <div class="space" style="min-width: 15.3333px;"></div>
+                <div class="event after"><span class="title">The power of scrum</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B007474YMC&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">10</span>/<span class="year">2011</span></span></div>
+                <div class="space" style="min-width: 10.0833px;"></div>
+                <div class="event after"><span class="title">Refactoring</span><span class="subtitle">Improving the
+                        design of existing code</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0134757599&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">02</span>/<span class="year">2012</span></span></div>
+                <div class="space" style="min-width: 5.08333px;"></div>
+                <div class="event after"><span class="title">Software in 30 days</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B007P6UPLG&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">04</span>/<span class="year">2012</span></span></div>
+                <div class="space" style="min-width: 45.75px;"></div>
+                <div class="event after"><span class="title">Adaptive leadership</span><span
+                        class="subtitle">Accelerating enterprise agility</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B00GFSAOKC&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">10</span>/<span class="year">2013</span></span></div>
+                <div class="space" style="min-width: 25.3333px;"></div>
+                <div class="event after"><span class="title">Scrum: the art of doing twice the work in half the
+                        time</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B00JI54HCU&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">08</span>/<span class="year">2014</span></span></div>
+                <div class="space" style="min-width: 12.75px;"></div>
+                <div class="event after"><span class="title">The nature of software development</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B00VDHRFWU&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">01</span>/<span class="year">2015</span></span></div>
+                <div class="space" style="min-width: 60.9167px;"></div>
+                <div class="event after"><span class="title">Lean agile marketing</span><span class="subtitle">How to
+                        become agile and deliver marketing success</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B01NAP0T3V&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">01</span>/<span class="year">2017</span></span></div>
+                <div class="space" style="min-width: 12.5px;"></div>
+                <div class="event after"><span class="title">Clean architecture</span><span class="subtitle">A
+                        craftmanship's guide to software structure and design</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B075LRM681&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">06</span>/<span class="year">2017</span></span></div>
+                <div class="space" style="min-width: 63.4167px;"></div>
+                <div class="event after"><span class="title">EDGE</span><span class="subtitle">Value-driven digital
+                        transformation</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=B07WFL74JR&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">07</span>/<span class="year">2019</span></span></div>
+                <div class="space" style="min-width: 2.58333px;"></div>
+                <div class="event after"><span class="title">Clean agile</span><span class="subtitle">Back to
+                        basics</span><img class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0135781868&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">08</span>/<span class="year">2019</span></span></div>
+                <div class="space" style="min-width: 2.5px;"></div>
+                <div class="event after"><span class="title">The scrum fieldbook</span><span class="subtitle">A master
+                        class on accelerating performance, getting results, and defining the future</span><img
+                        class="image"
+                        src="http://ws-na.amazon-adsystem.com/widgets/q?_encoding=UTF8&amp;ASIN=0525573216&amp;Format=_SL250_&amp;ID=AsinImage&amp;MarketPlace=BR&amp;ServiceVersion=20070822&amp;WS=1&amp;tag=jmarcon-20&amp;language=pt_BR" /><span
+                        class="time"><span class="month">09</span>/<span class="year">2019</span></span></div>
+                <div class="finish"></div>
+            </div>
+        </div>
+    </section>
+</div>
