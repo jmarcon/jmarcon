@@ -7,17 +7,18 @@ title: Apresentações
 </div>
 
 <div class="content-page col-md-12">
-    {% for page in site.pages %}
+    {% assign sorted = (site.pages | sort: 'date') | reverse  %}
+    {% for page in sorted %}
     {% if page.layout == "presentation" %}
-    <article class="post">
+    <article class="row">
         {% if page.img %}
-        <a class="post-thumbnail"
+        <a class="post-thumbnail col-md-4"
             style="background-image: url({{"/assets/img/" | prepend: site.baseurl | append : page.img}})"
             href="{{page.url | prepend: page.baseurl}}"></a>
         {% else %}
         {% endif %}
 
-        <div class="col-md-12 post-content">
+        <div class={% if page.img %}"col-md-8"{% else %}"col-md-12"{% endif%}>
             <h2 class="post-title"><a href="{{page.url | prepend: page.baseurl}}">{{page.title}}</a></h2>
             <p>{{ page.description }}</p>
         </div>
