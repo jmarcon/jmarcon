@@ -7,7 +7,7 @@ title: Apresentações
 </div>
 
 <div class="content-page col-md-12">
-    {% assign sorted = (site.pages | sort: 'date') | reverse  %}
+    {% assign sorted = site.pages | sort: 'date' | reverse  %}
     {% for page in sorted %}
     {% if page.layout == "presentation" %}
     <article class="row">
