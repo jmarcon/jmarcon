@@ -77,3 +77,6 @@ exclude:
   - vendor/ruby/
   - azure-pipelines.yml
   - run.sh
+  - update_reveal.sh
+  - README.md
+  - AppIdeas.md

@@ -1,0 +1,25 @@
+# Ideias para APPs
+
+- [x] CoinToss
+- [ ] Gestor de links para leitura posterior
+- [ ] WishList
+- [ ] Encurtador de links
+- [ ] Calculadora
+  - [ ] Simples
+  - [ ] Científica
+- [ ] Ferramenta de ToDo
+  - [ ] Folders / Pastas
+  - [ ] Tags
+- [ ] Agendador e POSTs sociais
+- [ ] Aplicação de Chat
+  - [ ] Com salas
+- [ ] Livro de Receitas
+  - [ ] Foto, Ingredientes, Processo (Analisando a dificuldade e o tempo), quantas porções entrega. Uma forma de ajustar os ingredientes baseado nas porções.
+  - [ ] Passo a passo com questões de programação para entrevistas
+    - [ ] Junior
+    - [ ] Pleno
+    - [ ] Sênior
+  - [ ] Curso em Vídeo de Arquitetura
+    - [ ] Enterprise
+    - [ ] Solução
+    - [ ] Sistemas / Aplicação
