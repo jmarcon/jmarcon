@@ -7,6 +7,6 @@ draft : true
 layout: post
 img : "posts/padrao.jpg"
 tags : ["Tecnologia", "Arquitetura", "Liderança Corporativa", "Visão Corporativa"]
-title : "Arquitetura da solução é importante para seu cliente"
+title : "Como a arquitetura de sua solução impacta seu cliente"
 ---
 

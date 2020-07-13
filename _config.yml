@@ -80,3 +80,4 @@ exclude:
   - update_reveal.sh
   - README.md
   - AppIdeas.md
+  - README.md
