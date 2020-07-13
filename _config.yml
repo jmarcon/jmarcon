@@ -81,3 +81,4 @@ exclude:
   - README.md
   - AppIdeas.md
   - README.md
+  - .jekyll-metadata
