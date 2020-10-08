@@ -11,7 +11,7 @@ image : "posts/layout.jpg"
 
 Hoje, lanço um novo layout para o site, mais limpo e direto.
 
-Pretendo reiniciar a produção de conteúdos.
+Pretendo reiniciar a produção de conteúdos daqui pra frente.
 
 No canto inferior esquerdo você encontrará um pequeno botão caso queira alternar entre os modos claro e escuro.
 
