@@ -11,7 +11,10 @@
   </tr>
 </table>
 <hr/>
-<img src="https://img.shields.io/github/followers/jmarcon" /><img src="https://visitor-badge.laobi.icu/badge?page_id=jmarcon" />
-[![Linkedin](https://img.shields.io/badge/linked-in-369?style=flat-square&logo=linkedin&logoColor=white&color=blue)](https://www.linkedin.com/in/julianomarcon)
+<h5 align="center">
+  <code><img src="https://img.shields.io/github/followers/jmarcon" /></code>
+  <code><img src="https://visitor-badge.laobi.icu/badge?page_id=jmarcon" /></code>
+  [![Linkedin](https://img.shields.io/badge/linked-in-369?style=flat-square&logo=linkedin&logoColor=white&color=blue)](https://www.linkedin.com/in/julianomarcon)
+</h5>
 <hr/>
 [![Spotify](https://novatorem.vercel.app/api/spotify)](https://open.spotify.com/user/juliano.marcon)
