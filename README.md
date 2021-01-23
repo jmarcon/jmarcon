@@ -1,7 +1,6 @@
 
 <h5 align="center">
   <img src="https://github-profile-trophy.vercel.app/?username=jmarcon&title=Commit,Stars,Followers,Issues,Repositories&margin-w=15&no-frame=true" />
-  <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
 </h5>
 
 <table>
