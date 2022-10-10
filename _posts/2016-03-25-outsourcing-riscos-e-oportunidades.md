@@ -23,7 +23,7 @@ A abstração das diversas dificuldades de gestão causados por uma equipe inter
 
 #### Redução de Custos
 
-Manter um funcionário é mais caro do que contratar uma empresa de outsourcing. Os custos operacionais de contratação, treinamento, espaço, ferias e tantos outros benefícios aplicados pela [CLT](http://www.planalto.gov.br/ccivil_03/decreto-lei/Del5452.htm) encarecem significativamente manter um funcionário contratado para um serviço.
+Manter um funcionário é mais caro do que contratar uma empresa de outsourcing. Os custos operacionais de contratação, treinamento, espaço, ferias e tantos outros benefícios aplicados pela [CLT](https://www.planalto.gov.br/ccivil_03/decreto-lei/Del5452.htm) encarecem significativamente manter um funcionário contratado para um serviço.
 
 Para as empresas contratantes é vantajoso não possuir esse vínculo direto com as pessoas e permite que, caso seja necessário, substituir as pessoas que não estão atendendo as necessidades de forma mais rápida.
 

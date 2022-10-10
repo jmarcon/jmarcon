@@ -13,7 +13,7 @@ image:  posts/soft-skills.jpg
 
 Conhecer com maestria uma determinada tecnologia pode não ser suficiente
 para definir um ótimo desenvolvedor de softwares nos dias atuais. Os conceitos
-de [agilidade](http://www.manifestoagil.com.br/) acabam por determinar comportamentos
+de [agilidade](https://www.manifestoagil.com.br/) acabam por determinar comportamentos
 esperados dos envolvidos na criação de softwares.
 <!--more-->
 

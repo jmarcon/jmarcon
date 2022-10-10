@@ -44,7 +44,7 @@ definidas para o dia. Essas conquistas devem ser atividades complexas ou que pos
 Para ajudar a se organizar, use ferramentas de gestão de tempo e organização de tarefas:
 
 * [GTD](https://pt.wikipedia.org/wiki/Getting_Things_Done)
-* [Pomodoro](http://pomodorotechnique.com/)
+* [Pomodoro](https://pomodorotechnique.com/)
 * [Matriz GUT](https://pt.wikipedia.org/wiki/GUT)
 
 ##### Como um gestor lida com tudo?

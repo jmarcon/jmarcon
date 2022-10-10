@@ -19,7 +19,7 @@ description: >
   se precisar de apoio, entre em contato por uma das redes sociais! ;-)
 permalink: ':title/'
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://www.julianomarcon.com.br" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://www.julianomarcon.com.br" # the base hostname & protocol for your site, e.g. https://example.com
 
 # Author Settings
 about-author: I am a web developer focusing on front-end development. Always hungry to keep learning. # add description

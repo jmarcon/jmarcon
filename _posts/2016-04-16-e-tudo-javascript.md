@@ -18,11 +18,11 @@ Vejo que atualmente muito se fala sobre MEAN Stack. Em resumo é uma pilha de te
 <!--more-->
 
 Se seu foco é aprender sobre o MEAN, pode encontrar informações agrupadas em
-[MEAN.IO](http://www.mean.io) ou em [MEAN.JS](https://www.meanjs.org). Mas sugiro
+[MEAN.IO](https://www.mean.io) ou em [MEAN.JS](https://www.meanjs.org). Mas sugiro
 que foque primeiro nas tecnologias em separado:
 
 * [**M**ongo](https://www.mongodb.org)
-* [**E**xpress](http://www.expressjs.com)
+* [**E**xpress](https://www.expressjs.com)
 * [**A**ngular](https://www.angularjs.org)
 * [**N**ode](https://www.nodejs.org)
 
@@ -107,7 +107,7 @@ Ao invés de discorrer sobre o tema de forma aprofundada (pois sei que esse assu
 é polêmico), segue duas referências interessantes para estudo que podem exemplificar
 bem como isso pode estar afetando a comunidade.
 
-* [NPM : Have we forgotten how to program?](http://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/)
+* [NPM : Have we forgotten how to program?](https://www.haneycodes.net/npm-left-pad-have-we-forgotten-how-to-program/)
 * [Why Code in Node.js often gets Rejected by SoundCloud](https://youtu.be/kA4-b7hvWhg)
 
 #### Dependência

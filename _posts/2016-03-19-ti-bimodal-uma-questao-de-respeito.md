@@ -19,7 +19,7 @@ A existência de um legado exige que as empresas foquem seus esforços em perfis
 O Gartner define como:
 
 > A TI Bimodal é a prática de gerenciar separadamente dois modos coerentes de entrega de TI, um focado na estabilidade e outro focado na agilidade. **O Modo1** é tradicional e sequencial enfatizando a segurança e a precisão. **O Modo2** é exploratório e não linear pensando sempre em velocidade e agilidade.
-<div class="reference">[Gartner](http://http://www.gartner.com/it-glossary/bimodal/)</div>
+<div class="reference">[Gartner](https://www.gartner.com/it-glossary/bimodal/)</div>
 
 <br/>
 

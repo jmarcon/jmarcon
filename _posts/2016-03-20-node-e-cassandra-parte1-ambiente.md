@@ -26,7 +26,7 @@ leitura.
 Primeiro, estou utilizando o OSX mas, provavelmente, você terá pouco trabalho
 para adaptar o que vamos ter aqui para outros sistemas.
 
-Para abstrair um pouco vamos utilizar o [Docker](http://www.docker.com) e deixar
+Para abstrair um pouco vamos utilizar o [Docker](https://www.docker.com) e deixar
 um pouco mais automático com o recurso "docker-compose".
 
 No OSX e no Windows, o pessoal do Docker adquiriu o

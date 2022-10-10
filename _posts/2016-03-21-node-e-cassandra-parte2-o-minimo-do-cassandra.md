@@ -18,7 +18,7 @@ Não vou discutir qual é o banco mais indicado para seu projeto, deixo aqui alg
 benchmarks encontrados na internet para que você possa tomar a decisão.
 <!--more-->
 
-* [Planet Cassandra](http://www.planetcassandra.org/nosql-performance-benchmarks/)
+* [Planet Cassandra](https://www.planetcassandra.org/nosql-performance-benchmarks/)
 * [MongoDB](https://www.mongodb.com/blog/post/high-performance-benchmarking-mongodb-and-nosql-systems)
 * [JaxEnter](https://jaxenter.com/evaluating-nosql-performance-which-database-is-right-for-your-data-107481.html)
 
