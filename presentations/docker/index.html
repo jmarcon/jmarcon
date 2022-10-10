@@ -13,7 +13,6 @@ description:
     Apresentação sobre as boas práticas do uso do docker e do docker-compose
 ---
 
-<!-- Any section element inside of this container is displayed as a slide -->
 <div class="slides">
     <section data-background="#FFFFFF">
         <img src="imgs/devmesh.png" alt="" style="width:50%" />
@@ -46,7 +45,7 @@ description:
             <img src="imgs/dockerLogo.png" alt="" style="max-height: 500px">
             <h1>Docker</h1>
 
-            <!-- Notas -->
+            
             <aside class="notes">
                 <strong>Plataforma de containers de aplicação</strong>
 
@@ -72,7 +71,7 @@ description:
             <img src="imgs/dockerLogo.png" alt="">
             <h3>Docker no macOS e Windows!</h3>
 
-            <!-- Notas -->
+            
             <aside class="notes">
                 <h1>Docker é nativo do Linux mas...</h1>
 
@@ -90,24 +89,11 @@ description:
                 <h6>+ Hyper-V instalado</h6>
             </div>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
-        <!--section data-background="imgs/oldboy.png">
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <br/>
-                        <h1 style="background:rgba(0, 0, 0, 0.9);">Update?</h1>
 
-						<aside class="notes">
-						</aside>
-                    </section-->
     </section>
 
 
@@ -120,7 +106,7 @@ COPY apresentacao/ /usr/share/nginx/html
 CMD nginx -g 'daemon off;'
 						</code></pre>
 
-            <!-- Notas -->
+            
             <aside class="notes">
                 <p>docker build -t apresentacao:latest . </p>
                 <p>docker run -p 8880:80 -d --name dmesh apresentacao:latest <p>
@@ -152,14 +138,14 @@ Successfully built 14443727bab8
             <h2>Demo</h2>
             <img src="imgs/demo1.png" alt="" />
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
         <section>
             <img src="imgs/dockerhost_layout.png" alt="" />
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -169,7 +155,7 @@ Successfully built 14443727bab8
         <section data-background="#0B3962">
             <img src="imgs/keepcalm.png" alt="">
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -177,7 +163,7 @@ Successfully built 14443727bab8
             <img src="imgs/loading.png" alt="">
             <h3 style="color:#504A67">N&atilde;o instale pacotes desnecess&aacute;rios</h3>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -188,7 +174,7 @@ Successfully built 14443727bab8
                     de camadas subiu de 42 para 127!</h3>
             </div>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -196,14 +182,14 @@ Successfully built 14443727bab8
             <h2>Utilize tags</h2>
             <p>docker build . -t tag:version</p>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
         <section data-background="imgs/stacking.png">
             <h2 style="color:#58463D; text-align:right">O que mais muda<br />fica para o final!</h2>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -230,7 +216,7 @@ RUN apt-get update && apt-get install wget vim
                             </code></pre>
             </div>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -242,21 +228,21 @@ RUN apt-get update && apt-get install wget vim
             <img src="imgs/dockermachine.png" alt="" style="max-height: 500px">
             <h1>Docker Machine</h1>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
         <section data-background="#FFFFFF" data-transition="fade">
             <img src="imgs/dockermachine_api.png" alt="">
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
         <section data-background="imgs/bkg.png" data-transition="concave">
             <img src="imgs/containers_layout.png" alt="" style="max-height: 500px">
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -280,7 +266,7 @@ $ eval "$(docker-machine env nomedohost)"
 $ eval "$(docker-machine env -u)"
 						</code></pre>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -311,7 +297,7 @@ to the Docker Engine running on this virtual machine,
 run: docker-machine env devmesh-now
 						</code></pre>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -328,7 +314,7 @@ export DOCKER_MACHINE_NAME="devmesh-now"
 # eval $(docker-machine env devmesh-now)
 						</code></pre>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -359,7 +345,7 @@ Removing intermediate container c6502ff53f16
 Successfully built 50a2bdfd7c9d
                         </code></pre>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -370,7 +356,7 @@ Successfully built 50a2bdfd7c9d
             <h2>Demo</h2>
             <img src="imgs/demo5.png" alt="" />
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -378,7 +364,7 @@ Successfully built 50a2bdfd7c9d
         <section data-background="#262422" data-transition="convex">
             <img src="imgs/olddocker.png" alt="" style="border-radius:50px; border:20px solid #262422; padding:-3px;" />
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -394,7 +380,7 @@ Successfully built 50a2bdfd7c9d
                 <h6>+ virtualiza&ccedil;&atilde;o</h6>
             </div>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -423,33 +409,22 @@ Successfully built 50a2bdfd7c9d
             <h2>Demo</h2>
             <img src="imgs/demo2.png" alt="" />
 
-            <!-- Notas -->
             <aside class="notes">
             </aside>
         </section>
     </section>
 
-    <!--section data-background="imgs/bkg.png">
-                    <section>
-                        <img src="imgs/swarm.png" alt="" style="max-height: 500px"/>
-                        <h1>Docker-Swarm</h1>
-
-						<aside class="notes">
-						</aside>
-                    </section>
-                </section !-->
-
     <section data-background="imgs/bkg.png">
         <section data-background="imgs/god.gif">
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
         <section data-background="#FFFFFF">
             <img src="imgs/dockerall.png" alt="" />
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -495,14 +470,14 @@ Successfully built 50a2bdfd7c9d
                 <h4>https://12factor.net/</h4>
             </div>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
         <section data-background="#2C4533">
             <img src="imgs/dinopensa.png" alt="">
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -521,7 +496,7 @@ Successfully built 50a2bdfd7c9d
                 </ul>
             </div>
 
-            <!-- Notas -->
+            
             <aside class="notes">
             </aside>
         </section>
@@ -544,10 +519,7 @@ Successfully built 50a2bdfd7c9d
                 <img src="imgs/twitter.png" alt="" style="width:50px; vertical-align:middle;">
                 <a href="https://twitter.com/julianomarcon" style="margin:15px; line-height: 50px;">@julianomarcon</a>
             </div>
-
-            <!-- Notas -->
-            <aside class="notes">
-            </aside>
+            <aside class="notes"></aside>
         </section>
         <section>
             <blockquote>“Learn the rules like a pro, so you can break them like an artist."</blockquote>

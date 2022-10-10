@@ -1,5 +1,5 @@
 #!/bin/bash
 
-export JEKYLL_VERSION=4.1.0
+export JEKYLL_VERSION=4
 rm -rf .sass-cache/
-docker run --rm --volume="$PWD:/srv/jekyll" -p 4000:4000 -it jekyll/builder:$JEKYLL_VERSION jekyll serve --watch --drafts
+docker run --rm -it --volume="$PWD:/srv/jekyll" -p 4000:4000 jekyll/jekyll:$JEKYLL_VERSION jekyll serve --watch --drafts

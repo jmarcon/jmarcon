@@ -1,5 +1,4 @@
 <head>
-    <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
                 'gtm.start':
@@ -8,9 +7,6 @@
                 j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
                     'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
         })(window, document, 'script', 'dataLayer', 'GTM-WZNGSKJ');</script>
-    <!-- End Google Tag Manager -->
-
-     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-63413033-1"></script>
     <script>
     window.dataLayer = window.dataLayer || [];
@@ -19,21 +15,10 @@
 
     gtag('config', 'UA-63413033-1');
     </script>
-    <!-- End Google Analytics -->
-
-    <!-- Google Optimize -->
     <script src="https://www.googleoptimize.com/optimize.js?id=GTM-TVVH6LB"></script>
-    <!-- End Google Optimize -->
-
-    <!-- Google adsense -->
     <script data-ad-client="ca-pub-2593937197676387" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <!-- End adsense -->
-
     <meta charset="utf-8">
     <title>{% if page.title %}{{page.title}} - {{site.title}}{% else %}{{site.title}}{% endif %}</title>
-
-    <!-- Edit site and author settings in `_config.yml` to make the social details your own -->
-
     <meta content="{{ site.title }}" property="og:site_name">
     {% if page.title %}
     <meta content="{{ page.title }}" property="og:title">
@@ -112,33 +97,22 @@
         href="{{ "/assets/img/favicon/apple-touch-icon-72x72.png" | prepend: site.baseurl }}">
     <link rel="apple-touch-icon" sizes="144x144"
         href="{{ "/assets/img/favicon/apple-touch-icon-144x144.png" | prepend: site.baseurl }}">
-    <!-- Chrome, Firefox OS and Opera -->
     <meta name="theme-color" content="#455a64">
-    <!-- Windows Phone -->
     <meta name="msapplication-navbutton-color" content="#263959">
-    <!-- iOS Safari -->
     <meta name="apple-mobile-web-app-status-bar-style" content="#263959">
-    <!-- Feed ATOM -->
     {% feed_meta %}
 
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet"> -->
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Poppins:400,300,500,600,700" rel="stylesheet">
 
-    <!-- Bootstrap -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"
         integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha256-aAr2Zpq8MZ+YA/D6JtRD3xtrwpEz2IqOS+pWD/7XKIw=" crossorigin="anonymous" />
-
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- Syntax Highlight -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/darcula.min.css"
         integrity="sha256-5BRDJ9LsMByOdNbohiNu+sxguR70wTsnt20w6GAZvlU=" crossorigin="anonymous" />
 
-    <!-- Styles -->
     <link rel="preload" href="{{ "/assets/css/main.css" | prepend: site.baseurl }}" as="style">
     <link rel="preload" href="{{ "/assets/css/maindark.css" | prepend: site.baseurl }}" as="style">
     <link rel="preload" href="{{ "/assets/js/main.js" | prepend: site.baseurl }}" as="script">
