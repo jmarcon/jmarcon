@@ -35,8 +35,7 @@ description:
             <p style="color:black" class="fragment fade-up">Apaixonado por tecnologia</p>
             <h2 style="color:black" class="fragment fade-up">Developer!!!</h2>
 
-            <aside class="notes">
-            </aside>
+            <aside class="notes" aria-label=""></aside>
         </section>
     </section>
 
@@ -44,9 +43,8 @@ description:
         <section data-background="imgs/bkg.png">
             <img src="imgs/dockerLogo.png" alt="" style="max-height: 500px">
             <h1>Docker</h1>
-
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
                 <strong>Plataforma de containers de aplicação</strong>
 
                 <p>Os containers docker encapsulam um software em um sistema de arquivos completo que contem tudo
@@ -72,7 +70,7 @@ description:
             <h3>Docker no macOS e Windows!</h3>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
                 <h1>Docker é nativo do Linux mas...</h1>
 
                 <p>Em Julho de 2016 a Docker anunciou o lancamento oficial do Docker para macOS e para Windows.</p>
@@ -90,7 +88,7 @@ description:
             </div>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
 
@@ -107,7 +105,7 @@ CMD nginx -g 'daemon off;'
 						</code></pre>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
                 <p>docker build -t apresentacao:latest . </p>
                 <p>docker run -p 8880:80 -d --name dmesh apresentacao:latest <p>
 
@@ -139,14 +137,14 @@ Successfully built 14443727bab8
             <img src="imgs/demo1.png" alt="" />
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section>
             <img src="imgs/dockerhost_layout.png" alt="" />
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
     </section>
@@ -156,7 +154,7 @@ Successfully built 14443727bab8
             <img src="imgs/keepcalm.png" alt="">
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section data-background="#EDEEE1">
@@ -164,18 +162,18 @@ Successfully built 14443727bab8
             <h3 style="color:#504A67">N&atilde;o instale pacotes desnecess&aacute;rios</h3>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section data-background="#FFFFFF">
             <div>
                 <img src="imgs/stack.png" alt="" style="width:30%; display:inline-block; " />
-                <h3 style="color:#F28033; display:inline-block; float:left; width: 60%; padding-top: 10%">O limite
+                <h3 style="color:#F28033; display:inline-block; width: 60%; padding-top: 10%">O limite
                     de camadas subiu de 42 para 127!</h3>
             </div>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section data-background-color="black" data-background="imgs/tree.png">
@@ -183,14 +181,14 @@ Successfully built 14443727bab8
             <p>docker build . -t tag:version</p>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section data-background="imgs/stacking.png">
             <h2 style="color:#58463D; text-align:right">O que mais muda<br />fica para o final!</h2>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section data-background="imgs/bkg.png">
@@ -217,7 +215,7 @@ RUN apt-get update && apt-get install wget vim
             </div>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
     </section>
@@ -229,21 +227,21 @@ RUN apt-get update && apt-get install wget vim
             <h1>Docker Machine</h1>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section data-background="#FFFFFF" data-transition="fade">
             <img src="imgs/dockermachine_api.png" alt="">
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section data-background="imgs/bkg.png" data-transition="concave">
             <img src="imgs/containers_layout.png" alt="" style="max-height: 500px">
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section data-background="imgs/bkg.png" data-transition="zoom">
@@ -267,7 +265,7 @@ $ eval "$(docker-machine env -u)"
 						</code></pre>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
 
@@ -298,7 +296,7 @@ run: docker-machine env devmesh-now
 						</code></pre>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
 
@@ -315,7 +313,7 @@ export DOCKER_MACHINE_NAME="devmesh-now"
 						</code></pre>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
 
@@ -346,7 +344,7 @@ Successfully built 50a2bdfd7c9d
                         </code></pre>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
 
@@ -357,7 +355,7 @@ Successfully built 50a2bdfd7c9d
             <img src="imgs/demo5.png" alt="" />
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
 
@@ -365,7 +363,7 @@ Successfully built 50a2bdfd7c9d
             <img src="imgs/olddocker.png" alt="" style="border-radius:50px; border:20px solid #262422; padding:-3px;" />
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
 
@@ -381,7 +379,7 @@ Successfully built 50a2bdfd7c9d
             </div>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
     </section>
@@ -393,7 +391,7 @@ Successfully built 50a2bdfd7c9d
             <img src="imgs/dockercompose.png" alt="" style="max-height: 500px" />
             <h1>Docker-Compose</h1>
 
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section data-background="imgs/multi-container.jpg">
@@ -409,7 +407,7 @@ Successfully built 50a2bdfd7c9d
             <h2>Demo</h2>
             <img src="imgs/demo2.png" alt="" />
 
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
     </section>
@@ -418,14 +416,14 @@ Successfully built 50a2bdfd7c9d
         <section data-background="imgs/god.gif">
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section data-background="#FFFFFF">
             <img src="imgs/dockerall.png" alt="" />
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section>
@@ -471,14 +469,14 @@ Successfully built 50a2bdfd7c9d
             </div>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section data-background="#2C4533">
             <img src="imgs/dinopensa.png" alt="">
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
         <section data-background="imgs/nonono.gif"></section>
@@ -497,7 +495,7 @@ Successfully built 50a2bdfd7c9d
             </div>
 
             
-            <aside class="notes">
+            <aside class="notes" aria-label="">
             </aside>
         </section>
     </section>
@@ -519,7 +517,7 @@ Successfully built 50a2bdfd7c9d
                 <img src="imgs/twitter.png" alt="" style="width:50px; vertical-align:middle;">
                 <a href="https://twitter.com/julianomarcon" style="margin:15px; line-height: 50px;">@julianomarcon</a>
             </div>
-            <aside class="notes"></aside>
+            <aside class="notes" aria-label=""></aside>
         </section>
         <section>
             <blockquote>“Learn the rules like a pro, so you can break them like an artist."</blockquote>

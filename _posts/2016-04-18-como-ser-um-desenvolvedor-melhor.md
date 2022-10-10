@@ -79,7 +79,7 @@ seu time.
 O respeito entre todos é essencial para que as pessoas possam refletir e tomar descisões sobre como o time pode se tornar mais efetivo, se
 ajustar e otimizar os comportamentos dos indivíduos para atingir os objetivos.
 
-# Valores
+## Valores
 
 Se para você os valores acima são óbvios, então é bem provável que você já os tenha
 impregnados em seu dia a dia. Neste caso, tenha empatia para com aqueles que não

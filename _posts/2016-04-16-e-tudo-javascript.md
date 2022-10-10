@@ -78,10 +78,9 @@ módulos nas aplicações.
   <div class="col-xs-2"></div>
 </div>
 
-
 ### Desvantagens
 
-#### A linguagem é sempre a mesma
+#### A linguagem é sempre a mesma, novamente
 
 Você deve estar se perguntando: "Mas isso não é uma vantagem?". Nesse caso, existem dois
 lados da moeda. A falsa visão de que, por ser a mesma linguagem, a tecnologia é a mesma
@@ -135,7 +134,6 @@ débito técnico que nunca poderão pagar sem reescrever todo o código.
   </div>
   <div class="col-xs-2"></div>
 </div>
-
 
 ## Conclusão
 

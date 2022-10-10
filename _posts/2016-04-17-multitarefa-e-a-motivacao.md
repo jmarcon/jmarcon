@@ -47,7 +47,7 @@ Para ajudar a se organizar, use ferramentas de gestão de tempo e organização 
 * [Pomodoro](https://pomodorotechnique.com/)
 * [Matriz GUT](https://pt.wikipedia.org/wiki/GUT)
 
-##### Como um gestor lida com tudo?
+#### Como um gestor lida com tudo?
 
 No papel de líder e gestor de uma equipe, é parte de seu trabalho manter todas as
 pessoas sabendo quais são seus principais objetivos e o resultado que se espera delas.
