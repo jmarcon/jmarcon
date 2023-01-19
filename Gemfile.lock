@@ -74,7 +74,7 @@ GEM
       forwardable-extended (~> 2.6)
     public_suffix (5.0.0)
     racc (1.6.0)
-    rack (2.2.4)
+    rack (2.2.6.2)
     rack-protection (3.0.2)
       rack
     rb-fsevent (0.11.2)
@@ -106,6 +106,7 @@ GEM
     webrick (1.7.0)
 
 PLATFORMS
+  x86_64-linux
   x86_64-linux-musl
 
 DEPENDENCIES
